@@ -1,0 +1,59 @@
+name: Mobile browser checks
+on:
+  push:
+    paths:
+      - 'web/start/**'
+      - 'tests/ios-mobile/**'
+      - 'tests/android-mobile/**'
+      - '.github/workflows/mobile.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ios-webkit:
+    name: iPhone simulator · WebKit
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check the sample and refused action in Apple WKWebView
+        run: python3 tests/ios-mobile/run.py ios-mobile-result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ios-webkit-receipt
+          path: ios-mobile-result.json
+          if-no-files-found: error
+  android-webview:
+    name: Android emulator · system WebView
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Enable KVM for the Android emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Install Android SDK build tools
+        run: "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager 'platforms;android-35' 'build-tools;35.0.0'"
+      - name: Tap the public starter in Android System WebView
+        uses: reactivecircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: bash tests/android-mobile/run.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-webview-receipt
+          path: android-mobile-result.json
+          if-no-files-found: error
