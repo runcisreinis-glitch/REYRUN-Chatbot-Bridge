@@ -7,6 +7,7 @@ const path = require('node:path');
 const {spawn, spawnSync} = require('node:child_process');
 const readline = require('node:readline');
 const {once} = require('node:events');
+const {inflateSync} = require('node:zlib');
 
 const platform = process.platform;
 const bootstrap = process.argv.includes('--bootstrap');
@@ -211,6 +212,30 @@ function wrapperFor(mode) {
   return path.join(project, 'launchers', 'REYRUN-' + mode + '-' + suffix);
 }
 
+function verifyRenderedPng(result) {
+  assert.ok(!result.isError, JSON.stringify(result.content).slice(0,1200));
+  const image = result.content.find(item => item.type === 'image' && item.mimeType === 'image/png');
+  assert.ok(image?.data, 'MCP client must receive PNG pixels');
+  const png = Buffer.from(image.data, 'base64');
+  assert.equal(png.subarray(0,8).toString('hex'), '89504e470d0a1a0a');
+  assert.equal(png.readUInt32BE(8), 13);
+  assert.equal(png.toString('ascii',12,16), 'IHDR');
+  const width = png.readUInt32BE(16), height = png.readUInt32BE(20);
+  assert.ok(width >= 64 && height >= 64, 'expected a browser viewport');
+  assert.equal(png.subarray(-12).toString('hex'), '0000000049454e44ae426082');
+  const data = [];
+  for (let offset = 8; offset < png.length;) {
+    const length = png.readUInt32BE(offset);
+    assert.ok(offset + length + 12 <= png.length, 'truncated PNG chunk');
+    if (png.toString('ascii', offset + 4, offset + 8) === 'IDAT') {
+      data.push(png.subarray(offset + 8, offset + 8 + length));
+    }
+    offset += 12 + length;
+  }
+  const pixels = inflateSync(Buffer.concat(data), {maxOutputLength:128*1024*1024});
+  assert.ok(pixels.length >= height * (1 + Math.ceil(width / 8)), 'incomplete image scanlines');
+}
+
 async function optionalProfiles() {
   for (const mode of ['filesystem','playwright','devtools']) {
     launch(wrapperFor(mode));
@@ -242,8 +267,7 @@ async function optionalProfiles() {
         // The initial blank page exercises the real renderer without sending user data or browsing a live site.
         const capture = mode === 'playwright' ? 'browser_take_screenshot' : 'screenshot';
         const image = await invoke(capture, {});
-        assert.ok(!image.isError, JSON.stringify(image.content).slice(0,1200));
-        assert.ok(image.content.some(c => c.type === 'image' && c.data && c.data.length > 100));
+        verifyRenderedPng(image);
       }
       console.log('PASS: ' + platform + ' native ' + mode + ' fixture');
     } finally { await session.close(); }

@@ -16,6 +16,17 @@ def archive(files):
 files=[(p.name,p.read_bytes(),0o100644) for p in sorted((root/'scripts').glob('*.cjs'))]
 payload=archive(files);encoded=base64.b64encode(payload).decode();digest=hashlib.sha256(payload).hexdigest()
 ps=r"""$ErrorActionPreference='Stop'
+# Windows PowerShell may inherit PowerShell 7's module path when launched from a terminal or CI.
+$stockModules=[IO.Path]::Combine($PSHOME,'Modules')
+$env:PSModulePath=$stockModules+[IO.Path]::PathSeparator+$env:PSModulePath
+function Get-StarterDigest([string]$path){
+  $hash=[Security.Cryptography.SHA256]::Create()
+  try {
+    $stream=[IO.File]::OpenRead($path)
+    try {return [BitConverter]::ToString($hash.ComputeHash($stream)).Replace('-','').ToLowerInvariant()}
+    finally {$stream.Dispose()}
+  } finally {$hash.Dispose()}
+}
 $base=if($env:REYRUN_WORKSPACE){$env:REYRUN_WORKSPACE}else{Join-Path $env:USERPROFILE 'REYRUN Bridge'}
 $rt=Join-Path $base 'runtime'
 [void][IO.Directory]::CreateDirectory($rt)
@@ -25,7 +36,7 @@ try {
   $zip=Join-Path $tmp 'starter.zip'
   $encoded=([IO.File]::ReadAllLines($env:REYRUN_START_FILE) | Where-Object { $_.StartsWith('::DATA:') } | ForEach-Object { $_.Substring(7) }) -join ''
   [IO.File]::WriteAllBytes($zip,[Convert]::FromBase64String($encoded))
-  if((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash -ne 'DIGEST'){throw 'Starter file is incomplete. Download again.'}
+  if((Get-StarterDigest $zip) -ne 'DIGEST'){throw 'Starter file is incomplete. Download again.'}
   Expand-Archive -LiteralPath $zip -DestinationPath $rt -Force
   $n=(Get-Command node.exe -ErrorAction SilentlyContinue | Select-Object -First 1).Source
   if(!$n -or ((& $n --version) -notmatch '^v(2[4-9]|[3-9][0-9])\.')){
@@ -36,7 +47,7 @@ try {
       $pkg=Join-Path $tmp 'node.zip'
       Invoke-WebRequest -UseBasicParsing -Uri ('https://nodejs.org/dist/v24.22.3/'+$tag+'.zip') -OutFile $pkg
       $sum=if($arch -eq 'arm64'){'WINARM'}else{'WINX64'}
-      if((Get-FileHash -LiteralPath $pkg -Algorithm SHA256).Hash -ne $sum){throw 'Official Node archive did not match its published SHA-256.'}
+      if((Get-StarterDigest $pkg) -ne $sum){throw 'Official Node archive did not match its published SHA-256.'}
       Expand-Archive -LiteralPath $pkg -DestinationPath $rt -Force
     }
     $n=$cached
@@ -53,7 +64,17 @@ try {
 """
 # PowerShell reads the plain-text commands above. No downloaded script is evaluated.
 def win(mode):
- cmdline=ps.replace('DIGEST',digest).replace('WINARM',hashes['win-arm64']).replace('WINX64',hashes['win-x64']).replace('MODE',mode)
+ windows_payload, windows_digest, body = encoded, digest, ps
+ if mode == 'rdr2':
+  helper = root / 'scripts' / 'rdr2'
+  rdr2_payload = archive(files + [('rdr2-detect.cjs', (helper / 'detect.cjs').read_bytes(), 0o100644)])
+  windows_payload = base64.b64encode(rdr2_payload).decode()
+  windows_digest = hashlib.sha256(rdr2_payload).hexdigest()
+  selection = '$game=$env:REYRUN_GAME_ROOT'
+  body = body.replace(selection, selection + '\n' + (helper / 'launcher-detection.ps1').read_text().rstrip())
+  setup_game = "& $n (Join-Path $rt 'setup.cjs') $mode $game"
+  body = body.replace(setup_game, setup_game + '\n' + (helper / 'stage-translation.ps1').read_text().rstrip())
+ cmdline=body.replace('DIGEST',windows_digest).replace('WINARM',hashes['win-arm64']).replace('WINX64',hashes['win-x64']).replace('MODE',mode)
  # Wrapping the audited body as one encoded UTF-16 command can exceed cmd's length limit.
  # Keep the commands in a local marker block within this same file, readable in any text editor.
  head="""@echo off
@@ -65,7 +86,7 @@ if not defined REYRUN_TEST_MODE pause
 exit /b %REYRUN_RESULT%
 :BEGIN_POWERSHELL
 """
- return (head+cmdline+':END_POWERSHELL\n'+'\n'.join('::DATA:'+x for x in textwrap.wrap(encoded,100))+'\n').replace('\n','\r\n').encode('ascii')
+ return (head+cmdline+':END_POWERSHELL\n'+'\n'.join('::DATA:'+x for x in textwrap.wrap(windows_payload,100))+'\n').replace('\n','\r\n').encode('ascii')
 mac=r'''#!/bin/bash
 set -euo pipefail
 umask 077
