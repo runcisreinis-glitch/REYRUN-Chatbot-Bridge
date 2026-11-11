@@ -1,0 +1,22 @@
+{
+  "checkedAtUtc": "2026-11-11T23:26:02.396Z",
+  "os": "win32",
+  "node": "v24.19.0",
+  "server": {
+    "name": "secure-filesystem-server",
+    "version": "2.3.0"
+  },
+  "packageSource": "official npm registry, isolated empty cache",
+  "configuredFolders": 1,
+  "allowedFolderListed": true,
+  "unicodeWriteRead": true,
+  "scopeBoundaryRefused": true,
+  "existingClientSettingsPreserved": true,
+  "nativeLauncherSha256": "87cf08a3339dc65726f19b006a73a424e5e182af71ea9ce9b0c6a58d4b7c9233",
+  "launcherExit": 0,
+  "installerElapsedSeconds": 6.68,
+  "startTxt": true,
+  "testWorkspaceRemoved": true,
+  "scope": "Fresh temporary Windows workspace, fake existing client configuration. Existing Node installation. No change to real client configuration; no foreground input.",
+  "invalidInheritedPowerShellModulePath": true
+}

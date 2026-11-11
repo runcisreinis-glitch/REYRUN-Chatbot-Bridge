@@ -1,0 +1,193 @@
+[
+  {
+    "name": "REYRUN · Web Crypto",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "use": {
+      "lv": "Atver gatavu skriptu savā pārlūkā un ar vienu pieskārienu pārbaudi paraugu vai izvēlies teksta failu.",
+      "en": "Open a ready-made browser script and check the sample with one tap or pick a text file.",
+      "ru": "Откройте готовый скрипт в браузере и одним касанием проверьте пример либо выберите текстовый файл."
+    },
+    "verified": {
+      "lv": "Paraugs «REYRUN» un «Rīga» satur 13 baitus divās rindās. Rezultātā ir SHA-256 kontrolsumma.",
+      "en": "The “REYRUN” and “Rīga” sample contains 13 bytes across two lines. Its receipt includes a SHA-256 checksum.",
+      "ru": "В примере «REYRUN» и «Rīga» 13 байт и две строки. Результат содержит контрольную сумму SHA-256."
+    },
+    "community": {
+      "lv": "Pašas REYRUN pārbaude, 2026. gada novembris.",
+      "en": "REYRUN project check, November 2026.",
+      "ru": "Собственная проверка REYRUN, ноябрь 2026 года."
+    },
+    "limit": {
+      "lv": "Šis ir viena faila apliecinājums. Lai čats izlasītu kļūdas tekstu, iedod tam vajadzīgo fragmentu.",
+      "en": "This is a receipt for one file. Share a relevant excerpt separately if you want the chat to interpret an error.",
+      "ru": "Это квитанция для одного файла. Чтобы чат объяснил ошибку, отдельно приложите нужный фрагмент текста."
+    },
+    "sources": [
+      {
+        "label": "REYRUN",
+        "url": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/tree/main/web/start"
+      }
+    ],
+    "launch": "mobile"
+  },
+  {
+    "name": "LocalSend",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "use": {
+      "lv": "Pārsūti sagatavotu failu uz otru ierīci savā Wi-Fi tīklā.",
+      "en": "Send the prepared file to another device on your Wi-Fi.",
+      "ru": "Перешлите готовый файл на другое устройство в своей сети Wi-Fi."
+    },
+    "verified": {
+      "lv": "Projekts piedāvā lietotnes visām četrām platformām. 1.18.2 izlaidums datēts ar 2026. gada 21. augustu.",
+      "en": "The project ships apps for all four platforms. Release 1.18.2 is dated 21 August 2026.",
+      "ru": "Проект выпускает приложения для всех четырёх платформ. Версия 1.18.2 вышла 21 августа 2026 года."
+    },
+    "community": {
+      "lv": "Augustā izstrādātāji pievienoja Android failu pārsūtīšanu fonā un kontrolsummu pārbaudi.",
+      "en": "In August the developers added background transfers on Android and transfer checksums.",
+      "ru": "В августе разработчики добавили на Android фоновую передачу и проверку контрольной суммы."
+    },
+    "limit": {
+      "lv": "Vajadzīgas divas savienotas ierīces ar LocalSend. Izvēlies failu un saņēmēju.",
+      "en": "Needs two connected devices with LocalSend. Choose the file and the recipient.",
+      "ru": "Нужны два соединённых устройства с LocalSend. Выберите файл и получателя."
+    },
+    "sources": [
+      {
+        "label": "LocalSend",
+        "url": "https://localsend.org/download"
+      },
+      {
+        "label": "2026 · Changelog",
+        "url": "https://localsend.org/changelog"
+      }
+    ],
+    "launch": "mobile"
+  },
+  {
+    "name": "Nextcloud Files",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Android",
+      "iOS"
+    ],
+    "use": {
+      "lv": "Saglabā čata sagatavoto failu savā Nextcloud mapē un turpini tajā pašā mapē no datora.",
+      "en": "Save a file prepared by the chat to your Nextcloud folder and pick it up on your computer.",
+      "ru": "Сохраните подготовленный чатом файл в папке Nextcloud и продолжите работу с ним на компьютере."
+    },
+    "verified": {
+      "lv": "Oficiālās lietotnes nodrošina failu apmaiņu ar jau pievienotu Nextcloud kontu.",
+      "en": "The official clients support file handoff through an existing Nextcloud account.",
+      "ru": "Официальные приложения передают файлы через уже подключённую учётную запись Nextcloud."
+    },
+    "community": {
+      "lv": "iOS lietotāji aprakstīja augšupielādes bez redzama progresa. Pirms darba turpināšanas pārbaudi saņemto failu otrajā ierīcē.",
+      "en": "iOS users reported uploads with no visible progress. Verify the received file on the other device before resuming.",
+      "ru": "Пользователи iOS описали загрузки без видимого прогресса. Проверьте полученный файл на втором устройстве, прежде чем продолжать."
+    },
+    "limit": {
+      "lv": "Izvēlies, ja tev jau ir Nextcloud konts un mape. Jauna servera izveide ir atsevišķs darbs.",
+      "en": "Choose it if you already have an account and folder. Setting up a new server is a separate task.",
+      "ru": "Выбирайте, если у вас уже есть учётная запись и папка. Создание сервера — отдельная задача."
+    },
+    "sources": [
+      {
+        "label": "Nextcloud",
+        "url": "https://nextcloud.com/install/"
+      },
+      {
+        "label": "iOS · 2026",
+        "url": "https://github.com/nextcloud/ios/issues"
+      }
+    ],
+    "launch": "mobile"
+  },
+  {
+    "name": "Termux",
+    "platforms": [
+      "Android"
+    ],
+    "use": {
+      "lv": "Android telefonā pārbaudi gatavu skriptu Termux privātajā mapē.",
+      "en": "Check a ready-made script in Termux’s private directory on Android.",
+      "ru": "Проверьте готовый скрипт в закрытой папке Termux на Android."
+    },
+    "verified": {
+      "lv": "Skripts darbojas bez tīkla, izveido paraugu un izdrukā tā kontrolsummu. Pārbaudīta POSIX čaulas izpilde.",
+      "en": "The script works offline, creates a sample and prints its checksum. Its POSIX shell execution was tested.",
+      "ru": "Скрипт работает без сети, создаёт образец и печатает контрольную сумму. Проверено выполнение в POSIX-оболочке."
+    },
+    "community": {
+      "lv": "Jūnijā viens Android 15 lietotājs ziņoja par pārtrauktiem ilgiem fona procesiem. Īsais paraugs saglabā kvīti uzreiz.",
+      "en": "In June an Android 15 user reported long background jobs being stopped. This short sample saves its receipt immediately.",
+      "ru": "В июне пользователь Android 15 сообщил об остановке длительных фоновых процессов. Короткий пример сразу сохраняет квитанцию."
+    },
+    "limit": {
+      "lv": "Izmanto jau uzstādītā Termux vidē. Ātrākais ceļš no parasta čata ir pārlūka paraugs.",
+      "en": "Use with Termux already installed. The browser sample is the quick start from a plain chat.",
+      "ru": "Используйте при уже установленном Termux. Для обычного чата самый простой старт — веб-пример."
+    },
+    "sources": [
+      {
+        "label": "Termux",
+        "url": "https://github.com/termux/termux-app"
+      },
+      {
+        "label": "Android 15 · #5150",
+        "url": "https://github.com/termux/termux-app/issues/5150"
+      }
+    ],
+    "launch": "termux"
+  },
+  {
+    "name": "Apple Shortcuts",
+    "platforms": [
+      "iOS",
+      "macOS"
+    ],
+    "use": {
+      "lv": "Nodod failu jau iestatītai Apple komandai caur kopīgošanas izvēlni.",
+      "en": "Pass a file to an existing Apple shortcut through the share sheet.",
+      "ru": "Передайте файл уже настроенной команде Apple через меню «Поделиться»."
+    },
+    "verified": {
+      "lv": "Apple dokumentācijā ir aprakstīta faila saņemšana no citas iPhone lietotnes. Gatavais pārlūka paraugs piedāvā kopīgot tā kvīti, ja ierīce to atbalsta.",
+      "en": "Apple documents accepting files from another iPhone app. The ready-made browser sample offers to share its receipt when the device supports it.",
+      "ru": "Apple документирует получение файлов из другого приложения iPhone. Веб-пример предложит поделиться квитанцией, если устройство это поддерживает."
+    },
+    "community": {
+      "lv": "Apple iOS 26 rokasgrāmata norāda, ka komandas redzamību nosaka tās pieņemtais ievades veids.",
+      "en": "Apple’s iOS 26 guide notes that a shortcut’s accepted input determines whether it appears.",
+      "ru": "Руководство Apple для iOS 26 указывает, что появление команды в меню зависит от поддерживаемого типа данных."
+    },
+    "limit": {
+      "lv": "Šim variantam vajadzīga jau pievienota komanda, kas pieņem failus. Šeit ir pārlūka paraugs, kuru var izmēģināt tūlīt.",
+      "en": "Requires an existing shortcut configured to accept files. The browser sample is ready to try immediately.",
+      "ru": "Нужна ранее добавленная команда, принимающая файлы. Веб-пример можно попробовать сразу."
+    },
+    "sources": [
+      {
+        "label": "Apple · iPhone",
+        "url": "https://support.apple.com/guide/shortcuts/launch-a-shortcut-from-another-app-apd163eb9f95/ios"
+      },
+      {
+        "label": "Apple · Share",
+        "url": "https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios"
+      }
+    ],
+    "launch": "mobile"
+  }
+]

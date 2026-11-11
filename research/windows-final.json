@@ -1,0 +1,59 @@
+{
+  "test": "Physical Windows, three released launcher profiles with a fresh per-profile workspace and isolated existing client configuration; invalid inherited PowerShell module path deliberately supplied to the wrappers.",
+  "cleaned": true,
+  "profiles": {
+    "jobs": {
+      "mode": "jobs",
+      "exit": 0,
+      "node": "v24.19.0",
+      "sha": "da8cb3ca667947013b3c0c4455dd70507a79170a51961a855f13fc09c6c964b7",
+      "elapsed": 2.57,
+      "original": true,
+      "startFile": true,
+      "now": "2026-11-11T23:26:03.864Z",
+      "handoffAcrossProcesses": true,
+      "staleRefused": true
+    },
+    "filesystem": {
+      "mode": "filesystem",
+      "exit": 0,
+      "node": "v24.19.0",
+      "sha": "87cf08a3339dc65726f19b006a73a424e5e182af71ea9ce9b0c6a58d4b7c9233",
+      "elapsed": 6.68,
+      "original": true,
+      "startFile": true,
+      "now": "2026-11-11T23:26:02.396Z",
+      "scopeListed": true,
+      "writeReadExact": true,
+      "outsideFixtureRefused": true
+    },
+    "rdr2": {
+      "mode": "rdr2",
+      "exit": 0,
+      "node": "v24.19.0",
+      "sha": "f00076ead32f8865ac458ad90c361eb462714601e09408366e5ed09e927c146f",
+      "elapsed": 12.97,
+      "original": true,
+      "startFile": true,
+      "staged": true,
+      "gameFolderEntries": 1,
+      "xmlHash": "c72337da664b3999ca4fc2de2600c1e79c551b29fa1e69d79d1330485aef5045",
+      "now": "2026-11-11T23:26:05.641Z",
+      "scopeListed": true,
+      "writeReadExact": true,
+      "outsideFixtureRefused": true
+    }
+  },
+  "translationStaging": {
+    "reusedHash": true,
+    "differentFilePreserved": true,
+    "gameOnlyHasExe": true,
+    "offlineStatusAccurate": true,
+    "offlinePromptIncludesVerifiedZip": true,
+    "noPartialXml": true,
+    "zipSha256": "11d7ee80bac9ac820a2c20e87f2f7fc736e3fab5ceb6e9cf7842543f9f3237da",
+    "zipBytes": 6147414,
+    "xmlBytes": 20782582,
+    "releaseCommit": "3de3d4df5b4cbf415bc1f0e56cec3adfea8d4258"
+  }
+}

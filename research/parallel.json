@@ -1,0 +1,12 @@
+{
+  "observedUtc": "2026-11-11T23:16:53.155Z",
+  "platform": "linux",
+  "node": "v24.22.1",
+  "independentConcurrentStdioProcesses": 4,
+  "independentJobsSaved": 4,
+  "sharedRevisionWinners": 1,
+  "competingWritesRejected": 3,
+  "jobsRecoveredAfterRestart": 5,
+  "resumedRevision": 2,
+  "scope": "Four local standard-I/O MCP clients. Live chatbot front ends and GUI control were outside this test."
+}

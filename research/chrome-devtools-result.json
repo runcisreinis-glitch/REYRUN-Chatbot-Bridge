@@ -1,0 +1,45 @@
+{
+  "key": "chrome-devtools",
+  "platform": "Linux x64, Node 24.22.1, Chromium 156",
+  "flags": [
+    "chrome-devtools-mcp@1.13.0",
+    "--isolated",
+    "--headless",
+    "--slim",
+    "--no-javascript-evaluation",
+    "--no-file-navigations",
+    "--no-usage-statistics",
+    "--no-performance-crux",
+    "--executable-path=/usr/bin/chromium",
+    "--allowed-url-pattern=http://127.0.0.1:35861/*",
+    "--chrome-arg=--no-sandbox"
+  ],
+  "init": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "logging": {},
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "chrome_devtools",
+      "title": "Chrome DevTools MCP server",
+      "version": "1.13.0"
+    }
+  },
+  "tools": [
+    "navigate",
+    "screenshot"
+  ],
+  "nav": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Protocol error (Target.setDiscoverTargets): Target closed\nCause: "
+      }
+    ],
+    "isError": true
+  },
+  "failure": "{'content': [{'type': 'text', 'text': 'Protocol error (Target.setDiscoverTargets): Target closed\\nCause: '}], 'isError': True}"
+}

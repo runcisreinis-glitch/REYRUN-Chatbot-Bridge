@@ -1,0 +1,6 @@
+{
+  "schema": "reyrun.mobile.request/1",
+  "id": "phone-test-01",
+  "action": "inspect-text",
+  "text": "REYRUN\nRīga\n"
+}

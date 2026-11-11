@@ -1,0 +1,190 @@
+{
+  "checkedAt": "2026-11-12T01:05:00+02:00",
+  "platform": "Windows (physical workstation)",
+  "sources": {
+    "remote": "https://github.com/desktop-commander/remote-desktop-commander",
+    "help": "https://desktopcommander.app/help/getting-started/what-is-desktop-commander",
+    "local": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "reportFocus": "https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/852",
+    "reportTimeout": "https://github.com/desktop-commander/remote-desktop-commander/issues/90",
+    "reinis": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge"
+  },
+  "evidence": {
+    "bridgeVersion": "1.0.0",
+    "desktopCommanderDeviceVersion": "0.3.0",
+    "handoff": {
+      "stageA": "Reinis Bridge write → Desktop Commander read",
+      "stageB": "Desktop Commander write → Reinis Bridge read",
+      "returnedBytes": 22,
+      "differentChatThreadsTested": false
+    },
+    "intervalsUtc": [
+      {
+        "slot": "A",
+        "began": "2026-11-11T22:58:43.2158604Z",
+        "ended": "2026-11-11T22:58:54.2312717Z"
+      },
+      {
+        "slot": "B",
+        "began": "2026-11-11T22:58:46.6327410Z",
+        "ended": "2026-11-11T22:58:51.6436920Z"
+      }
+    ],
+    "overlapSeconds": 5.011,
+    "idempotencyReturnedSameCompletedJob": true,
+    "gui": {
+      "interface": "OpenBot private app via Reinis Bridge",
+      "observed": "Chrome / new GitHub repository",
+      "closeReceipt": {
+        "appClosed": true,
+        "forcedTerminationUsed": false,
+        "inputDesktopUnchanged": true
+      }
+    },
+    "githubActivity": {
+      "asOf": "2026-11-11T23:05:00Z",
+      "localStars": 10284,
+      "localForks": 1288,
+      "remoteStars": 220,
+      "remoteForks": 35
+    },
+    "windowsLauncherFixture": {
+      "startExit": 0,
+      "repeatExit": 0,
+      "configSameOnRepeat": true,
+      "startFile": true,
+      "result": {
+        "platform": "win32",
+        "node": "v24.19.0",
+        "tools": [
+          "bridge_status",
+          "list_jobs",
+          "read_checkpoint",
+          "save_checkpoint"
+        ],
+        "serverInfo": {
+          "name": "reyrun-local-bridge",
+          "version": "1.0.0"
+        },
+        "firstRevision": 1,
+        "secondProcessRead": true,
+        "staleWriteRefused": true,
+        "oldSettingPreserved": true
+      },
+      "time": "2026-11-11T23:11:44.8652286Z",
+      "sha256": "d3924fb3ecdf5a1a10632786102c8e03e4135feccba3cef8ba7519de5b101c1e"
+    },
+    "finalWindowsProfiles": {
+      "jobs": {
+        "mode": "jobs",
+        "exit": 0,
+        "node": "v24.19.0",
+        "sha": "da8cb3ca667947013b3c0c4455dd70507a79170a51961a855f13fc09c6c964b7",
+        "elapsed": 2.57,
+        "original": true,
+        "startFile": true,
+        "now": "2026-11-11T23:26:03.864Z",
+        "handoffAcrossProcesses": true,
+        "staleRefused": true
+      },
+      "filesystem": {
+        "mode": "filesystem",
+        "exit": 0,
+        "node": "v24.19.0",
+        "sha": "87cf08a3339dc65726f19b006a73a424e5e182af71ea9ce9b0c6a58d4b7c9233",
+        "elapsed": 6.68,
+        "original": true,
+        "startFile": true,
+        "now": "2026-11-11T23:26:02.396Z",
+        "scopeListed": true,
+        "writeReadExact": true,
+        "outsideFixtureRefused": true
+      },
+      "rdr2": {
+        "mode": "rdr2",
+        "exit": 0,
+        "node": "v24.19.0",
+        "sha": "f00076ead32f8865ac458ad90c361eb462714601e09408366e5ed09e927c146f",
+        "elapsed": 12.97,
+        "original": true,
+        "startFile": true,
+        "staged": true,
+        "gameFolderEntries": 1,
+        "xmlHash": "c72337da664b3999ca4fc2de2600c1e79c551b29fa1e69d79d1330485aef5045",
+        "now": "2026-11-11T23:26:05.641Z",
+        "scopeListed": true,
+        "writeReadExact": true,
+        "outsideFixtureRefused": true
+      }
+    },
+    "liveRdr2Staging": {
+      "reusedHash": true,
+      "differentFilePreserved": true,
+      "gameOnlyHasExe": true,
+      "offlineStatusAccurate": true,
+      "offlinePromptIncludesVerifiedZip": true,
+      "noPartialXml": true,
+      "zipSha256": "11d7ee80bac9ac820a2c20e87f2f7fc736e3fab5ceb6e9cf7842543f9f3237da",
+      "zipBytes": 6147414,
+      "xmlBytes": 20782582,
+      "releaseCommit": "3de3d4df5b4cbf415bc1f0e56cec3adfea8d4258"
+    }
+  },
+  "lv": {
+    "reinis": {
+      "name": "Reinis Bridge",
+      "start": "Šis ir Reiņa personīgais Windows tilts. Projekta Windows palaidējs dod savu, lokālu savienojumu ar izvēlētu mapi. Tas neinstalē Reiņa privāto tiltu un neprasa piekļuvi viņa datoram.",
+      "works": "Rīgā 12. novembrī plkst. 00.58 pa esošo tiltu palaidām divus īsus fona darbus. To izpildes laiki pārklājās 5,011 sekundes. Atkārtots pieprasījums ar to pašu darba atslēgu atgrieza jau pabeigto darbu. Korekti atsākt var arī lasīšanu no pēdējās saglabātās vietas.",
+      "gui": "Atsevišķā OpenBot privātajā Chrome logā tika izveidots šā projekta GitHub repozitorijs. Pēc pārbaudes lietotne aizvērās, un lokālā aizvēršanas kvīts apliecināja, ka lietotāja ievades darbvirsma palikusi tā pati.",
+      "parallel": "Reiņa novērojums ir viena interaktīvā plūsma. Divi fona termināļa darbi darbojās vienlaikus. Divu atsevišķu čatu vienlaicīga darbvirsmas vadība šajā testā nav izmēģināta.",
+      "access": "Hermes pārbaudes brīdī bija apturēts. Konfigurētā OpenBot sarunu adrese atbildēja ar 404, savukārt atsevišķais privātās darbvirsmas klients veica vajadzīgo darbību. Katram darbam jāpārbauda tieši tā izmantotais savienojums."
+    },
+    "desktopCommander": {
+      "name": "Desktop Commander Remote",
+      "start": "Atver oficiālo Desktop Commander instalēšanas lapu, izvēlies savas sistēmas versiju un piesaisti datoru savam kontam. ChatGPT vai citā atbalstītā klientā pievieno oficiālo attālo savienotāju. Pārbaudi faila nolasīšanu atsevišķā testa mapē.",
+      "works": "Windows ierīce ziņoja versiju 0.3.0. Desktop Commander nolasīja caur Reinis Bridge izveidotu testa failu un ierakstīja tajā otro tekstu. Reinis Bridge nolasīja visus 22 baitus. Šāda nodošana saglabā darba stāvokli failā. Atsevišķu sarunu vēstures joprojām ir jānodod pašam.",
+      "gui": "Oficiālais attālais rīku saraksts aptver failus, termināli un procesu sesijas. Failu pārbaudei nelietojām peli un tastatūru. Windows, macOS un Linux atbalstu norāda izstrādātājs. Šeit fiziski pārbaudīts Windows.",
+      "feedback": "2026. gada 13. oktobrī Windows lietotājs ar 0.2.52 ziņoja, ka start_process atvēra konsoles virs citām programmām. 3. novembrī cits lietotājs ar 0.3.1 ziņoja par aptuveni 60 sekunžu noildzēm, arī ja ierīce rādījās tiešsaistē. Tie ir divi konkrēti gadījumi. Šīs pārbaudes laikā failu apmaiņa izdevās.",
+      "popularity": "11. novembrī GitHub API uzrādīja 10 284 zvaigznes un 1 288 atzarojumus lokālajam projektam, 220 zvaigznes un 35 atzarojumus attālā pakalpojuma repozitorijam. Šie skaitļi raksturo interesi par repozitorijiem. Aktīvo lietotāju skaits nav zināms."
+    },
+    "windowsLauncher": "Windows dators, Node 24.19, plkst. 01.11 Rīgā. Palaidējs divreiz pareizi sagatavoja savienojumu testa mapēs ar atstarpēm nosaukumā un saglabāja iepriekšējo iestatījumu. Viens klienta process ierakstīja 1. redakciju. Otrs to nolasīja. Mēģinājums rakstīt pāri no vecākas redakcijas tika noraidīts."
+  },
+  "en": {
+    "reinis": {
+      "name": "Reinis Bridge",
+      "start": "This is Reinis’s personal Windows bridge. The Windows launcher in this project creates your own local connection to a folder you select. It does not install his private bridge or grant access to his PC.",
+      "works": "At 00:58 Riga time on 12 November, two short background jobs ran on the existing bridge. Their execution windows overlapped for 5.011 seconds. Repeating the second request with its original key returned the completed job. Saved output offsets allow a client to resume reading.",
+      "gui": "The project’s GitHub repository was created in an isolated OpenBot Chrome session. Afterwards the private app closed. Its local close receipt confirmed that the user’s input desktop stayed the same.",
+      "parallel": "Reinis has experienced one interactive stream. We measured two concurrent background terminal jobs. Simultaneous desktop control from two separate chats was not tested.",
+      "access": "Hermes was stopped. The configured OpenBot chat endpoint returned 404, while the separate private-desktop client performed the requested operation. Check the particular interface your workflow uses."
+    },
+    "desktopCommander": {
+      "name": "Desktop Commander Remote",
+      "start": "Open the official Desktop Commander setup page, choose your operating system and pair the computer with your account. Add the official remote connector in ChatGPT or another supported client. Try reading a sample file in a dedicated test folder.",
+      "works": "The Windows device reported version 0.3.0. Desktop Commander read a sample file created through Reinis Bridge, then wrote a replacement. Reinis Bridge read back all 22 bytes. A shared file can carry a checkpoint. It does not transfer the conversations themselves.",
+      "gui": "The official remote tools cover files, the terminal and process sessions. Our file operations used no mouse or keyboard. The vendor lists Windows, macOS and Linux. This physical test used Windows.",
+      "feedback": "On 13 October 2026 a Windows user running 0.2.52 reported that start_process brought console windows to the foreground. On 3 November a user running 0.3.1 reported intermittent timeouts of about 60 seconds while their device still appeared online. These are individual reports. Our file handoff succeeded.",
+      "popularity": "On 11 November, GitHub’s API showed 10,284 stars and 1,288 forks for the local project and 220 stars and 35 forks for the hosted service repository. They measure repository interest. The active-user count is unknown."
+    },
+    "windowsLauncher": "Physical Windows PC, Node 24.19, 01:11 Riga time. Two launcher runs configured the connection in test folders with spaces in their names, preserving the original setting. One client process saved revision 1. Another read it. A stale write was refused."
+  },
+  "ru": {
+    "reinis": {
+      "name": "Reinis Bridge",
+      "start": "Это личный мост Рейниса для Windows. Программа запуска в этом проекте создаёт отдельное локальное подключение к выбранной вами папке. Она не устанавливает личный мост Рейниса и не даёт доступа к его компьютеру.",
+      "works": "12 ноября в 00:58 по рижскому времени через действующий мост запустили две короткие фоновые задачи. Они выполнялись одновременно в течение 5,011 секунды. При повторном запросе с прежним ключом мост вернул уже выполненную задачу. Чтение вывода можно продолжить с сохранённой позиции.",
+      "gui": "Репозиторий проекта на GitHub создали в отдельном приватном окне Chrome через OpenBot. После проверки приложение закрылось. Локальный отчёт подтвердил, что пользовательский рабочий стол, принимающий ввод, остался прежним.",
+      "parallel": "По опыту Рейниса доступен один интерактивный поток. В нашем тесте одновременно работали две фоновые задачи терминала. Управление рабочим столом из двух разных чатов одновременно мы не проверяли.",
+      "access": "Hermes был остановлен. Настроенный адрес для чата OpenBot вернул ошибку 404, а отдельный клиент приватного рабочего стола выполнил задачу. Проверять стоит именно то подключение, которое требуется для вашей работы."
+    },
+    "desktopCommander": {
+      "name": "Desktop Commander Remote",
+      "start": "Откройте официальную страницу установки Desktop Commander, выберите свою операционную систему и привяжите компьютер к учётной записи. Подключите официальный удалённый коннектор в ChatGPT или другом совместимом приложении. Для проверки прочитайте файл в отдельной тестовой папке.",
+      "works": "На компьютере с Windows была версия 0.3.0. Desktop Commander прочитал файл, созданный через Reinis Bridge, и записал в него другой текст. Reinis Bridge прочитал все 22 байта. Так можно передать сведения о выполненной работе. История чатов при этом не переносится.",
+      "gui": "Официальный набор удалённых инструментов позволяет работать с файлами, терминалом и сеансами процессов. При проверке файлов мы не использовали мышь и клавиатуру. Разработчик указывает поддержку Windows, macOS и Linux. Здесь проверен реальный компьютер с Windows.",
+      "feedback": "13 октября 2026 года пользователь Windows с версией 0.2.52 сообщил, что start_process выводит окна консоли на передний план. 3 ноября другой пользователь с версией 0.3.1 сообщил о периодических тайм-аутах примерно через 60 секунд, хотя устройство отображалось в сети. Это отдельные случаи. В нашем тесте обмен файлами прошёл успешно.",
+      "popularity": "11 ноября GitHub API показал 10 284 звезды и 1 288 форков у локального проекта. У репозитория удалённого сервиса было 220 звёзд и 35 форков. Эти показатели характеризуют интерес к репозиториям. Число активных пользователей неизвестно."
+    },
+    "windowsLauncher": "Компьютер с Windows, Node 24.19, 01:11 по Риге. Два запуска настроили подключение в тестовых папках с пробелами в названиях. Исходная настройка сохранилась. Один клиентский процесс записал первую версию, другой её прочитал. Попытка записи поверх устаревшей версии была отклонена."
+  }
+}

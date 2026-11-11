@@ -1,0 +1,325 @@
+{
+  "date": "2026-11-11",
+  "platforms": [
+    "Windows",
+    "macOS"
+  ],
+  "projects": [
+    {
+      "key": "filesystem",
+      "name": "Filesystem MCP",
+      "rank": 1,
+      "version": "2.3.0",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "argv": [
+        "npx",
+        "--yes",
+        "@modelcontextprotocol/server-filesystem@2.3.0",
+        "--confine-roots",
+        "<job folder>"
+      ],
+      "sources": [
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Filesystem MCP · tools and directory rules",
+          "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md"
+        },
+        {
+          "kind": "release",
+          "lang": "EN",
+          "label": "Filesystem 2.3.0 release",
+          "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v2.4.0"
+        },
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Desktop client setup for Windows and macOS",
+          "url": "https://modelcontextprotocol.io/docs/develop/connect-local-servers"
+        },
+        {
+          "kind": "firsthand",
+          "lang": "EN",
+          "label": "User report on effective roots, 16 March 2026",
+          "url": "https://github.com/modelcontextprotocol/servers/issues/3602"
+        }
+      ],
+      "use": {
+        "lv": "Vislabāk der failu sagatavošanai vienā darba mapē. MI palīgs var sakārtot projektu un pārkopēt failus, saglabājot to baitus.",
+        "en": "Best for files in a selected job folder. An AI assistant can organize the project and copy files without changing their bytes.",
+        "ru": "Подходит для файлов в выбранной рабочей папке. Помощник может упорядочить проект и скопировать файлы без изменения их содержимого."
+      },
+      "start": {
+        "lv": "Datora MI lietotnē vajag vietējo MCP savienojumu un Node.js 24 vai jaunāku. Izvēlies tikai konkrētā darba mapes. Palūdz parādīt atļautās mapes un nolasīt viena paredzēta faila informāciju.",
+        "en": "Requires a desktop AI client with local MCP support and Node.js 24 or later. Select the directories for this job. Ask for the effective directory list and the metadata of a file you expect there.",
+        "ru": "Нужны настольное приложение с поддержкой локального MCP и Node.js 24 или новее. Выберите папки задачи. Попросите показать список доступных папок и сведения об одном ожидаемом файле."
+      },
+      "limit": {
+        "lv": "Vienai lasīšanas sesijai pievieno --read-only. Kopējot esošu failu, vispirms pārbaudi, vai mērķis jau pastāv. copy_file nepieļauj pārrakstīšanu. Parasts čats bez vietēja savienojuma dod norādes spēlētājam.",
+        "en": "For a read-only session add --read-only. Check whether the destination exists before copying. The copy_file tool refuses to overwrite an existing file. Browser-only chats without a local connection can guide the user.",
+        "ru": "Для сеанса чтения добавьте --read-only. Проверьте, существует ли файл назначения. Команда copy_file откажется его перезаписывать. Обычный веб-чат без локального подключения может вести пользователя по шагам."
+      },
+      "verified": {
+        "lv": "Linux testa vidē palaidām īsto 2.3.0 serveri. Tas parādīja atļautās mapes, nolasīja faila informāciju, precīzi pārkopēja bināru failu un atteica piekļuvi ārpus izvēlētajām mapēm.",
+        "en": "We ran the actual 2.3.0 server on Linux. It listed the allowed folders, read file metadata, copied binary data intact and refused access outside the selected folders.",
+        "ru": "В Linux запущен настоящий сервер 2.3.0. Он показал разрешённые папки, прочитал сведения о файле, точно скопировал двоичные данные и отказал в доступе за пределами выбранных папок."
+      },
+      "community": {
+        "lv": "Martā lietotājs ziņoja, ka klienta norādītās mapes aizstāja komandrindas sarakstu. Šeit lietojam --confine-roots un pārbaudām faktisko atļauju sarakstu.",
+        "en": "A March user report showed client roots replacing command-line choices. This recipe uses --confine-roots and checks the effective list.",
+        "ru": "В марте пользователь сообщил, что клиент заменил заданный список папок своим. В этом варианте используется --confine-roots и проверяется фактический список."
+      },
+      "stars": {
+        "repository": "modelcontextprotocol/servers",
+        "count": 91934,
+        "checked": "2026-11-11",
+        "url": "https://api.github.com/repos/modelcontextprotocol/servers"
+      }
+    },
+    {
+      "key": "playwright",
+      "name": "Microsoft Playwright MCP",
+      "rank": 2,
+      "version": "0.0.85",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "argv": [
+        "npx",
+        "--yes",
+        "@playwright/mcp@0.0.85",
+        "--headless",
+        "--isolated",
+        "--browser",
+        "chrome",
+        "--no-webmcp"
+      ],
+      "sources": [
+        {
+          "kind": "release",
+          "lang": "EN",
+          "label": "Microsoft release · 9 November 2026",
+          "url": "https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.85"
+        },
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Microsoft · browser profiles and documented options",
+          "url": "https://github.com/microsoft/playwright-mcp"
+        },
+        {
+          "kind": "ci",
+          "lang": "EN",
+          "label": "Author tests on Windows, macOS and Ubuntu · 11 November",
+          "url": "https://github.com/microsoft/playwright-mcp/actions/runs/43074928448"
+        },
+        {
+          "kind": "firsthand",
+          "lang": "JA",
+          "label": "Japanese first-person profile comparison · 29 June 2026",
+          "url": "https://zenn.dev/ruri/articles/playwright-multi-session-isolation"
+        }
+      ],
+      "use": {
+        "lv": "Vislabāk der sava projekta tīmekļa pārbaudēm, kad jāatrod poga, jāpāriet uz nākamo lapu vai jāpārbauda salasāmība. Katram darbam var būt savs pārlūka profils.",
+        "en": "Best for testing your own web project when you need to find controls, navigate or inspect readable page content. Each job can have a fresh browser profile.",
+        "ru": "Подходит для проверки собственного сайта: найти кнопку, перейти на следующую страницу, проверить читаемость. Каждой задаче можно дать отдельный профиль браузера."
+      },
+      "start": {
+        "lv": "Vajag vietēju MCP klientu, Node.js 18 vai jaunāku un uzstādītu Chrome. Palaid ar --headless un --isolated. Klientā atļauj šim darbam vajadzīgās darbības, piemēram, lapas atvēršanu un tās struktūras nolasīšanu.",
+        "en": "Requires a local MCP client, Node.js 18 or later and installed Chrome. Launch with --headless and --isolated. Permit the operations the job needs in the client, such as navigation and reading a page snapshot.",
+        "ru": "Нужны локальный MCP-клиент, Node.js 18 или новее и установленный Chrome. Запускайте с --headless и --isolated. Разрешите в клиенте только нужные операции, например переход и чтение структуры страницы."
+      },
+      "limit": {
+        "lv": "Profils sākas bez tavas personiskās pieteikšanās. Standarta rīku saraksts ietver arī koda izpildi. --allowed-origins pats par sevi negarantē pilnīgu tīkla izolāciju. Izmanto savu uzticamu testa vietni un klienta rīku atļaujas.",
+        "en": "The new profile starts without your personal sign-in. The default tool list includes code execution. The project says --allowed-origins is not a complete network boundary. Use a trusted test site and client-side tool permissions.",
+        "ru": "Новый профиль не содержит личных сеансов входа. В стандартном наборе есть выполнение кода. Авторы указывают, что --allowed-origins не гарантирует полной сетевой изоляции. Используйте доверенный тестовый сайт и ограничения инструментов клиента."
+      },
+      "verified": {
+        "lv": "Linux vidē pārbaudījām MCP savienojumu un rīku sarakstu. Šajā vidē sistēma liedza Chromium izveidot ligzdu, tāpēc savu lapas testa rezultātu neuzrādām. Microsoft 11. novembra pārbaudēs Windows un macOS testi izturēti.",
+        "en": "Verified the MCP handshake and tool list on Linux. The host denied a Chromium socket, so our local test did not validate page rendering. Microsoft’s 11 November CI run passed on Windows and macOS.",
+        "ru": "В Linux проверены подключение MCP и список инструментов. Среда запретила Chromium создать сокет, поэтому локальный тест не подтвердил отображение страницы. 11 ноября проверки Microsoft прошли в Windows и macOS."
+      },
+      "community": {
+        "lv": "Japāņu praktiskajā salīdzinājumā autors atsevišķi pārbaudīja pārlūka procesu un pieteikšanās stāvokli. Paralēliem darbiem viņš iesaka skaidri izvēlēties izolētu profilu.",
+        "en": "A Japanese hands-on comparison tested browser processes and sign-in state separately. The author recommends explicitly selecting isolated profiles for parallel jobs.",
+        "ru": "В японском практическом разборе автор отдельно проверил процессы браузера и состояние входа. Для параллельных задач он рекомендует явно выбирать изолированный профиль."
+      },
+      "stars": {
+        "repository": "microsoft/playwright-mcp",
+        "count": 39515,
+        "checked": "2026-11-11",
+        "url": "https://api.github.com/repos/microsoft/playwright-mcp"
+      }
+    },
+    {
+      "key": "chrome-devtools",
+      "name": "Chrome DevTools MCP",
+      "rank": 3,
+      "version": "1.13.0",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "argv": [
+        "npx",
+        "--yes",
+        "chrome-devtools-mcp@1.13.0",
+        "--headless",
+        "--isolated",
+        "--slim",
+        "--no-javascript-evaluation",
+        "--no-file-navigations",
+        "--no-usage-statistics",
+        "--no-performance-crux",
+        "--allowed-url-pattern=<approved origin>/*"
+      ],
+      "sources": [
+        {
+          "kind": "release",
+          "lang": "EN",
+          "label": "Chrome DevTools release · 11 November 2026",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.13.0"
+        },
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Chrome DevTools MCP · configuration",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md"
+        },
+        {
+          "kind": "ci",
+          "lang": "EN",
+          "label": "Upstream Windows/macOS/Ubuntu test matrix · 11 November",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/43058501937"
+        },
+        {
+          "kind": "firsthand",
+          "lang": "EN",
+          "label": "macOS report about abrupt termination · 26 August 2026",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/issues/2621"
+        },
+        {
+          "kind": "firsthand",
+          "lang": "ZH",
+          "label": "Chinese practitioner’s test log · 21 October 2026",
+          "url": "https://friendlyai.top/projects/chrome-devtools-mcp/"
+        },
+        {
+          "kind": "ci",
+          "lang": "EN",
+          "label": "Later upstream pre-release run · macOS/Node 22 failure",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/43105363963"
+        }
+      ],
+      "use": {
+        "lv": "Izvēlies vienkāršai vizuālai pārbaudei. Ierobežots rīku komplekts var atvērt atļauto projekta lapu un uzņemt tās ekrānattēlu.",
+        "en": "Choose it for visual checks. A restricted tool set can navigate to an approved project page and take a screenshot.",
+        "ru": "Удобен для визуальной проверки. Ограниченный набор инструментов открывает разрешённую страницу проекта и делает снимок экрана."
+      },
+      "start": {
+        "lv": "Vajag lokālu MCP klientu, Node.js LTS (piemēram, 24) un Chrome. URL atļauju sarakstam nepieciešams Chrome 149 vai jaunāks. Norādi sava testa domēna vai precīza lokālā porta adresi un palaid atsevišķo profilu.",
+        "en": "Requires a local MCP client, Node.js LTS (for example 24) and Chrome. URL allowlisting requires Chrome 149 or newer. Specify your test site or the exact loopback origin and start a separate profile.",
+        "ru": "Нужны локальный MCP-клиент, Node.js LTS (например 24) и Chrome. Для списка разрешённых адресов нужен Chrome 149 или новее. Укажите собственный тестовый домен или точный локальный адрес с портом и запустите отдельный профиль."
+      },
+      "limit": {
+        "lv": "Šis profils ir īslaicīgs. Lai izmantotu jau atvērtu personisko cilni, būtu jāizvēlas cits režīms. Attēlos var būt privāti dati no pašas testa lapas. Aizver sesiju ar klienta apturēšanas darbību.",
+        "en": "This profile is temporary. Existing personal tabs belong to a different connection mode. Screenshots can contain private data displayed on the test page. Stop the session through the client.",
+        "ru": "Профиль временный. Для подключения к личной открытой вкладке нужен другой режим. Снимок может содержать частные данные, которые показывает сама тестовая страница. Завершайте сеанс через клиент."
+      },
+      "verified": {
+        "lv": "Linux vidē pārbaudījām 1.13.0 savienojumu. Ar norādītajiem ierobežojumiem serveris piedāvāja tieši divus rīkus: navigate un screenshot. Vietējā testa pārlūks netika palaists. Autoru Windows un macOS pārbaudes citā tās pašas dienas izpildē izturētas. Vēlāk tajā dienā citā pirmslaidiena izpildē neizturēja macOS tests ar Node 22.",
+        "en": "Connected to 1.13.0 on Linux. The restricted configuration exposed exactly two tools, navigate and screenshot. Our host could not start the test browser. The linked upstream run that day passed on Windows and macOS. A later pre-release run that day failed its macOS/Node 22 job.",
+        "ru": "В Linux установлено соединение с 1.13.0. При указанных ограничениях сервер предоставил ровно два инструмента: navigate и screenshot. В нашей среде браузер не запустился. По ссылке приведён успешный прогон авторов в Windows и macOS за ту же дату. В более позднем предрелизном прогоне в тот же день проверка macOS с Node 22 не прошла."
+      },
+      "community": {
+        "lv": "macOS lietotājs ziņoja, ka pēc servera avārijas var palikt atvērts testa Chrome process. Ķīniešu autors atsevišķi aprakstīja praktisku pārbaudi Debian vidē un precīzi norādīja neizmēģinātās iespējas.",
+        "en": "A macOS user reported a test Chrome process persisting after abnormal server termination. A Chinese practitioner separately published a Debian test log and identified the modes they did not test.",
+        "ru": "Пользователь macOS сообщил, что после аварийного завершения сервера мог остаться тестовый процесс Chrome. Китайский автор отдельно опубликовал результаты проверки в Debian и перечислил непроверенные режимы."
+      },
+      "stars": {
+        "repository": "ChromeDevTools/chrome-devtools-mcp",
+        "count": 55113,
+        "checked": "2026-11-11",
+        "url": "https://api.github.com/repos/ChromeDevTools/chrome-devtools-mcp"
+      }
+    },
+    {
+      "key": "git-worktree",
+      "name": "Git worktree + bundle",
+      "rank": 4,
+      "version": "Git CLI · tested 2.52.0",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "argv": [],
+      "sources": [
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Git worktree manual",
+          "url": "https://git-scm.com/docs/git-worktree"
+        },
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Git bundle manual",
+          "url": "https://git-scm.com/docs/git-bundle"
+        },
+        {
+          "kind": "primary",
+          "lang": "EN",
+          "label": "Git desktop downloads",
+          "url": "https://git-scm.com/downloads"
+        },
+        {
+          "kind": "firsthand",
+          "lang": "DE",
+          "label": "German practical two-role experiment · 9 September 2026",
+          "url": "https://www.bitblokes.de/ki-agenten-git-worktrees/"
+        }
+      ],
+      "use": {
+        "lv": "Projekta failiem, kurus vari nodot starp sesijām bez dzīva savienojuma. Katrs uzdevums saņem savu darba kopiju un zaru. Uz citu datoru var pārnest saglabāto izmaiņu pakotni.",
+        "en": "Use for handing project files between sessions without a live connection. Each job gets a separate checkout and branch. A bundle carries the committed changes to another computer.",
+        "ru": "Для передачи проектных файлов между сеансами без постоянного подключения. Каждая задача получает отдельную рабочую копию и ветку. Пакет переносит сохранённые в Git изменения на другой компьютер."
+      },
+      "start": {
+        "lv": "Vajag Git un atsevišķu projektu ar vismaz vienu saglabātu versiju. Dod katram darbam savu zaru. Pirms nodošanas pārbaudi pakotni ar git bundle verify un izmēģini atvēršanu jaunā mapē.",
+        "en": "Requires Git and a dedicated project with an initial commit. Assign a separate branch per job. Verify the bundle with git bundle verify and test opening it in a new folder.",
+        "ru": "Нужны Git и отдельный проект хотя бы с одним коммитом. Выделите каждой задаче отдельную ветку. Перед передачей проверьте пакет командой git bundle verify и откройте его в новой папке."
+      },
+      "limit": {
+        "lv": "Darba kopijām ir kopīga Git objektu glabātava. Pilnā zara pakotnē var būt tā iepriekšējā vēsture. Dalīšanai veido atsevišķu repozitoriju tikai ar izvēlētajiem failiem. Šis ceļš pats nedod iespēju vadīt datoru, programmas vai peli.",
+        "en": "Worktrees share the Git object store. A full branch bundle may include its earlier history. For sharing, create a dedicated repository containing only selected files. This route does not give control over the device, apps or mouse.",
+        "ru": "Рабочие копии используют общую базу объектов Git. Полный пакет ветки может включать её историю. Для передачи создайте отдельный репозиторий только с выбранными файлами. Этот способ не даёт управления устройством, приложениями или мышью."
+      },
+      "verified": {
+        "lv": "Linux vidē izveidojām divas darba kopijas. Vienas izmaiņas atstāja otru neskartu. Pārbaudījām pakotni un no tās atjaunojām to pašu komitu un identiskus faila baitus.",
+        "en": "On Linux we made two worktrees, changed one and confirmed the other was untouched. We verified the bundle and cloned the same commit and file bytes from it.",
+        "ru": "В Linux создали две рабочие копии. Изменение в первой не затронуло вторую. Проверенный пакет восстановил тот же коммит и точную копию файла."
+      },
+      "community": {
+        "lv": "Vācu autoru izmēģinājumā divu darbu izmaiņas pārbaudītas atsevišķās mapēs. Izmēģinājumā abu darba lomas atveidoja ar failu izmaiņām.",
+        "en": "A German practical test checked two jobs in separate folders. The authors simulated the workers through controlled file changes.",
+        "ru": "В немецком практическом опыте две задачи проверили в отдельных папках. Авторы воспроизвели действия исполнителей контролируемыми изменениями файлов."
+      },
+      "stars": {
+        "repository": "git/git",
+        "count": 64269,
+        "checked": "2026-11-11",
+        "url": "https://api.github.com/repos/git/git"
+      }
+    }
+  ],
+  "starsScope": {
+    "lv": "Zvaigžņu skaits attiecas uz visu GitHub repozitoriju, arī oficiālā failu servera kolekcijai un Git spogulim. Tas nav cilvēku vai instalāciju skaits.",
+    "en": "Stars refer to the whole GitHub repository, including the multi-server collection and the Git mirror. They are not installation or user counts.",
+    "ru": "Звёзды относятся ко всему репозиторию GitHub, включая коллекцию серверов и зеркало Git. Это не число пользователей или установок."
+  }
+}

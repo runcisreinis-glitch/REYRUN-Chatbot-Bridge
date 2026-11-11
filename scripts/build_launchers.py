@@ -16,9 +16,6 @@ def archive(files):
 files=[(p.name,p.read_bytes(),0o100644) for p in sorted((root/'scripts').glob('*.cjs'))]
 payload=archive(files);encoded=base64.b64encode(payload).decode();digest=hashlib.sha256(payload).hexdigest()
 ps=r"""$ErrorActionPreference='Stop'
-# Windows PowerShell may inherit PowerShell 7's module path when launched from a terminal or CI.
-$stockModules=[IO.Path]::Combine($PSHOME,'Modules')
-$env:PSModulePath=$stockModules+[IO.Path]::PathSeparator+$env:PSModulePath
 function Get-StarterDigest([string]$path){
   $hash=[Security.Cryptography.SHA256]::Create()
   try {
@@ -79,6 +76,8 @@ def win(mode):
  # Keep the commands in a local marker block within this same file, readable in any text editor.
  head="""@echo off
 setlocal
+rem Let Windows PowerShell discover its own built-in modules when started from PowerShell 7.
+set "PSModulePath="
 set "REYRUN_START_FILE=%~f0"
 powershell.exe -NoProfile -Command "$src=[IO.File]::ReadAllLines($env:REYRUN_START_FILE);$a=[array]::IndexOf($src,':BEGIN_POWERSHELL');$b=[array]::IndexOf($src,':END_POWERSHELL');if($a -lt 0 -or $b -le $a){exit 2};& ([scriptblock]::Create(($src[($a+1)..($b-1)] -join [Environment]::NewLine)))"
 set "REYRUN_RESULT=%ERRORLEVEL%"
