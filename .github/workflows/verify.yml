@@ -1,0 +1,32 @@
+name: Native first-run checks
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    name: First launch and resume on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run launcher in a fresh, isolated user fixture
+        run: node tests/native-first-run.cjs
+      - name: Verify first run without system Node and reuse the private runtime
+        run: node tests/native-first-run.cjs --bootstrap
+      - name: Check real file and isolated browser profiles with a blank page
+        run: node tests/native-first-run.cjs --profiles
