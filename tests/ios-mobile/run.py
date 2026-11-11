@@ -71,7 +71,8 @@ def exercise(temp, http_port):
     shutil.copyfile(HERE / "scenario.js", app / "scenario.js")
     run("xcrun", "--sdk", "iphonesimulator", "clang", "-fobjc-arc", "-target",
         platform.machine() + "-apple-ios16.0-simulator", "-isysroot", run("xcrun", "--sdk", "iphonesimulator", "--show-sdk-path"),
-        "-framework", "UIKit", "-framework", "WebKit", "-framework", "Foundation", str(HERE / "Smoke.m"), "-o", str(app / "Smoke"))
+        "-framework", "UIKit", "-framework", "WebKit", "-framework", "Foundation", "-framework", "CoreGraphics",
+        str(HERE / "Smoke.m"), "-o", str(app / "Smoke"))
     run("codesign", "--force", "--sign", "-", str(app))
     sim = partial(run, "xcrun", "simctl")
     device = sim("create", "REYRUN smoke " + uuid.uuid4().hex[:8], device_type, runtime)
