@@ -18,9 +18,15 @@
 
 [Скачать файл запуска для RDR2](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/en/install/)
 
+## Пользуетесь ChatGPT в браузере?
+
+[Запуск для ChatGPT на Windows](https://mcp.desktopcommander.app/remote-windows.cmd) · [Открыть подключение в ChatGPT](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
+
+Чтобы ChatGPT работал с файлами Windows, начните с официального файла запуска Desktop Commander. Если компьютер уже подключён, откройте приложение в ChatGPT и попросите прочитать один тестовый файл. При первом подключении сверьте и подтвердите код устройства в своём аккаунте. В ноябре 2026 года бесплатный план включает 10 000 обращений к инструментам в месяц. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+
 ## Выберите мост для своей задачи
 
-Сначала идут инструменты с ограниченным доступом для работы в фоне. Далее — специализированные средства и обмен файлами. Звёзды GitHub отражают интерес к конкретному репозиторию. Откройте карточку, чтобы увидеть версию, результат проверки и источники.
+Сначала идут инструменты с ограниченным доступом для работы в фоне. Далее — специализированные средства и обмен файлами. Звёзды GitHub отражают интерес к конкретному репозиторию. Откройте карточку, чтобы увидеть версию, результат проверки и источники. На телефоне пример проверяет один файл. LocalSend, Nextcloud и команды Apple помогают передавать файлы между уже настроенными приложениями. Полного управления экраном телефона эти варианты не дают.
 
 1. **Filesystem MCP · 2.3.0** (Windows, macOS) — Подходит для файлов в выбранной рабочей папке. Помощник может упорядочить проект и скопировать файлы без изменения их содержимого. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 2. **REYRUN Task Bridge · 1.0.0** (Windows, macOS) — Передайте следующему чату точную точку остановки. У каждого задания своя история версий. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)

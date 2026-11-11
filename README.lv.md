@@ -18,9 +18,15 @@ Lejupielādē un atver Windows palaidēju. Tas meklē spēli Steam, Rockstar un 
 
 [Lejupielādēt RDR2 palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Atvērt tulkojuma instrukciju](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/uzstadisana/)
 
+## Vai lieto ChatGPT pārlūkā?
+
+[Windows palaidējs ChatGPT](https://mcp.desktopcommander.app/remote-windows.cmd) · [Atvērt ChatGPT savienotāju](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
+
+Lai ChatGPT varētu strādāt ar Windows failiem, iedod tam Desktop Commander oficiālo palaidēju. Ja tavs dators jau piesaistīts, atver savienotāju un palūdz nolasīt vienu testa failu. Pirmajā reizē savienojumu apstiprini savā kontā, salīdzinot ierīces kodu. Bezmaksas plāns 2026. gada novembrī ietver 10 000 rīku izsaukumu mēnesī. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Bezmaksas plāns](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+
 ## Izvēlies savam darbam piemērotu tiltu
 
-Vispirms ir risinājumi ar šauru piekļuvi, kurus var izmēģināt fonā. Tālāk ir specializēti rīki un failu apmaiņa. GitHub zvaigznes rāda interesi par konkrēto repozitoriju. Atver kartīti, lai apskatītu pārbaudi, versiju un avotus.
+Vispirms ir risinājumi ar šauru piekļuvi, kurus var izmēģināt fonā. Tālāk ir specializēti rīki un failu apmaiņa. GitHub zvaigznes rāda interesi par konkrēto repozitoriju. Atver kartīti, lai apskatītu pārbaudi, versiju un avotus. Telefonā paraugs pārbauda vienu failu. LocalSend, Nextcloud un Apple komandas palīdz nodot failus starp jau savienotām lietotnēm. Pilnas telefona ekrāna vadības šie varianti nedod.
 
 1. **Filesystem MCP · 2.3.0** (Windows, macOS) — Vislabāk der failu sagatavošanai vienā darba mapē. MI palīgs var sakārtot projektu un pārkopēt failus, saglabājot to baitus. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 2. **REYRUN Task Bridge · 1.0.0** (Windows, macOS) — Nodod nākamajam čatam precīzi to vietu, kur darbs apstājās. Katram darbam ir sava pierakstu vēsture. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)

@@ -6,6 +6,12 @@
 
 Скачайте и откройте файл. Он подключит рабочую папку к уже установленному Claude Desktop. Полностью закройте и снова откройте приложение, когда вам удобно. Для обычного веб-чата откройте пример в браузере. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
 
+## Пользуетесь ChatGPT в браузере?
+
+[Запуск для ChatGPT на Windows](https://mcp.desktopcommander.app/remote-windows.cmd) · [Открыть подключение в ChatGPT](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
+
+Чтобы ChatGPT работал с файлами Windows, начните с официального файла запуска Desktop Commander. Если компьютер уже подключён, откройте приложение в ChatGPT и попросите прочитать один тестовый файл. При первом подключении сверьте и подтвердите код устройства в своём аккаунте. В ноябре 2026 года бесплатный план включает 10 000 обращений к инструментам в месяц. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+
 ## Проверка после запуска
 
 Для Filesystem вызовите list_allowed_directories. Создайте тестовый файл в показанной папке и прочитайте его. Если содержимое отличается, остановите установку. Для Task Bridge вызовите bridge_status и read_checkpoint. Для первого save_checkpoint используйте revision 0. После обрыва связи вызовите read_checkpoint с прежним именем задания.
@@ -22,7 +28,9 @@ Windows, macOS. Подходит для файлов в выбранной ра�
 
 Для сеанса чтения добавьте --read-only. Проверьте, существует ли файл назначения. Команда copy_file откажется его перезаписывать. Обычный веб-чат без локального подключения может вести пользователя по шагам.
 
-[Filesystem MCP · tools and directory rules](https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md) · [Filesystem 2.3.0 release](https://github.com/modelcontextprotocol/servers/releases/tag/v2.4.0) · [Desktop client setup for Windows and macOS](https://modelcontextprotocol.io/docs/develop/connect-local-servers) · [User report on effective roots, 16 March 2026](https://github.com/modelcontextprotocol/servers/issues/3602) · [GitHub · modelcontextprotocol/servers](https://api.github.com/repos/modelcontextprotocol/servers) · [Windows · JSON](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/windows-filesystem.json)
+**Параллельная работа.** Назначьте одного автора для каждой папки. Разным папкам можно дать отдельные подключения.
+
+[Filesystem MCP · tools and directory rules](https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md) · [Filesystem 2.3.0 release](https://github.com/modelcontextprotocol/servers/releases/tag/v2.4.0) · [Desktop client setup for Windows and macOS](https://modelcontextprotocol.io/docs/develop/connect-local-servers) · [User report on effective roots, 16 March 2026](https://github.com/modelcontextprotocol/servers/issues/3602) · [GitHub · modelcontextprotocol/servers](https://api.github.com/repos/modelcontextprotocol/servers) · [Windows · JSON](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/windows-filesystem.json) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
 ## 2. REYRUN Task Bridge · 1.0.0
 
@@ -36,7 +44,9 @@ Windows, macOS. Передайте следующему чату точную т
 
 Профиль сохраняет записи заданий. Для копирования файлов выберите Filesystem.
 
-[Windows · JSON](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/reinis.json) · [4 × stdio](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/parallel.json)
+**Параллельная работа.** Проверены четыре параллельных клиента и восстановление пяти задач.
+
+[Windows · JSON](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/reinis.json) · [4 × stdio](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/parallel.json) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
 ## 3. Microsoft Playwright MCP · 0.0.85
 
@@ -44,13 +54,15 @@ Windows, macOS. Подходит для проверки собственног�
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-macOS.command.zip)
 
-**Проверка.** В Linux проверены подключение MCP и список инструментов. Среда запретила Chromium создать сокет, поэтому локальный тест не подтвердил отображение страницы. 11 ноября проверки Microsoft прошли в Windows и macOS.
+**Проверка.** На Windows и macOS наш файл запуска открыл отдельный процесс Chrome и передал снимок экрана клиенту чата. Проверка распаковала пиксели PNG. Для испытания открывалась пустая страница.
 
 **Опыт за 2026 год.** В японском практическом разборе автор отдельно проверил процессы браузера и состояние входа. Для параллельных задач он рекомендует явно выбирать изолированный профиль.
 
 Новый профиль не содержит личных сеансов входа. В стандартном наборе есть выполнение кода. Авторы указывают, что --allowed-origins не гарантирует полной сетевой изоляции. Используйте доверенный тестовый сайт и ограничения инструментов клиента.
 
-[Microsoft release · 9 November 2026](https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.85) · [Microsoft · browser profiles and documented options](https://github.com/microsoft/playwright-mcp) · [Author tests on Windows, macOS and Ubuntu · 11 November](https://github.com/microsoft/playwright-mcp/actions/runs/43074928448) · [Japanese first-person profile comparison · 29 June 2026](https://zenn.dev/ruri/articles/playwright-multi-session-isolation) · [GitHub · microsoft/playwright-mcp](https://api.github.com/repos/microsoft/playwright-mcp)
+**Параллельная работа.** Каждому параллельному сеансу нужны свой процесс и профиль. В нашем тесте открывался один на каждую ОС.
+
+[Microsoft release · 9 November 2026](https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.85) · [Microsoft · browser profiles and documented options](https://github.com/microsoft/playwright-mcp) · [Author tests on Windows, macOS and Ubuntu · 11 November](https://github.com/microsoft/playwright-mcp/actions/runs/43074928448) · [Japanese first-person profile comparison · 29 June 2026](https://zenn.dev/ruri/articles/playwright-multi-session-isolation) · [GitHub · microsoft/playwright-mcp](https://api.github.com/repos/microsoft/playwright-mcp) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
 ## 4. Chrome DevTools MCP · 1.13.0
 
@@ -58,13 +70,15 @@ Windows, macOS. Удобен для визуальной проверки. Ог�
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-macOS.command.zip)
 
-**Проверка.** В Linux установлено соединение с 1.13.0. При указанных ограничениях сервер предоставил ровно два инструмента: navigate и screenshot. В нашей среде браузер не запустился. По ссылке приведён успешный прогон авторов в Windows и macOS за ту же дату. В более позднем предрелизном прогоне в тот же день проверка macOS с Node 22 не прошла.
+**Проверка.** На Windows и macOS наш файл запуска открыл отдельный процесс Chrome и передал снимок экрана клиенту чата. Проверка распаковала пиксели PNG. Для испытания открывалась пустая страница.
 
 **Опыт за 2026 год.** Пользователь macOS сообщил, что после аварийного завершения сервера мог остаться тестовый процесс Chrome. Китайский автор отдельно опубликовал результаты проверки в Debian и перечислил непроверенные режимы.
 
 Профиль временный. Для подключения к личной открытой вкладке нужен другой режим. Снимок может содержать частные данные, которые показывает сама тестовая страница. Завершайте сеанс через клиент.
 
-[Chrome DevTools release · 11 November 2026](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.13.0) · [Chrome DevTools MCP · configuration](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md) · [Upstream Windows/macOS/Ubuntu test matrix · 11 November](https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/43058501937) · [macOS report about abrupt termination · 26 August 2026](https://github.com/ChromeDevTools/chrome-devtools-mcp/issues/2621) · [Chinese practitioner’s test log · 21 October 2026](https://friendlyai.top/projects/chrome-devtools-mcp/) · [Later upstream pre-release run · macOS/Node 22 failure](https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/43105363963) · [GitHub · ChromeDevTools/chrome-devtools-mcp](https://api.github.com/repos/ChromeDevTools/chrome-devtools-mcp)
+**Параллельная работа.** В каждом сеансе свой процесс Chrome. В общем профиле вкладки могут смешиваться.
+
+[Chrome DevTools release · 11 November 2026](https://github.com/ChromeDevTools/chrome-devtools-mcp/releases/tag/chrome-devtools-mcp-v1.13.0) · [Chrome DevTools MCP · configuration](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md) · [Upstream Windows/macOS/Ubuntu test matrix · 11 November](https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/43058501937) · [macOS report about abrupt termination · 26 August 2026](https://github.com/ChromeDevTools/chrome-devtools-mcp/issues/2621) · [Chinese practitioner’s test log · 21 October 2026](https://friendlyai.top/projects/chrome-devtools-mcp/) · [Later upstream pre-release run · macOS/Node 22 failure](https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/43105363963) · [GitHub · ChromeDevTools/chrome-devtools-mcp](https://api.github.com/repos/ChromeDevTools/chrome-devtools-mcp) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
 ## 5. Desktop Commander · Remote / Local
 
@@ -77,6 +91,8 @@ Windows, macOS. Работает с файлами и сеансами терм�
 **Опыт за 2026 год.** 13 октября 2026 года пользователь Windows с версией 0.2.52 сообщил, что start_process выводит окна консоли на передний план. 3 ноября другой пользователь с версией 0.3.1 сообщил о периодических тайм-аутах примерно через 60 секунд, хотя устройство отображалось в сети. Это отдельные случаи. В нашем тесте обмен файлами прошёл успешно.
 
 Файл запуска использует локальный пакет 0.3.2. Remote 0.3.0 — отдельный сервис с привязкой. Элементы интерфейса проверяйте в профиле браузера.
+
+**Параллельная работа.** Проверена передача файла между двумя инструментами. Предел числа одновременных чатов на устройстве не измерялся.
 
 [local](https://github.com/wonderwhy-er/DesktopCommanderMCP) · [remote](https://github.com/desktop-commander/remote-desktop-commander) · [help](https://desktopcommander.app/help/getting-started/what-is-desktop-commander) · [reportFocus](https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/852) · [reportTimeout](https://github.com/desktop-commander/remote-desktop-commander/issues/90)
 
@@ -92,6 +108,8 @@ Windows. Репозиторий проекта на GitHub создали в о�
 
 Это личный мост Рейниса для Windows. Программа запуска в этом проекте создаёт отдельное локальное подключение к выбранной вами папке. Она не устанавливает личный мост Рейниса и не даёт доступа к его компьютеру.
 
+**Параллельная работа.** Один интерактивный рабочий стол. Два фоновых задания выполнялись одновременно 5,011 секунды.
+
 [REYRUN · Windows](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/reinis.json)
 
 ## 7. Git worktree + bundle · Git CLI · tested 2.52.0
@@ -106,6 +124,8 @@ Windows, macOS. Для передачи проектных файлов межд
 
 Рабочие копии используют общую базу объектов Git. Полный пакет ветки может включать её историю. Для передачи создайте отдельный репозиторий только с выбранными файлами. Этот способ не даёт управления устройством, приложениями или мышью.
 
+**Параллельная работа.** Проверены две рабочие копии, каждая в своей ветке.
+
 [Git worktree manual](https://git-scm.com/docs/git-worktree) · [Git bundle manual](https://git-scm.com/docs/git-bundle) · [Git desktop downloads](https://git-scm.com/downloads) · [German practical two-role experiment · 9 September 2026](https://www.bitblokes.de/ki-agenten-git-worktrees/) · [GitHub · git/git](https://api.github.com/repos/git/git)
 
 ## 8. REYRUN · Web Crypto
@@ -114,13 +134,15 @@ Windows, macOS, Android, iOS. Откройте готовый скрипт в б
 
 [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
 
-**Проверка.** В примере «REYRUN» и «Rīga» 13 байт и две строки. Результат содержит контрольную сумму SHA-256.
+**Проверка.** На эмуляторе Android 15 одно касание обработало опубликованный пример без изменений. WebView 124.0.6367.219 вернул 13 байт, две строки и ожидаемую SHA-256. В предварительном просмотре Chrome получили тот же результат. В симуляторе iPhone SE с iOS 18.5 и WebKit кнопка примера дала тот же результат. Неподдерживаемое действие было отклонено. Испытания прошли на виртуальных устройствах.
 
-**Опыт за 2026 год.** Собственная проверка REYRUN, ноябрь 2026 года.
+**Опыт за 2026 год.** Независимых отзывов о новой демонстрации пока нет.
 
 Это квитанция для одного файла. Чтобы чат объяснил ошибку, отдельно приложите нужный фрагмент текста.
 
-[REYRUN](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/tree/main/web/start)
+**Параллельная работа.** У каждого задания свой файл или квитанция. Меню отправки телефона обслуживает одно действие за раз.
+
+[REYRUN](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/tree/main/web/start) · [MDN · File API](https://developer.mozilla.org/en-US/docs/Web/API/File_API) · [MDN · SubtleCrypto.digest](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) · [Android 15 · WebView · 2026-11-11](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121791094/job/130863821353) · [iPhone SE · iOS 18.5 · WebKit](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121668999/job/130863410709)
 
 ## 9. LocalSend
 
@@ -128,13 +150,15 @@ Windows, macOS, Android, iOS. Перешлите готовый файл на д
 
 [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
 
-**Проверка.** Проект выпускает приложения для всех четырёх платформ. Версия 1.18.2 вышла 21 августа 2026 года.
+**Проверка.** Передача между двумя устройствами здесь не проверялась. Передайте mobile-request.json и сравните ID и хеш квитанции с результатом нашей страницы.
 
-**Опыт за 2026 год.** В августе разработчики добавили на Android фоновую передачу и проверку контрольной суммы.
+**Опыт за 2026 год.** 25 июня 2026 года xueyexiao на китайском описал, как на Redmi K70 передал файл через меню файлового менеджера, когда у выбора файла в LocalSend не было доступа.
 
 Нужны два соединённых устройства с LocalSend. Выберите файл и получателя.
 
-[LocalSend](https://localsend.org/download) · [2026 · Changelog](https://localsend.org/changelog)
+**Параллельная работа.** У каждого задания свой файл или квитанция. Меню отправки телефона обслуживает одно действие за раз.
+
+[LocalSend](https://localsend.org/download) · [2026 · Changelog](https://localsend.org/changelog) · [xueyexiao · Redmi K70 · 中文](https://github.com/localsend/localsend/discussions/835) · [REYRUN · mobile-request.json](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-request.json)
 
 ## 10. Nextcloud Files
 
@@ -142,13 +166,15 @@ Windows, macOS, Android, iOS. Сохраните подготовленный ч
 
 [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
 
-**Проверка.** Официальные приложения передают файлы через уже подключённую учётную запись Nextcloud.
+**Проверка.** В этой сессии частный сервер не подключали. Проверьте ID и хеш файла, полученного на втором устройстве.
 
-**Опыт за 2026 год.** Пользователи iOS описали загрузки без видимого прогресса. Проверьте полученный файл на втором устройстве, прежде чем продолжать.
+**Опыт за 2026 год.** 28 апреля 2026 года Sanook на немецком описал загрузку фотографии с Android, которая долго ждала в очереди и затем завершилась. В отчёте речь шла о фотографии.
 
 Выбирайте, если у вас уже есть учётная запись и папка. Создание сервера — отдельная задача.
 
-[Nextcloud](https://nextcloud.com/install/) · [iOS · 2026](https://github.com/nextcloud/ios/issues)
+**Параллельная работа.** У каждого задания свой файл или квитанция. Меню отправки телефона обслуживает одно действие за раз.
+
+[Nextcloud](https://nextcloud.com/install/) · [iOS · 2026](https://github.com/nextcloud/ios/issues) · [Sanook · Android · Deutsch](https://help.nextcloud.com/t/android-client-warte-auf-hochladen/217584/18) · [REYRUN · mobile-request.json](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-request.json)
 
 ## 11. Termux
 
@@ -156,13 +182,15 @@ Android. Проверьте готовый скрипт в закрытой па
 
 [Готовый скрипт для Termux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-termux.sh)
 
-**Проверка.** Скрипт работает без сети, создаёт образец и печатает контрольную сумму. Проверено выполнение в POSIX-оболочке.
+**Проверка.** Дважды запущен через sh в Linux. Созданы две отдельные папки и две квитанции с ожидаемым хешем. Запуск на Android здесь не проверялся.
 
-**Опыт за 2026 год.** В июне пользователь Android 15 сообщил об остановке длительных фоновых процессов. Короткий пример сразу сохраняет квитанцию.
+**Опыт за 2026 год.** 30 апреля 2026 года slondr сообщил о зависании выбора файла на Pixel 9a с Android 16. В той же ветке разработчик сообщил об успешной проверке на двух Samsung.
 
 Используйте при уже установленном Termux. Для обычного чата самый простой старт — веб-пример.
 
-[Termux](https://github.com/termux/termux-app) · [Android 15 · #5150](https://github.com/termux/termux-app/issues/5150)
+**Параллельная работа.** У каждого задания свой файл или квитанция. Меню отправки телефона обслуживает одно действие за раз.
+
+[Termux](https://github.com/termux/termux-app) · [Android 15 · #5150](https://github.com/termux/termux-app/issues/5150) · [Termux · Installation](https://github.com/termux/termux-app#installation) · [Termux:API](https://github.com/termux/termux-api) · [slondr · Pixel 9a · English](https://github.com/termux/termux-app/issues/5101)
 
 ## 12. Apple Shortcuts
 
@@ -170,13 +198,15 @@ iOS, macOS. Передайте файл уже настроенной коман
 
 [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
 
-**Проверка.** Apple документирует получение файлов из другого приложения iPhone. Веб-пример предложит поделиться квитанцией, если устройство это поддерживает.
+**Проверка.** Эта последовательность здесь не проверялась на физическом iPhone. Откройте phone-test.txt в «Файлах» и убедитесь, что он содержит REYRUN-OK.
 
-**Опыт за 2026 год.** Руководство Apple для iOS 26 указывает, что появление команды в меню зависит от поддерживаемого типа данных.
+**Опыт за 2026 год.** 28 января 2026 года японский автор anyprogram описал команду для создания и сохранения TXT на iPhone и iPad. В режиме редактирования она перезаписывает выбранный файл.
 
 Нужна ранее добавленная команда, принимающая файлы. Веб-пример можно попробовать сразу.
 
-[Apple · iPhone](https://support.apple.com/guide/shortcuts/launch-a-shortcut-from-another-app-apd163eb9f95/ios) · [Apple · Share](https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios)
+**Параллельная работа.** У каждого задания свой файл или квитанция. Меню отправки телефона обслуживает одно действие за раз.
+
+[Apple · iPhone](https://support.apple.com/guide/shortcuts/launch-a-shortcut-from-another-app-apd163eb9f95/ios) · [Apple · Share](https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios) · [Apple · Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios) · [anyprogram · iPhone/iPad · 日本語](https://qiita.com/anyprogram/items/6cc1394569c687ed506c) · [iPhone 16 Pro Max · 2026](https://github.com/net00-1/SW-DLT/issues/133) · [REYRUN · mobile-request.json](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-request.json)
 
 ## Установите латышский перевод RDR2
 
@@ -197,3 +227,24 @@ iOS, macOS. Передайте файл уже настроенной коман
 ## Как разобраться в ошибке программы?
 
 Положите копию журнала ошибок программы в рабочую папку REYRUN. Попросите ИИ прочитать и объяснить последнюю ошибку. В обычный веб-чат приложите только нужный фрагмент. Веб-пример сообщает контрольную сумму и число строк. Сам текст остаётся на устройстве.
+
+## Где клиент читает настройки подключения?
+
+На Windows готовый файл запуска ищет существующий профиль Claude Desktop в %APPDATA%/Claude, на Mac — в ~/Library/Application Support/Claude. В claude_desktop_config.json добавляется выбранная запись reyrun-… и создаётся копия прежнего файла. Если клиента нет, START.txt укажет веб-пример. Для другого клиента с локальным MCP используйте сгенерированный runtime/reyrun-…-client.json. В нём указан путь к исполняемому файлу именно на этом компьютере.
+
+## Пример передачи задачи
+
+Сохраните последний проверенный результат и один следующий шаг. Новый чат с тем же локальным профилем может вызвать read_checkpoint с прежним job. В обычный веб-чат вставьте запись и приложите нужный файл. Управление окном игры и запросами разрешений оставьте одной сессии.
+
+
+```json
+{
+  "name": "save_checkpoint",
+  "arguments": {
+    "job": "game-check",
+    "revision": 0,
+    "done": "Тестовый файл прочитан без изменений.",
+    "next": "Проверь выбранную папку игры."
+  }
+}
+```

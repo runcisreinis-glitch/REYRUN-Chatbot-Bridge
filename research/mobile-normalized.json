@@ -13,14 +13,14 @@
       "ru": "Откройте готовый скрипт в браузере и одним касанием проверьте пример либо выберите текстовый файл."
     },
     "verified": {
-      "lv": "Paraugs «REYRUN» un «Rīga» satur 13 baitus divās rindās. Rezultātā ir SHA-256 kontrolsumma.",
-      "en": "The “REYRUN” and “Rīga” sample contains 13 bytes across two lines. Its receipt includes a SHA-256 checksum.",
-      "ru": "В примере «REYRUN» и «Rīga» 13 байт и две строки. Результат содержит контрольную сумму SHA-256."
+      "lv": "Android 15 emulatorā viens pieskāriens ekrānam apstrādāja nemainīto publisko paraugu. WebView 124.0.6367.219 atdeva 13 baitus, 2 rindas un paredzēto SHA-256. Tādu pašu rezultātu ieguvām Chrome priekšskatījumā. iPhone SE simulatorā ar iOS 18.5 un WebKit parauga poga deva to pašu rezultātu. Neatbalstīta darbība tika noraidīta. Tās ir operētājsistēmu simulācijas.",
+      "en": "On the Android 15 emulator a single screen tap processed the unchanged public sample. WebView 124.0.6367.219 returned 13 bytes, two lines and the expected SHA-256. A Chrome preview gave the same result. In an iPhone SE simulator running iOS 18.5 and WebKit the sample button gave the same result. An unsupported action was rejected. These runs used simulated devices.",
+      "ru": "На эмуляторе Android 15 одно касание обработало опубликованный пример без изменений. WebView 124.0.6367.219 вернул 13 байт, две строки и ожидаемую SHA-256. В предварительном просмотре Chrome получили тот же результат. В симуляторе iPhone SE с iOS 18.5 и WebKit кнопка примера дала тот же результат. Неподдерживаемое действие было отклонено. Испытания прошли на виртуальных устройствах."
     },
     "community": {
-      "lv": "Pašas REYRUN pārbaude, 2026. gada novembris.",
-      "en": "REYRUN project check, November 2026.",
-      "ru": "Собственная проверка REYRUN, ноябрь 2026 года."
+      "lv": "Šai jaunajai demonstrācijai neatkarīgu lietotāju atsauksmju vēl nav.",
+      "en": "We have no independent user reports about this new demo yet.",
+      "ru": "Независимых отзывов о новой демонстрации пока нет."
     },
     "limit": {
       "lv": "Šis ir viena faila apliecinājums. Lai čats izlasītu kļūdas tekstu, iedod tam vajadzīgo fragmentu.",
@@ -31,6 +31,24 @@
       {
         "label": "REYRUN",
         "url": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/tree/main/web/start"
+      },
+      {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_API",
+        "date": "",
+        "label": "MDN · File API"
+      },
+      {
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest",
+        "date": "",
+        "label": "MDN · SubtleCrypto.digest"
+      },
+      {
+        "label": "Android 15 · WebView · 2026-11-11",
+        "url": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121791094/job/130863821353"
+      },
+      {
+        "label": "iPhone SE · iOS 18.5 · WebKit",
+        "url": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121668999/job/130863410709"
       }
     ],
     "launch": "mobile"
@@ -49,14 +67,14 @@
       "ru": "Перешлите готовый файл на другое устройство в своей сети Wi-Fi."
     },
     "verified": {
-      "lv": "Projekts piedāvā lietotnes visām četrām platformām. 1.18.2 izlaidums datēts ar 2026. gada 21. augustu.",
-      "en": "The project ships apps for all four platforms. Release 1.18.2 is dated 21 August 2026.",
-      "ru": "Проект выпускает приложения для всех четырёх платформ. Версия 1.18.2 вышла 21 августа 2026 года."
+      "lv": "Šeit divu ierīču pārsūtīšana nav izmēģināta. Pašpārbaudei nosūti mobile-request.json, tad salīdzini ID un kontrolsummu mūsu lapā.",
+      "en": "We did not test a two-device transfer here. Send mobile-request.json to the other device and compare the receipt ID and digest with our page.",
+      "ru": "Передача между двумя устройствами здесь не проверялась. Передайте mobile-request.json и сравните ID и хеш квитанции с результатом нашей страницы."
     },
     "community": {
-      "lv": "Augustā izstrādātāji pievienoja Android failu pārsūtīšanu fonā un kontrolsummu pārbaudi.",
-      "en": "In August the developers added background transfers on Android and transfer checksums.",
-      "ru": "В августе разработчики добавили на Android фоновую передачу и проверку контрольной суммы."
+      "lv": "25.06.2026. xueyexiao ķīniešu valodā aprakstīja, kā Redmi K70 failu nosūtīja no Android failu lietotnes kopīgošanas izvēlnes, kad LocalSend atlasītājam pietrūka atļaujas.",
+      "en": "On 25 June 2026 xueyexiao reported in Chinese that sharing from the Android file manager worked on a Redmi K70 when the LocalSend picker lacked access.",
+      "ru": "25 июня 2026 года xueyexiao на китайском описал, как на Redmi K70 передал файл через меню файлового менеджера, когда у выбора файла в LocalSend не было доступа."
     },
     "limit": {
       "lv": "Vajadzīgas divas savienotas ierīces ar LocalSend. Izvēlies failu un saņēmēju.",
@@ -71,6 +89,11 @@
       {
         "label": "2026 · Changelog",
         "url": "https://localsend.org/changelog"
+      },
+      {
+        "url": "https://github.com/localsend/localsend/discussions/835",
+        "date": "2026-06-25",
+        "label": "xueyexiao · Redmi K70 · 中文"
       }
     ],
     "launch": "mobile"
@@ -89,14 +112,14 @@
       "ru": "Сохраните подготовленный чатом файл в папке Nextcloud и продолжите работу с ним на компьютере."
     },
     "verified": {
-      "lv": "Oficiālās lietotnes nodrošina failu apmaiņu ar jau pievienotu Nextcloud kontu.",
-      "en": "The official clients support file handoff through an existing Nextcloud account.",
-      "ru": "Официальные приложения передают файлы через уже подключённую учётную запись Nextcloud."
+      "lv": "Sesijā nepieslēdzām privātu serveri. Pārbaudes kritērijs ir pareizais ID un kontrolsumma failam, kas saņemts otrā ierīcē.",
+      "en": "We did not connect a private server. Verify the ID and digest of the file fetched on the second device.",
+      "ru": "В этой сессии частный сервер не подключали. Проверьте ID и хеш файла, полученного на втором устройстве."
     },
     "community": {
-      "lv": "iOS lietotāji aprakstīja augšupielādes bez redzama progresa. Pirms darba turpināšanas pārbaudi saņemto failu otrajā ierīcē.",
-      "en": "iOS users reported uploads with no visible progress. Verify the received file on the other device before resuming.",
-      "ru": "Пользователи iOS описали загрузки без видимого прогресса. Проверьте полученный файл на втором устройстве, прежде чем продолжать."
+      "lv": "28.04.2026. Sanook vāciski aprakstīja gaidošu Android fotoattēla augšupielādi. Vēlāk tā pabeidzās. Tas bija novērojums par foto, nevis mūsu testa failu.",
+      "en": "On 28 April 2026 Sanook described a queued Android photo upload in German. It finished later. Their observation concerned a photo.",
+      "ru": "28 апреля 2026 года Sanook на немецком описал загрузку фотографии с Android, которая долго ждала в очереди и затем завершилась. В отчёте речь шла о фотографии."
     },
     "limit": {
       "lv": "Izvēlies, ja tev jau ir Nextcloud konts un mape. Jauna servera izveide ir atsevišķs darbs.",
@@ -111,6 +134,11 @@
       {
         "label": "iOS · 2026",
         "url": "https://github.com/nextcloud/ios/issues"
+      },
+      {
+        "url": "https://help.nextcloud.com/t/android-client-warte-auf-hochladen/217584/18",
+        "date": "2026-04-28",
+        "label": "Sanook · Android · Deutsch"
       }
     ],
     "launch": "mobile"
@@ -126,14 +154,14 @@
       "ru": "Проверьте готовый скрипт в закрытой папке Termux на Android."
     },
     "verified": {
-      "lv": "Skripts darbojas bez tīkla, izveido paraugu un izdrukā tā kontrolsummu. Pārbaudīta POSIX čaulas izpilde.",
-      "en": "The script works offline, creates a sample and prints its checksum. Its POSIX shell execution was tested.",
-      "ru": "Скрипт работает без сети, создаёт образец и печатает контрольную сумму. Проверено выполнение в POSIX-оболочке."
+      "lv": "Palaists divreiz Linux vidē ar sh. Iegūtas divas atsevišķas mapes un divi JSON ar pareizo kontrolsummu. Android izpildi neesam izmēģinājuši.",
+      "en": "Run twice with sh on Linux. Each run created a separate folder and receipt with the expected digest. Execution on Android was not tested here.",
+      "ru": "Дважды запущен через sh в Linux. Созданы две отдельные папки и две квитанции с ожидаемым хешем. Запуск на Android здесь не проверялся."
     },
     "community": {
-      "lv": "Jūnijā viens Android 15 lietotājs ziņoja par pārtrauktiem ilgiem fona procesiem. Īsais paraugs saglabā kvīti uzreiz.",
-      "en": "In June an Android 15 user reported long background jobs being stopped. This short sample saves its receipt immediately.",
-      "ru": "В июне пользователь Android 15 сообщил об остановке длительных фоновых процессов. Короткий пример сразу сохраняет квитанцию."
+      "lv": "30.04.2026. slondr ziņoja par iestrēgušu failu atlasītāju Pixel 9a ar Android 16. Projekta izstrādātājs tajā pašā diskusijā minēja divus Samsung, kuros atlase darbojās.",
+      "en": "On 30 April 2026 slondr reported a stuck file picker on a Pixel 9a with Android 16. A project developer reported working selection on two Samsung phones in the same thread.",
+      "ru": "30 апреля 2026 года slondr сообщил о зависании выбора файла на Pixel 9a с Android 16. В той же ветке разработчик сообщил об успешной проверке на двух Samsung."
     },
     "limit": {
       "lv": "Izmanto jau uzstādītā Termux vidē. Ātrākais ceļš no parasta čata ir pārlūka paraugs.",
@@ -148,6 +176,21 @@
       {
         "label": "Android 15 · #5150",
         "url": "https://github.com/termux/termux-app/issues/5150"
+      },
+      {
+        "url": "https://github.com/termux/termux-app#installation",
+        "date": "",
+        "label": "Termux · Installation"
+      },
+      {
+        "url": "https://github.com/termux/termux-api",
+        "date": "",
+        "label": "Termux:API"
+      },
+      {
+        "url": "https://github.com/termux/termux-app/issues/5101",
+        "date": "2026-04-30",
+        "label": "slondr · Pixel 9a · English"
       }
     ],
     "launch": "termux"
@@ -164,14 +207,14 @@
       "ru": "Передайте файл уже настроенной команде Apple через меню «Поделиться»."
     },
     "verified": {
-      "lv": "Apple dokumentācijā ir aprakstīta faila saņemšana no citas iPhone lietotnes. Gatavais pārlūka paraugs piedāvā kopīgot tā kvīti, ja ierīce to atbalsta.",
-      "en": "Apple documents accepting files from another iPhone app. The ready-made browser sample offers to share its receipt when the device supports it.",
-      "ru": "Apple документирует получение файлов из другого приложения iPhone. Веб-пример предложит поделиться квитанцией, если устройство это поддерживает."
+      "lv": "Šo darbību secību fiziskā iPhone neesam izmēģinājuši. Lietotnē Files atver saglabāto phone-test.txt un pārbaudi, ka redzams REYRUN-OK.",
+      "en": "We did not run this sequence on a physical iPhone. Open the saved phone-test.txt in Files and verify that it reads REYRUN-OK.",
+      "ru": "Эта последовательность здесь не проверялась на физическом iPhone. Откройте phone-test.txt в «Файлах» и убедитесь, что он содержит REYRUN-OK."
     },
     "community": {
-      "lv": "Apple iOS 26 rokasgrāmata norāda, ka komandas redzamību nosaka tās pieņemtais ievades veids.",
-      "en": "Apple’s iOS 26 guide notes that a shortcut’s accepted input determines whether it appears.",
-      "ru": "Руководство Apple для iOS 26 указывает, что появление команды в меню зависит от поддерживаемого типа данных."
+      "lv": "28.01.2026. japāņu autors anyprogram parādīja savu iPhone un iPad saīsni TXT failu izveidei un saglabāšanai. Viņa esoša faila rediģēšanas režīms pārraksta izvēlēto failu.",
+      "en": "On 28 January 2026 Japanese author anyprogram documented an iPhone/iPad shortcut for creating and saving TXT files. Its edit-existing mode overwrites the selected file.",
+      "ru": "28 января 2026 года японский автор anyprogram описал команду для создания и сохранения TXT на iPhone и iPad. В режиме редактирования она перезаписывает выбранный файл."
     },
     "limit": {
       "lv": "Šim variantam vajadzīga jau pievienota komanda, kas pieņem failus. Šeit ir pārlūka paraugs, kuru var izmēģināt tūlīt.",
@@ -186,6 +229,20 @@
       {
         "label": "Apple · Share",
         "url": "https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios"
+      },
+      {
+        "url": "https://support.apple.com/guide/shortcuts/welcome/ios",
+        "date": "",
+        "label": "Apple · Shortcuts User Guide"
+      },
+      {
+        "url": "https://qiita.com/anyprogram/items/6cc1394569c687ed506c",
+        "date": "2026-01-28",
+        "label": "anyprogram · iPhone/iPad · 日本語"
+      },
+      {
+        "label": "iPhone 16 Pro Max · 2026",
+        "url": "https://github.com/net00-1/SW-DLT/issues/133"
       }
     ],
     "launch": "mobile"

@@ -1,0 +1,36 @@
+{
+  "asOfUtc": "2026-11-11",
+  "desktop": {
+    "run": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121075378",
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "checks": [
+      "first and repeated isolated client configuration",
+      "private Node bootstrap",
+      "Unicode filesystem round trip and scope refusal",
+      "Playwright and Chrome DevTools PNG pixels from an isolated blank browser"
+    ]
+  },
+  "android": {
+    "job": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121791094/job/130863821353",
+    "testDevice": "Android 15 API 35 emulator, System WebView 124.0.6367.219",
+    "nativeTaps": 1,
+    "sampleBytes": 13,
+    "sampleLines": 2,
+    "sampleSha256": "927089762e6199a4a37a3cf75788c5ca045d15698109a55c6d607992a0148ca9",
+    "physicalDevice": false,
+    "filePickerTested": false
+  },
+  "ios": {
+    "job": "https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43121668999/job/130863410709",
+    "testDevice": "iPhone SE (3rd generation), iOS 18.5 simulator, AppleWebKit/605.1.15",
+    "activation": "DOM activation of the sample button in the native WKWebView",
+    "sampleBytes": 13,
+    "sampleLines": 2,
+    "sampleSha256": "927089762e6199a4a37a3cf75788c5ca045d15698109a55c6d607992a0148ca9",
+    "unsupportedActionRejected": true,
+    "physicalDevice": false
+  }
+}

@@ -14,6 +14,7 @@ script. The **Try the sample** button runs it.
 | --- | --- |
 | Windows workspace | [Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) |
 | Mac workspace | [macOS launcher ZIP](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) |
+| ChatGPT web + Windows, live file access desired | [Official Desktop Commander Remote Windows launcher](https://mcp.desktopcommander.app/remote-windows.cmd). For a paired device, [open the ChatGPT connector](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425). The device owner confirms first-time pairing. |
 | RDR2 for Windows | [RDR2 Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) |
 | Android, iPhone or regular web chat | [Run the browser script](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en) |
 
