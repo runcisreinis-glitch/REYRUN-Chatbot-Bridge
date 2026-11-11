@@ -3,6 +3,13 @@ name: Native first-run checks
 on:
   push:
     branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'launchers/**'
+      - 'tests/native-first-run.cjs'
+      - 'tests/concurrent-checkpoints.cjs'
+      - 'tests/rdr2-discovery.cjs'
+      - '.github/workflows/verify.yml'
   workflow_dispatch:
 
 permissions:
@@ -24,6 +31,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Check game discovery and simultaneous checkpoint writes
+        run: |
+          node tests/rdr2-discovery.cjs
+          node tests/concurrent-checkpoints.cjs
       - name: Run launcher in a fresh, isolated user fixture
         run: node tests/native-first-run.cjs
       - name: Verify first run without system Node and reuse the private runtime

@@ -25,6 +25,7 @@ jobs:
           name: ios-webkit-receipt
           path: ios-mobile-result.json
           if-no-files-found: error
+  # Include this job under jobs in .github/workflows/mobile.yml.
   android-webview:
     name: Android emulator · system WebView
     runs-on: ubuntu-24.04
@@ -44,12 +45,14 @@ jobs:
           sudo udevadm trigger --name-match=kvm
       - name: Install Android SDK build tools
         run: "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager 'platforms;android-35' 'build-tools;35.0.0'"
+      - name: Prepare the verified Android 15 system image
+        run: bash tests/android-mobile/prepare-image.sh
       - name: Tap the public starter in Android System WebView
         uses: reactivecircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2
         with:
           api-level: 35
           arch: x86_64
-          target: google_apis
+          target: default
           disable-animations: true
           script: bash tests/android-mobile/run.sh
       - uses: actions/upload-artifact@v4

@@ -14,8 +14,7 @@ page = Path(sys.argv[1])
 deadline = time.monotonic() + 75
 tapped = False
 while time.monotonic() < deadline:
-    logs = subprocess.check_output(["adb", "logcat", "-d", "-s", "ReyrunMobile:I", "*:S",
-                                    "-v", "raw"], text=True)
+    logs = subprocess.check_output(["adb", "logcat", "-d", "-v", "raw", "-s", "ReyrunMobile:I", "*:S"], text=True)
     if error := re.search(r"^ERROR (.+)$", logs, re.M):
         sys.exit(error.group(1))
     if not tapped and (button := re.search(r"^BUTTON (\d+) (\d+)$", logs, re.M)):
