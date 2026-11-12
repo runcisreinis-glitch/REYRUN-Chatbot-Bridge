@@ -13,3 +13,6 @@ def check(result):
         assert row['url'].rstrip('/')==url.rstrip('/')==row['canonical'].rstrip('/'),row
         assert urlsplit(row['card']).scheme=='https' and row['image']==[1200,630],row
         assert row['client']>200 and row['scroll']<=row['client']+1,row
+        assert row['overlaps']==[],row
+        if urlsplit(url).hostname.split('.')[0] in ('reyrun-chatbot-bridge','reyrun-rdr2-latviski'):
+            assert row['hasInstaller'],row

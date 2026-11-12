@@ -1,8 +1,6 @@
-"""Run the checked-in mobile starter in a fresh Apple iOS Simulator WKWebView."""
+"""Check public REYRUN pages in the iOS Simulator and macOS system WebKit."""
 from functools import partial
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-import hashlib
 import json
 import platform
 import plistlib
@@ -10,7 +8,6 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import threading
 import time
 import uuid
 import runpy
@@ -25,19 +22,6 @@ BUNDLE = "org.reyrun.MobileSmoke"
 
 def run(*args):
     return subprocess.check_output(args, text=True, timeout=240).strip()
-
-
-class Starter(BaseHTTPRequestHandler):
-    def do_GET(self):
-        if self.path != "/start/?lang=en":
-            self.send_error(404)
-            return
-        html = STARTER.read_bytes()
-        self.send_response(200)
-        self.send_header("Content-Type", "text/html; charset=utf-8")
-        self.send_header("Content-Length", str(len(html)))
-        self.end_headers()
-        self.wfile.write(html)
 
 
 def choose_iphone():
@@ -56,7 +40,7 @@ def choose_iphone():
     return max(options)
 
 
-def exercise(temp, http_port):
+def exercise(temp):
     version, name, runtime, device_type = choose_iphone()
     print(f"Testing {name} on iOS Simulator runtime {version}", flush=True)
     app = temp / "Smoke.app"
@@ -69,7 +53,6 @@ def exercise(temp, http_port):
         "NSAppTransportSecurity": {"NSAllowsLocalNetworking": True}, "UILaunchScreen": {},
         "UIApplicationSceneManifest": {"UIApplicationSupportsMultipleScenes": False, "UISceneConfigurations": {
             "UIWindowSceneSessionRoleApplication": [{"UISceneConfigurationName": "Smoke", "UISceneDelegateClassName": "Scene"}]}},
-        "REYRUNTestURL": f"http://localhost:{http_port}/start/?lang=en",
     }
     (app / "Info.plist").write_bytes(plistlib.dumps(plist))
     for file in ("geometry.js", "pages.json"):
@@ -110,6 +93,5 @@ def exercise(temp, http_port):
 
 
 if __name__ == "__main__":
-    with ThreadingHTTPServer(("127.0.0.1", 0), Starter) as server, tempfile.TemporaryDirectory() as scratch:
-        threading.Thread(target=server.serve_forever, daemon=True).start()
-        exercise(Path(scratch), server.server_port)
+    with tempfile.TemporaryDirectory() as scratch:
+        exercise(Path(scratch))

@@ -22,4 +22,4 @@ adb logcat -c
 adb shell input keyevent KEYCODE_WAKEUP
 adb shell wm dismiss-keyguard
 adb shell am start -W -n org.reyrun.mobiletest/.ProbeActivity
-python3 "$suite/verify.py" web/start/index.html
+python3 "$suite/verify.py"
