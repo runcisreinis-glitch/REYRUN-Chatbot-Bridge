@@ -12,7 +12,7 @@ You don’t need any technical skills. Paste this page’s address into your usu
 
 If you ask ChatGPT questions online, you already use a chatbot. You don’t need to install the AI itself on your computer.
 
-[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/) · [简体中文](README.zh-CN.md)
 
 <details>
 <summary>Instructions for your AI and technical details</summary>
