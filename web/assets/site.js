@@ -13,6 +13,10 @@ if(copy)copy.addEventListener('click',async()=>{
 function openLinkedDevice() {
  const id=location.hash.slice(1);
  const target=document.getElementById(id);
+ for (const link of document.querySelectorAll('.device-links a')) {
+   if (link.hash === location.hash) link.setAttribute('aria-current','location');
+   else link.removeAttribute('aria-current');
+ }
  if (!target || !target.matches('.device-guide')) return;
  target.open=true;
  for (const link of document.querySelectorAll('.langs a')) {

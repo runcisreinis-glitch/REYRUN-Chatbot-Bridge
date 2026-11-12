@@ -1,55 +1,59 @@
-"""Render the site's own bridge artwork into its social previews (Playwright)."""
-from pathlib import Path
-from html import escape
-from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
-from threading import Thread
-from functools import partial
+"""Build the six guide and file-check cards and three phone cards at 1200 × 630."""
 import argparse
+import base64
+from html import escape
+from pathlib import Path
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-WEB = ROOT / "web"
+WEB = Path(__file__).resolve().parents[1] / "web"
 COPY = {
-    "lv": ("REYRUN Tilts", ("Čatbots tavā", "datorā"), ("Pārbaudi failu", "telefonā"), "Windows un Mac", "Faila pārbaude pārlūkā"),
-    "en": ("REYRUN Bridge", ("Your chatbot,", "on your computer"), ("Check a file", "on your phone"), "Windows and Mac", "Check a file in your browser"),
-    "ru": ("Мост REYRUN", ("Чат-бот на вашем", "компьютере"), ("Проверьте файл", "на телефоне"), "Windows и Mac", "Проверка файла в браузере"),
+    "lv": {"bridge": ("Dod čatbotam", "rokas un acis.", "Windows · Mac · Linux · Android · iPhone"),
+           "check": ("Pārbaudi failu", "telefonā.", "Pārbaudi izvēlēto failu un saņem apliecinājumu."),
+           "phone": ("No čata", "uz telefonu.", "Saglabā piezīmi vai atver e-pasta melnrakstu.")},
+    "en": {"bridge": ("Give your chatbot", "hands and eyes.", "Windows · Mac · Linux · Android · iPhone"),
+           "check": ("Check a file", "on your phone.", "Choose a file and get a checksum receipt."),
+           "phone": ("From your chat", "to your phone.", "Save a note or open an email draft.")},
+    "ru": {"bridge": ("Дайте чат-боту", "руки и глаза.", "Windows · Mac · Linux · Android · iPhone"),
+           "check": ("Проверьте файл", "на телефоне.", "Выберите файл и получите результат проверки."),
+           "phone": ("Из чата", "на телефон.", "Сохраните заметку или откройте черновик письма.")},
 }
 STYLE = """
-*{box-sizing:border-box}body{margin:0;background:#09161d;color:#eff5f3;font-family:Arial,sans-serif}
-main{position:relative;width:1200px;height:630px;padding:54px 65px;overflow:hidden;
-background:radial-gradient(ellipse at 78% 45%,#20414c 0%,#102731 38%,#08151c 82%)}
-.brand{font-size:30px;font-weight:700;letter-spacing:1px;color:#ffbd88}
-h1{position:absolute;left:65px;top:164px;margin:0;z-index:1;font-size:67px;line-height:1.07;
-letter-spacing:-2.2px;max-width:610px}h1 span{display:block;color:#91f3dc}
-p{position:absolute;bottom:30px;left:65px;font-size:28px;color:#cbd9db}
-canvas{position:absolute;right:15px;top:104px;width:543px;height:366px}
-img{position:absolute;right:54px;bottom:35px;width:83px;height:83px}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;color:#eff5ff}
+main{position:relative;isolation:isolate;width:1200px;height:630px;overflow:hidden;background:
+radial-gradient(ellipse at 95% 15%,#395983 0,transparent 46%),
+radial-gradient(ellipse at 54% 105%,#214c89 0,transparent 52%),linear-gradient(130deg,#090f20,#162541 75%,#10213e)}
+main:before{content:"";position:absolute;inset:20px;border:1px solid #57729b;border-radius:25px;box-shadow:inset 0 1px #e3f1ff68,0 1px #010813}
+main:after{content:"";position:absolute;right:8%;top:20px;width:48%;height:3px;background:linear-gradient(90deg,transparent,#b4dcff,#f6fbff 57%,transparent);border-radius:100%;box-shadow:0 1px 8px #8abaff63}
+.brand{display:flex;align-items:center;gap:14px;position:absolute;left:64px;top:56px;font-weight:760;font-size:32px;letter-spacing:.05em}
+.brand img{width:58px;height:58px;object-fit:contain;background:linear-gradient(130deg,#293c58,#0c172c);padding:4px;border:1px solid #8ea9d0;border-radius:12px;box-shadow:inset 0 1px #cbdfff97,0 3px 6px #0006}
+h1{position:absolute;z-index:1;left:62px;top:155px;margin:0;font-weight:740;line-height:1.04;letter-spacing:-.055em;font-size:65px}
+h1 span{display:block;color:#bfd9fa}.art{position:absolute;top:166px;right:40px;width:590px;height:auto;filter:drop-shadow(0 22px 13px #030b1e88)}
+footer{position:absolute;left:65px;right:65px;bottom:48px;border-top:1px solid #6081a477;padding-top:19px;font-size:25px;font-weight:520;color:#c7daf4}
 """
-class Quiet(SimpleHTTPRequestHandler):
-    def log_message(self, *_):
-        pass
+def asset_uri(name, kind):
+    return f"data:{kind};base64," + base64.b64encode((WEB / "assets" / name).read_bytes()).decode()
 
 def main():
-    options = argparse.ArgumentParser()
-    options.add_argument("--browser", choices=["chromium","webkit"], default="chromium")
-    options.add_argument("--executable-path")
-    args = options.parse_args()
-    with ThreadingHTTPServer(("127.0.0.1",0), partial(Quiet, directory=str(WEB))) as server, sync_playwright() as pw:
-        Thread(target=server.serve_forever, daemon=True).start()
-        origin = f"http://127.0.0.1:{server.server_port}"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--browser", choices=["chromium", "webkit"], default="chromium")
+    parser.add_argument("--executable-path")
+    args = parser.parse_args()
+    logo = asset_uri("reyrun.png", "image/png")
+    art = asset_uri("bridge-model.webp", "image/webp")
+    with sync_playwright() as pw:
         browser = getattr(pw, args.browser).launch(executable_path=args.executable_path)
-        page = browser.new_page(viewport={"width":1200,"height":630}, reduced_motion="reduce")
-        page.goto(origin + "/")
-        for lang, (name, home, start, devices, check) in COPY.items():
-            for kind, (lines, caption) in {"bridge":(home,devices), "check":(start,check)}.items():
-                page.set_content(f'''<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{STYLE}</style>
-                    <main><div class="brand">{escape(name)}</div><h1>{escape(lines[0])}<span>{escape(lines[1])}</span></h1>
-                    <canvas id="bridge-art"></canvas><p>{escape(caption)}</p><img src="{origin}/assets/reyrun.png"></main>
-                    <script src="{origin}/assets/bridge-visual.js"></script></html>''')
-                page.wait_for_function("document.querySelector('img').naturalWidth && document.querySelector('canvas').width > 500")
-                page.evaluate("new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))")
-                page.screenshot(path=str(WEB / "assets" / f"{kind}-{lang}-v1.jpg"), type="jpeg", quality=91)
+        page = browser.new_page(viewport={"width":1200, "height":630}, reduced_motion="reduce")
+        for lang, cards in COPY.items():
+            for kind, (first, second, caption) in cards.items():
+                page.set_content(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{STYLE}</style>'
+                    f'<main><div class="brand"><img src="{logo}">REYRUN</div><h1>{escape(first)}<span>{escape(second)}</span></h1>'
+                    f'<img class="art" src="{art}"><footer>{escape(caption)}</footer></main></html>')
+                page.evaluate("Promise.all(Array.from(document.images, i=>i.decode()))")
+                if page.locator("h1").bounding_box()["width"] > 580:
+                    page.locator("h1").evaluate("e=>e.style.fontSize='58px'")
+                page.screenshot(path=str(WEB / "assets" / f"{kind}-{lang}-v2.jpg"),
+                                type="jpeg", quality=94)
         browser.close()
-        server.shutdown()
+
 if __name__ == "__main__":
     main()

@@ -13,10 +13,21 @@ SUMMARY = {
     "ru": "Подключите чат-бота к своему компьютеру или телефону. Выберите Windows, Mac, Linux, Android или iPhone и попробуйте конкретное действие.",
 }
 ART = {
-    "lv": "Gaismas tilts savieno smadzeņu zīmējumu ar datoru. Stūrī ir REYRUN logo.",
-    "en": "An illuminated bridge connects a drawing of a brain to a computer. The REYRUN logo is in the corner.",
-    "ru": "Светящийся мост соединяет рисунок мозга с компьютером. В углу логотип REYRUN.",
+    "lv":"REYRUN. Metāla tilts savieno mikroshēmu ar datoru un telefonu uz safīrzilas pamatnes.",
+    "en":"REYRUN. A metal bridge links a chip, a computer and a phone on sapphire-blue bases.",
+    "ru":"REYRUN. Металлический мост соединяет микросхему с компьютером и телефоном на сапфировых подставках.",
 }
+
+FLAGS = {"en": "gb", "lv": "lv", "ru": "ru"}
+LANG_NAMES = {"en": "English", "lv": "Latviski", "ru": "Русский"}
+
+def language_controls(lang, routes, extra=""):
+    links = []
+    for key in ("en", "lv", "ru"):
+        current = ' aria-current="page"' if key == lang else ''
+        links.append(f'<a{extra} lang="{key}" hreflang="{key}" href="{routes[key]}" aria-label="{LANG_NAMES[key]}"{current}>'
+                     f'<img class="flag" src="/assets/flags/{FLAGS[key]}.svg" alt="">{key.upper()}</a>')
+    return "".join(links)
 
 def theme_button(lang):
     label, light, dark = {
@@ -27,12 +38,12 @@ def theme_button(lang):
     return (
         f'<button hidden type="button" class="theme-switch" data-theme-switch '
         f'aria-label="{label}" aria-pressed="false" data-light="{light}" data-dark="{dark}">'
-        '<span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>'
+        '<span class="sun" aria-hidden="true">☼</span><span class="moon" aria-hidden="true">☾</span></button>'
     )
 
 def metadata(site, lang, route, title, description):
-    kind = "check" if route == START[lang] else "bridge"
-    image = f"{site}/assets/{kind}-{lang}-v1.jpg"
+    kind = "phone" if route.endswith("/phone/") else ("check" if route == START[lang] else "bridge")
+    image = f"{site}/assets/{kind}-{lang}-v2.jpg"
     props = [
         ("og:type", "website"), ("og:site_name", NAMES[lang]),
         ("og:url", site + route), ("og:title", title), ("og:description", description),
@@ -55,11 +66,7 @@ def render_start(web, site, lang):
     url = site + START[lang]
     title = words["title"] + " · " + NAMES[lang]
     alternatives = "".join(f'<link rel="alternate" hreflang="{key}" href="{site + path}">' for key, path in START.items())
-    links = "".join(
-        f'<a lang="{key}" hreflang="{key}" href="{path}"'
-        + (' aria-current="page"' if key == lang else '') + f'>{key.upper()}</a>'
-        for key, path in START.items()
-    )
+    links = language_controls(lang, START)
     head = (
         f'<link rel="canonical" href="{url}">{alternatives}'
         + f'<meta name="description" content="{escape(words["intro"], quote=True)}">'

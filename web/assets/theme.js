@@ -8,7 +8,7 @@
     const dark = selected === 'dark' || (selected !== 'light' && system.matches);
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
     const bar = document.querySelector('meta[name="theme-color"]');
-    if (bar) bar.content = dark ? '#0b191f' : '#f4f8f7';
+    if (bar) bar.content = dark ? '#091329' : '#adceef';
     if (button) {
       button.setAttribute('aria-pressed', String(dark));
       button.title = dark ? button.dataset.light : button.dataset.dark;

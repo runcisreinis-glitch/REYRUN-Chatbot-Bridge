@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 60 30" overflow="hidden" role="img" aria-label="United Kingdom">
+  <title>Union Flag of the United Kingdom</title>
+  <desc>One-to-two version. Hoist at left; the broader white diagonals are uppermost at the hoist.</desc>
+  <rect width="60" height="30" fill="#012169"/>
+  <path d="M 0 0 L 60 30 M 0 30 L 60 0" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <path d="M -0.4472135955 0.894427191 L 29.5527864045 15.894427191 M 0.4472135955 30.894427191 L 30.4472135955 15.894427191 M 30.4472135955 14.105572809 L 60.4472135955 29.105572809 M 29.5527864045 14.105572809 L 59.5527864045 -0.894427191" fill="none" stroke="#C8102E" stroke-width="2"/>
+  <path d="M 0 15 H 60 M 30 0 V 30" fill="none" stroke="#FFFFFF" stroke-width="10"/>
+  <path d="M 0 15 H 60 M 30 0 V 30" fill="none" stroke="#C8102E" stroke-width="6"/>
+</svg>
