@@ -1,6 +1,6 @@
 # REYRUN Bridge — Give your chatbot hands and eyes.
 
-[Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en)
+[Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
 Download and open the file. It connects a workspace to an existing Claude Desktop installation. Fully quit and reopen the app when convenient. For an ordinary web chat, try the browser sample. On Mac open the .command file inside the ZIP. Your system may show its own first-use confirmation.
 
@@ -8,7 +8,7 @@ Download and open the file. It connects a workspace to an existing Claude Deskto
 
 ## What to say to your chatbot
 
-> Give me the ready-made REYRUN launcher for my device. I want you to work in one folder I choose. After I open the launcher, write a small test file there, read it back and tell me what it says. If this chat works only in a browser, give me the ready-made file check page. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/
+> Give me the ready-made REYRUN launcher for my device. After I open it, write a small file in the REYRUN workspace, read it back and tell me what it says. If this chat cannot connect to local tools, give me the link to the browser file check. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/
 
 [Guide for AI](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
@@ -35,11 +35,11 @@ Start with limited-access tools you can try in the background. Specialised tools
 5. **Desktop Commander · Remote / Local** (Windows, macOS) — Use files and terminal sessions in the background. Our local launcher offers three inspection tools in one workspace. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-macOS.command.zip) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 6. **Reinis Bridge · 1.0.0** (Windows) — The project’s GitHub repository was created in an isolated OpenBot Chrome session. Afterwards the private app closed. Its local close receipt confirmed that the user’s input desktop stayed the same. [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 7. **Git worktree + bundle · Git CLI · tested 2.52.0** (Windows, macOS) — Use for handing project files between sessions without a live connection. Each job gets a separate checkout and branch. A bundle carries the committed changes to another computer. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-git-handoff-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-git-handoff-macOS.command.zip) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
-8. **REYRUN · Web Crypto** (Windows, macOS, Android, iOS) — Open a ready-made browser script and check the sample with one tap or pick a text file. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
-9. **LocalSend** (Windows, macOS, Android, iOS) — Send the prepared file to another device on your Wi-Fi. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
-10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Save a file prepared by the chat to your Nextcloud folder and pick it up on your computer. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+8. **REYRUN · Web Crypto** (Windows, macOS, Android, iOS) — Open a ready-made browser script and check the sample with one tap or pick a text file. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+9. **LocalSend** (Windows, macOS, Android, iOS) — Send the prepared file to another device on your Wi-Fi. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Save a file prepared by the chat to your Nextcloud folder and pick it up on your computer. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 11. **Termux** (Android) — Check a ready-made script in Termux’s private directory on Android. [Ready-made Termux script](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-termux.sh) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
-12. **Apple Shortcuts** (iOS, macOS) — Pass a file to an existing Apple shortcut through the share sheet. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+12. **Apple Shortcuts** (iOS, macOS) — Pass a file to an existing Apple shortcut through the share sheet. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 
 [Tests and sources](skill/reyrun-chatbot-bridge/references/START-en.md) · [JSON](research/)
 

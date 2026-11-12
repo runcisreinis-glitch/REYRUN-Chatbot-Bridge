@@ -2,7 +2,7 @@
 
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
-[Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=lv)
+[Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
 Lejupielādē un atver. Palaidējs pievieno darba mapi jau uzstādītai Claude Desktop lietotnei. Pilnībā aizver un atver lietotni, kad tev ērti. Citam čatam izvēlies pārlūka paraugu. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
 
@@ -132,7 +132,7 @@ Darba kopijām ir kopīga Git objektu glabātava. Pilnā zara pakotnē var būt 
 
 Windows, macOS, Android, iOS. Atver gatavu skriptu savā pārlūkā un ar vienu pieskārienu pārbaudi paraugu vai izvēlies teksta failu.
 
-[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=lv)
+[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
 **Pārbaude.** Android 15 emulatorā viens pieskāriens ekrānam apstrādāja nemainīto publisko paraugu. WebView 124.0.6367.219 atdeva 13 baitus, 2 rindas un paredzēto SHA-256. Tādu pašu rezultātu ieguvām Chrome priekšskatījumā. iPhone SE simulatorā ar iOS 18.5 un WebKit parauga poga deva to pašu rezultātu. Neatbalstīta darbība tika noraidīta. Tās ir operētājsistēmu simulācijas.
 
@@ -148,7 +148,7 @@ Windows, macOS, Android, iOS. Atver gatavu skriptu savā pārlūkā un ar vienu 
 
 Windows, macOS, Android, iOS. Pārsūti sagatavotu failu uz otru ierīci savā Wi-Fi tīklā.
 
-[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=lv)
+[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
 **Pārbaude.** Šeit divu ierīču pārsūtīšana nav izmēģināta. Pašpārbaudei nosūti mobile-request.json, tad salīdzini ID un kontrolsummu mūsu lapā.
 
@@ -164,7 +164,7 @@ Vajadzīgas divas savienotas ierīces ar LocalSend. Izvēlies failu un saņēmē
 
 Windows, macOS, Android, iOS. Saglabā čata sagatavoto failu savā Nextcloud mapē un turpini tajā pašā mapē no datora.
 
-[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=lv)
+[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
 **Pārbaude.** Sesijā nepieslēdzām privātu serveri. Pārbaudes kritērijs ir pareizais ID un kontrolsumma failam, kas saņemts otrā ierīcē.
 
@@ -196,7 +196,7 @@ Izmanto jau uzstādītā Termux vidē. Ātrākais ceļš no parasta čata ir pā
 
 iOS, macOS. Nodod failu jau iestatītai Apple komandai caur kopīgošanas izvēlni.
 
-[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=lv)
+[Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
 **Pārbaude.** Šo darbību secību fiziskā iPhone neesam izmēģinājuši. Lietotnē Files atver saglabāto phone-test.txt un pārbaudi, ka redzams REYRUN-OK.
 

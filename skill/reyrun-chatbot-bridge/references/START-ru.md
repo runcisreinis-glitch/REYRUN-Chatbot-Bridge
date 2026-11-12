@@ -2,7 +2,7 @@
 
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
-[Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
+[Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
 Скачайте и откройте файл. Он подключит рабочую папку к уже установленному Claude Desktop. Полностью закройте и снова откройте приложение, когда вам удобно. Для обычного веб-чата откройте пример в браузере. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
 
@@ -132,7 +132,7 @@ Windows, macOS. Для передачи проектных файлов межд
 
 Windows, macOS, Android, iOS. Откройте готовый скрипт в браузере и одним касанием проверьте пример либо выберите текстовый файл.
 
-[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
+[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
 **Проверка.** На эмуляторе Android 15 одно касание обработало опубликованный пример без изменений. WebView 124.0.6367.219 вернул 13 байт, две строки и ожидаемую SHA-256. В предварительном просмотре Chrome получили тот же результат. В симуляторе iPhone SE с iOS 18.5 и WebKit кнопка примера дала тот же результат. Неподдерживаемое действие было отклонено. Испытания прошли на виртуальных устройствах.
 
@@ -148,7 +148,7 @@ Windows, macOS, Android, iOS. Откройте готовый скрипт в б
 
 Windows, macOS, Android, iOS. Перешлите готовый файл на другое устройство в своей сети Wi-Fi.
 
-[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
+[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
 **Проверка.** Передача между двумя устройствами здесь не проверялась. Передайте mobile-request.json и сравните ID и хеш квитанции с результатом нашей страницы.
 
@@ -164,7 +164,7 @@ Windows, macOS, Android, iOS. Перешлите готовый файл на д
 
 Windows, macOS, Android, iOS. Сохраните подготовленный чатом файл в папке Nextcloud и продолжите работу с ним на компьютере.
 
-[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
+[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
 **Проверка.** В этой сессии частный сервер не подключали. Проверьте ID и хеш файла, полученного на втором устройстве.
 
@@ -196,7 +196,7 @@ Android. Проверьте готовый скрипт в закрытой па
 
 iOS, macOS. Передайте файл уже настроенной команде Apple через меню «Поделиться».
 
-[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
+[Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
 **Проверка.** Эта последовательность здесь не проверялась на физическом iPhone. Откройте phone-test.txt в «Файлах» и убедитесь, что он содержит REYRUN-OK.
 
@@ -210,7 +210,7 @@ iOS, macOS. Передайте файл уже настроенной коман
 
 ## Установите латышский перевод RDR2
 
-Скачайте и откройте файл запуска для Windows. Он ищет игру в библиотеках Steam, Rockstar и Epic и подготавливает проверенный файл латышского перевода в рабочей папке. Если найдётся несколько папок, вы выбираете нужную. Передайте ИИ инструкцию по установке плагина, загрузчика, резервному копированию и проверке в сюжетном режиме. [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/en/install/)
+Скачайте и откройте файл запуска для Windows. Он ищет игру в библиотеках Steam, Rockstar и Epic и подготавливает проверенный файл латышского перевода в рабочей папке. Если найдётся несколько папок, вы выбираете нужную. Передайте ИИ инструкцию по установке плагина, загрузчика, резервному копированию и проверке в сюжетном режиме. [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/ru/install/)
 
 ## Как четырём чатам работать одновременно?
 

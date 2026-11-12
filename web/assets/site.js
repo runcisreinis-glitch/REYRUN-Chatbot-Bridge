@@ -19,7 +19,7 @@ if(launch&&browserStart){
    const desktop=Array.from(launch.children);
    launch.prepend(browserStart);
    browserStart.className='btn primary';
-   for(const link of desktop){link.className='';options.append(link,document.createTextNode('  '));}
+   for(const link of desktop){link.className='';options.append(link);}
  }else if(/Mac/.test(navigator.platform)){
    const mac=launch.lastElementChild,win=launch.firstElementChild;
    launch.prepend(mac);mac.classList.add('primary');win.classList.remove('primary');

@@ -2,7 +2,7 @@
 
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
-[Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en)
+[Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
 Download and open the file. It connects a workspace to an existing Claude Desktop installation. Fully quit and reopen the app when convenient. For an ordinary web chat, try the browser sample. On Mac open the .command file inside the ZIP. Your system may show its own first-use confirmation.
 
@@ -132,7 +132,7 @@ Worktrees share the Git object store. A full branch bundle may include its earli
 
 Windows, macOS, Android, iOS. Open a ready-made browser script and check the sample with one tap or pick a text file.
 
-[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en)
+[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
 **Test result.** On the Android 15 emulator a single screen tap processed the unchanged public sample. WebView 124.0.6367.219 returned 13 bytes, two lines and the expected SHA-256. A Chrome preview gave the same result. In an iPhone SE simulator running iOS 18.5 and WebKit the sample button gave the same result. An unsupported action was rejected. These runs used simulated devices.
 
@@ -148,7 +148,7 @@ This is a receipt for one file. Share a relevant excerpt separately if you want 
 
 Windows, macOS, Android, iOS. Send the prepared file to another device on your Wi-Fi.
 
-[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en)
+[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
 **Test result.** We did not test a two-device transfer here. Send mobile-request.json to the other device and compare the receipt ID and digest with our page.
 
@@ -164,7 +164,7 @@ Needs two connected devices with LocalSend. Choose the file and the recipient.
 
 Windows, macOS, Android, iOS. Save a file prepared by the chat to your Nextcloud folder and pick it up on your computer.
 
-[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en)
+[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
 **Test result.** We did not connect a private server. Verify the ID and digest of the file fetched on the second device.
 
@@ -196,7 +196,7 @@ Use with Termux already installed. The browser sample is the quick start from a 
 
 iOS, macOS. Pass a file to an existing Apple shortcut through the share sheet.
 
-[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=en)
+[Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
 **Test result.** We did not run this sequence on a physical iPhone. Open the saved phone-test.txt in Files and verify that it reads REYRUN-OK.
 

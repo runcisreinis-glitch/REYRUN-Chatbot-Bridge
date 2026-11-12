@@ -1,6 +1,6 @@
 # REYRUN Мост — Дайте чат-боту руки и глаза.
 
-[Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru)
+[Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
 Скачайте и откройте файл. Он подключит рабочую папку к уже установленному Claude Desktop. Полностью закройте и снова откройте приложение, когда вам удобно. Для обычного веб-чата откройте пример в браузере. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
 
@@ -8,7 +8,7 @@
 
 ## Что сказать своему чат-боту
 
-> Дай мне готовый файл запуска REYRUN для моего устройства. Я хочу, чтобы ты работал в одной выбранной мной папке. Когда я запущу файл, создай там небольшой тестовый файл, прочитай его и скажи, что в нём написано. Если наш чат работает только в браузере, дай мне готовую страницу для проверки файла. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/
+> Дай мне готовый файл запуска REYRUN для моего устройства. Когда я его открою, создай в рабочей папке REYRUN небольшой файл, прочитай его и скажи, что там написано. Если в этом чате нельзя подключить локальные инструменты, дай мне ссылку на проверку файла в браузере. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/
 
 [Инструкция для ИИ](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
@@ -16,7 +16,7 @@
 
 Скачайте и откройте файл запуска для Windows. Он ищет игру в библиотеках Steam, Rockstar и Epic и подготавливает проверенный файл латышского перевода в рабочей папке. Если найдётся несколько папок, вы выбираете нужную. Передайте ИИ инструкцию по установке плагина, загрузчика, резервному копированию и проверке в сюжетном режиме.
 
-[Скачать файл запуска для RDR2](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/en/install/)
+[Скачать файл запуска для RDR2](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/ru/install/)
 
 ## Пользуетесь ChatGPT в браузере?
 
@@ -35,11 +35,11 @@
 5. **Desktop Commander · Remote / Local** (Windows, macOS) — Работает с файлами и сеансами терминала в фоне. Наш локальный файл запуска открывает три инструмента для просмотра одной рабочей папки. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 6. **Reinis Bridge · 1.0.0** (Windows) — Репозиторий проекта на GitHub создали в отдельном приватном окне Chrome через OpenBot. После проверки приложение закрылось. Локальный отчёт подтвердил, что пользовательский рабочий стол, принимающий ввод, остался прежним. [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 7. **Git worktree + bundle · Git CLI · tested 2.52.0** (Windows, macOS) — Для передачи проектных файлов между сеансами без постоянного подключения. Каждая задача получает отдельную рабочую копию и ветку. Пакет переносит сохранённые в Git изменения на другой компьютер. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-git-handoff-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-git-handoff-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
-8. **REYRUN · Web Crypto** (Windows, macOS, Android, iOS) — Откройте готовый скрипт в браузере и одним касанием проверьте пример либо выберите текстовый файл. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
-9. **LocalSend** (Windows, macOS, Android, iOS) — Перешлите готовый файл на другое устройство в своей сети Wi-Fi. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
-10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Сохраните подготовленный чатом файл в папке Nextcloud и продолжите работу с ним на компьютере. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+8. **REYRUN · Web Crypto** (Windows, macOS, Android, iOS) — Откройте готовый скрипт в браузере и одним касанием проверьте пример либо выберите текстовый файл. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+9. **LocalSend** (Windows, macOS, Android, iOS) — Перешлите готовый файл на другое устройство в своей сети Wi-Fi. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Сохраните подготовленный чатом файл в папке Nextcloud и продолжите работу с ним на компьютере. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 11. **Termux** (Android) — Проверьте готовый скрипт в закрытой папке Termux на Android. [Готовый скрипт для Termux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-termux.sh) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
-12. **Apple Shortcuts** (iOS, macOS) — Передайте файл уже настроенной команде Apple через меню «Поделиться». [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/?lang=ru) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+12. **Apple Shortcuts** (iOS, macOS) — Передайте файл уже настроенной команде Apple через меню «Поделиться». [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 
 [Проверки и источники](skill/reyrun-chatbot-bridge/references/START-ru.md) · [JSON](research/)
 
@@ -51,4 +51,4 @@
 
 Назовите новому чату то же имя задачи. Попросите прочитать последнюю запись и проверить созданные файлы. После тайм-аута сначала проверьте прежнее задание. Повторяйте скачивание или копирование только после проверки результата. При конфликте версий сначала прочитайте сохранённую запись.
 
-Мосты и перевод игры доступны бесплатно. Если они вам помогли, ваша поддержка даст Рейнису время на следующий перевод и новые испытания. [Поддержать Рейниса](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/support.html) · [Поиск REYRUN](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/)
+Мосты и перевод игры доступны бесплатно. Если они вам помогли, ваша поддержка даст Рейнису время на следующий перевод и новые испытания. [Поддержать Рейниса](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/support.ru.html) · [Поиск REYRUN](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.ru.html)

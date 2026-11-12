@@ -1,0 +1,59 @@
+<!doctype html><html lang="{{lang}}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>{{pagetitle}}</title>
+{{head}}
+<style>
+:root{font-family:system-ui,sans-serif;color-scheme:light dark;--bg:#f5f0e7;--fg:#242a27;--panel:#fffdf7;--edge:#c3c7ba;--accent:#254c43;--quiet:#526057}
+@media(prefers-color-scheme:dark){:root{--bg:#17221f;--fg:#ebf1e7;--panel:#25312e;--edge:#54665b;--accent:#81c1aa;--quiet:#bbc7bc}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);padding:1.1rem}main{max-width:43rem;margin:2rem auto 4rem}header,nav,.actions{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap}header{justify-content:space-between}.brand{color:inherit;text-decoration:none;font-weight:800;letter-spacing:.13em}.k{font-size:.8rem;font-weight:700}h1{font:700 clamp(2.1rem,7vw,3.65rem)/1.06 Georgia,serif;letter-spacing:-.04em;margin:1.5rem 0 .9rem}h2{font-size:1.13rem}p{line-height:1.55}section{border-block-start:1px solid var(--edge);padding:1rem 0;margin-block:1rem}button,.control,nav a{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--edge);border-radius:6px;padding:.72rem 1rem;min-height:44px;cursor:pointer;text-decoration:none}nav a{min-width:44px;text-align:center;padding:.7rem;font-size:.82rem}nav a[aria-current=page]{border:2px solid var(--accent);font-weight:700}.primary{color:var(--bg);background:var(--accent);border-color:var(--accent);font-weight:700}.control{position:relative;display:inline-flex;align-items:center}.control:focus-within,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.control input{position:absolute;inset:0;width:100%;opacity:0;cursor:pointer}.hint{font-size:.93rem;color:var(--quiet)}textarea{width:100%;resize:vertical;background:var(--panel);border:1px solid var(--edge);border-radius:6px;padding:.7rem;color:inherit;font:.9rem/1.55 ui-monospace,monospace}#status{min-height:1.5rem;font-weight:650}button:disabled{opacity:.6}
+</style></head><body><main><header><a class="brand" href="{{home}}" aria-label="{{home_name}}">REYRUN</a><nav aria-label="{{langnav}}">{{nav}}</nav></header>
+<h1 id="title">{{title}}</h1><p id="intro">{{intro}}</p><div class="actions"><button class="primary" id="demo" type="button">{{demo}}</button><label class="control"><span id="choose">{{choose}}</span><input id="picker" type="file" accept=".txt,.json,text/plain,application/json" aria-labelledby="choose"></label></div><p class="hint" id="hint">{{hint}}</p><section id="output" hidden><h2 id="resultTitle">{{resultTitle}}</h2><textarea rows="9" spellcheck="false" readonly aria-labelledby="resultTitle" id="result"></textarea><div class="actions"><button id="copy" type="button">{{copy}}</button><button id="save" type="button">{{save}}</button><button id="share" type="button" hidden>{{share}}</button></div><p class="hint" id="send">{{send}}</p></section><p role="status" id="status"></p><noscript>{{noscript}}</noscript></main>
+<script>
+'use strict';
+const t={{i18n}};
+const lang=document.documentElement.lang;
+const legacy=new URLSearchParams(location.search).get('lang');
+const pages={lv:'/start/',en:'/en/start/',ru:'/ru/start/'};
+if(Object.hasOwn(pages,legacy)&&legacy!==lang) location.replace(pages[legacy]+location.hash);
+const el=id=>document.getElementById(id);
+const sample={schema:'reyrun.mobile.request/1',id:'phone-test-01',action:'inspect-text',text:'REYRUN\nRīga\n'};
+const maxSize=65536;
+let seq=0;
+let latest='';
+let latestName='';
+const encoder=new TextEncoder();
+function newRun(){seq++;latest='';latestName='';el('output').hidden=true;el('status').textContent='';return seq;}
+function validate(input){
+ if(!input||input.schema!=='reyrun.mobile.request/1'||input.action!=='inspect-text'||!/^[A-Za-z0-9._-]{1,64}$/.test(typeof input.id==='string'?input.id:'')||typeof input.text!=='string')throw new Error(t.bad);
+ return {id:input.id,text:input.text};
+}
+async function inspect(id,text,bytes,run){
+ if(!window.crypto||!crypto.subtle)throw new Error(t.https);
+ const digest=await crypto.subtle.digest('SHA-256',bytes);
+ if(run!==seq)return;
+ const rows=text===''?0:text.split(/\r\n|\r|\n/).length-( /[\r\n]$/.test(text)?1:0);
+ const sha256=Array.from(new Uint8Array(digest),n=>n.toString(16).padStart(2,'0')).join('');
+ latest=JSON.stringify({schema:'reyrun.mobile.receipt/1',id,action:'inspect-text',bytes:bytes.byteLength,lines:rows,sha256},null,2);
+ latestName='REYRUN-'+id+'-receipt.json';
+ el('result').value=latest;el('output').hidden=false;el('status').textContent=t.done;
+ try{el('share').hidden=!(navigator.canShare&&navigator.canShare({files:[makeFile()]}));}catch{el('share').hidden=true;}
+}
+function makeFile(){return new File([latest+'\n'],latestName,{type:'application/json'});}
+function fail(error,run){if(run===seq)el('status').textContent=error.message;}
+el('demo').onclick=async()=>{const run=newRun();try{await inspect(sample.id,sample.text,encoder.encode(sample.text),run);}catch(e){fail(e,run);}};
+el('picker').onchange=async event=>{
+ const file=event.target.files[0];event.target.value='';if(!file)return;
+ const run=newRun();
+ try{
+   if(file.size>maxSize)throw new Error(t.large);
+   if(!/\.(txt|json)$/i.test(file.name))throw new Error(t.type);
+   const bytes=await file.arrayBuffer();let text;
+   try{text=new TextDecoder('utf-8',{fatal:true}).decode(bytes);}catch{throw new Error(t.encoding);}
+   if(/\.json$/i.test(file.name)){
+     let msg;try{msg=validate(JSON.parse(text));}catch{throw new Error(t.bad);}
+     await inspect(msg.id,msg.text,encoder.encode(msg.text),run);
+   }else await inspect('selected-text',text,bytes,run);
+ }catch(e){fail(e,run);}
+};
+el('copy').onclick=async()=>{if(!latest)return;try{await navigator.clipboard.writeText(latest);el('status').textContent=t.copied;}catch{el('result').focus();el('result').select();el('status').textContent=t.manual;}};
+el('save').onclick=()=>{if(!latest)return;const url=URL.createObjectURL(makeFile());const a=document.createElement('a');a.href=url;a.download=latestName;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);};
+el('share').onclick=async()=>{if(!latest)return;try{await navigator.share({files:[makeFile()]});}catch(e){if(e.name!=='AbortError')el('status').textContent=t.sharefail;}};
+</script></body></html>

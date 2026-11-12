@@ -2,6 +2,7 @@
 import json, html, zipfile
 from pathlib import Path
 from wording import COPY, LANGS, tr
+from share import NAMES, START, SUMMARY, metadata, render_start
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/'web'
 REFS=ROOT/'skill/reyrun-chatbot-bridge/references'
@@ -66,7 +67,7 @@ def mobile_cards(l,card):
 def section_actions(d,l,web=True):
     tag=d['launch']
     if not tag:return []
-    if tag=='mobile':return [('/start/?lang='+l,tr(l,'Atvērt gatavo paraugu','Open the ready-made sample','Открыть готовый пример'))]
+    if tag=='mobile':return [(START[l],tr(l,'Atvērt gatavo paraugu','Open the ready-made sample','Открыть готовый пример'))]
     if tag=='termux':return [('/start/mobile-termux.sh',tr(l,'Gatavais Termux skripts','Ready-made Termux script','Готовый скрипт для Termux'))]
     return [(dl(tag,os),os) for os in ('Windows','macOS') if os in d['os']]
 def details(d,l,i):
@@ -81,8 +82,9 @@ def make(l):
     c=lambda k:tr(l,*COPY[k])
     t=lambda *v:tr(l,*v)
     rows=catalog(l)
-    guidegame=GAME+('/uzstadisana/' if l=='lv' else '/en/install/')
-    support=SEARCH+('/atbalsts.html' if l=='lv' else '/support.html')
+    guidegame=GAME+{'lv':'/uzstadisana/','en':'/en/install/','ru':'/ru/install/'}[l]
+    support=SEARCH+{'lv':'/atbalsts.html','en':'/support.html','ru':'/support.ru.html'}[l]
+    search_home=SEARCH+{'lv':'/index.lv.html','en':'/','ru':'/index.ru.html'}[l]
     skillpath='/download/REYRUN-Bridge-Skill.zip'
     headline=f"{c('h1')} {c('accent')}"
     refbasename='START-'+l+'.md'
@@ -98,16 +100,16 @@ def make(l):
     qs+=f'<details class="guide"><summary>{c("file_task")}</summary><p>{c("file_answer")}</p></details>'
     alts=''.join(f'<link rel="alternate" hreflang="{x}" href="{url(x)}">' for x in LANGS)
     cards=''.join(details(d,l,i) for i,d in enumerate(rows,1))
-    data=f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{h(c('title'))} — {h(headline)}</title><meta name="description" content="{h(c('pitch'))}"><meta name="theme-color" content="#0b191f"><link rel="canonical" href="{metaurl}">{alts}<link rel="icon" href="/assets/reyrun.png"><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/bridge-visual.js"></script><script defer src="/assets/site.js"></script></head><body><a class="skip" href="#main">{t('Uz saturu','Skip to content','К содержанию')}</a><header><div class="wrap"><a class="brand" href="{PAGES[l]}"><img alt="" src="/assets/reyrun.png"> {h(c('title').upper())}</a><nav class="navmain"><a href="#rdr2">RDR2</a><a href="#bridges">{t('Tilti','Bridges','Мосты')}</a><a href="{GITHUB}">GitHub ↗</a></nav><nav class="langs" aria-label="{t('Valoda','Language','Язык')}">{langs}</nav></div></header>
-<main id="main"><section class="hero"><div class="wrap heroGrid"><div><h1>{h(c('h1'))}<span>{h(c('accent'))}</span></h1><p>{h(c('pitch'))}</p><div class="btns" id="first-launch">{btn(dl('filesystem','Windows'),c('win'),True,True)}{btn(dl('filesystem','macOS'),c('mac'),download=True)}</div><p class="small"><a id="browser-start" href="/start/?lang={l}">{c('phone')} →</a> · <a href="#chatgpt">ChatGPT</a></p></div><figure><canvas id="bridge-art" width="680" height="385" role="img" aria-label="{h(t('Gaismas tilts starp MI un datoru','An illuminated bridge from an AI to a computer','Световой мост от ИИ к компьютеру'))}"></canvas><figcaption><span>{c('base')}</span><span>REYRUN</span><span>{c('device')}</span></figcaption></figure></div></section>
+    data=f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{h(c('title'))} — {h(headline)}</title><meta name="description" content="{h(c('pitch'))}"><meta name="theme-color" content="#0b191f"><link rel="canonical" href="{metaurl}">{alts}{metadata(SITE, l, PAGES[l], NAMES[l] + " · " + headline, SUMMARY[l])}<link rel="icon" href="/assets/reyrun.png"><link rel="stylesheet" href="/assets/site.css"><script defer src="/assets/bridge-visual.js"></script><script defer src="/assets/site.js"></script></head><body><a class="skip" href="#main">{t('Uz saturu','Skip to content','К содержанию')}</a><header><div class="wrap"><a class="brand" href="{PAGES[l]}"><img alt="" src="/assets/reyrun.png"> {h(c('title').upper())}</a><nav class="navmain"><a href="#rdr2">RDR2</a><a href="#bridges">{t('Tilti','Bridges','Мосты')}</a><a href="{GITHUB}">GitHub ↗</a></nav><nav class="langs" aria-label="{t('Valoda','Language','Язык')}">{langs}</nav></div></header>
+<main id="main"><section class="hero"><div class="wrap heroGrid"><div><h1>{h(c('h1'))} <span>{h(c('accent'))}</span></h1><p>{h(c('pitch'))}</p><div class="btns" id="first-launch">{btn(dl('filesystem','Windows'),c('win'),True,True)}{btn(dl('filesystem','macOS'),c('mac'),download=True)}</div><p class="small"><a id="browser-start" href="{START[l]}">{c('phone')} →</a> <a href="#chatgpt">ChatGPT</a></p></div><figure><canvas id="bridge-art" width="680" height="385" role="img" aria-label="{h(t('Gaismas tilts starp MI un datoru','An illuminated bridge from an AI to a computer','Световой мост от ИИ к компьютеру'))}"></canvas><figcaption><span>{c('base')}</span><span>REYRUN</span><span>{c('device')}</span></figcaption></figure></div></section>
 <div class="wrap"><section class="content board"><article class="pane"><h2>{c('prompt_title')}</h2><blockquote class="calltext" id="prompt">{h(prompt)}</blockquote><div class="btns"><button class="btn" data-copy data-ok="{c('copied')}" data-selected="{c('selected')}">{c('copy')}</button><a href="{skillpath}" download>{c('method')} (.zip)</a></div><p class="small">{c('first')} {c('device_note')}</p></article><aside class="person"><div class="byline"><img src="/assets/reinis.webp" alt="Reinis"><div><strong>Reinis</strong><br><small>{c('author')}</small></div></div><p>{c('appeal')}</p>{btn(support,c('support')+' ↗')}</aside></section>
 <section id="chatgpt" class="content pane"><h2>{c('chatgpt_title')}</h2><div class="btns">{btn(dcfile,c('chatgpt_file'),True)}{btn(dcapp,c('chatgpt_open'))}</div><p>{c('chatgpt_intro')}</p><small><a href="{dchelp}">Desktop Commander</a> · <a href="{dcprice}">{t('Bezmaksas plāns','Free plan','Бесплатный план')}</a></small></section>
 <section id="rdr2" class="content pane"><h2>{c('rdr')}</h2><p>{c('rdr_text')}</p><div class="btns">{btn(dl('rdr2','Windows'),c('rdr_win'),True,True)}{btn(guidegame,c('rdr_guide')+' ↗')}</div></section>
 <section id="bridges" class="content"><h2>{c('catalog')}</h2><p class="lead">{c('rank')}</p><div class="filters" aria-label="{c('all')}">{opts}</div><div class="methods">{cards}</div></section><section class="content"><h2>{c('guide')}</h2>{qs}<p><a href="{GITHUB}/blob/main/skill/reyrun-chatbot-bridge/references/{refbasename}">{c('method')} ↗</a> · <a href="{GITHUB}/tree/main/research">{c('evidence')} ↗</a></p></section></div></main>
-<footer><div class="wrap"><strong>{c('title')}</strong><a href="{GITHUB}">GitHub</a><a href="{guidegame}">RDR2</a><a href="{SEARCH}/">{c('search')}</a><a href="{support}">{c('support')}</a></div></footer></body></html>'''
+<footer><div class="wrap"><strong>{c('title')}</strong><a href="{GITHUB}">GitHub</a><a href="{guidegame}">RDR2</a><a href="{search_home}">{c('search')}</a><a href="{support}">{c('support')}</a></div></footer></body></html>'''
     out=WEB/PAGES[l].strip('/');out.mkdir(parents=True,exist_ok=True);(out/'index.html').write_text(data)
     header='[Latviski](%s) · [English](%s) · [Русский](%s)'%tuple(url(x) for x in LANGS)
-    starters=f"[{c('win')}]({SITE+dl('filesystem','Windows')}) · [{c('mac')}]({SITE+dl('filesystem','macOS')}) · [{c('phone')}]({SITE}/start/?lang={l})"
+    starters=f"[{c('win')}]({SITE+dl('filesystem','Windows')}) · [{c('mac')}]({SITE+dl('filesystem','macOS')}) · [{c('phone')}]({SITE}{START[l]})"
     readme=f"# {c('title')} — {headline}\n\n{starters}\n\n{c('first')} {c('device_note')}\n\n"+' · '.join(f"[{s}]({p})" for s,p in [('Latviski','README.lv.md'),('English','README.md'),('Русский','README.ru.md')])+f" · [{c('title')}]({metaurl})\n\n## {c('prompt_title')}\n\n> {prompt}\n\n[{c('method')}]({SITE}{skillpath}) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)\n\n## {c('rdr')}\n\n{c('rdr_text')}\n\n[{c('rdr_win')}]({SITE+dl('rdr2','Windows')}) · [{c('rdr_guide')}]({guidegame})\n\n## {c('catalog')}\n\n{c('rank')}\n\n"
     dcguide=f"## {c('chatgpt_title')}\n\n[{c('chatgpt_file')}]({dcfile}) · [{c('chatgpt_open')}]({dcapp})\n\n{c('chatgpt_intro')} [Desktop Commander]({dchelp}) · [{t('Bezmaksas plāns','Free plan','Бесплатный план')}]({dcprice})\n\n"
     readme=readme.replace('## '+c('catalog'),dcguide+'## '+c('catalog'))
@@ -131,10 +133,12 @@ def make(l):
     (REFS/refbasename).write_text(long)
     readme+=f"\n[{c('evidence')}](skill/reyrun-chatbot-bridge/references/{refbasename}) · [JSON](research/)\n\n"
     for i in (1,2):readme+=f"### {c('guide'+str(i))}\n\n{c('answer'+str(i))}\n\n"
-    readme+=f"{c('appeal')} [{c('support')}]({support}) · [{c('search')}]({SEARCH}/)\n"
+    readme+=f"{c('appeal')} [{c('support')}]({support}) · [{c('search')}]({search_home})\n"
     (ROOT/({'lv':'README.lv.md','en':'README.md','ru':'README.ru.md'}[l])).write_text(readme)
 if __name__=='__main__':
-    for l in LANGS:make(l)
+    for l in LANGS:
+        make(l)
+        render_start(WEB, SITE, l)
     dest=WEB/'download';dest.mkdir(exist_ok=True)
     with zipfile.ZipFile(dest/'REYRUN-Bridge-Skill.zip','w',zipfile.ZIP_DEFLATED) as z:
         for f in sorted((ROOT/'skill').rglob('*')):
