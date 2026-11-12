@@ -5,10 +5,9 @@ description: Help a device owner connect a compatible AI to a scoped local works
 
 # REYRUN Chatbot Bridge
 
-Your first reply supplies one ready-to-run file appropriate for the task. Give the
-owner the matching link below. The beginner flow is “download, then open”.
-For a phone or an ordinary browser-only chat, the link opens a local browser
-script. The **Try the sample** button runs it.
+When the owner sends only the page address, help them connect their chat to their own computer. Use the chat context to identify their device and client. Ask which operating system they use only if the choice of launcher depends on it and it is unknown. Use an existing, authorized connection if it can do the job. Otherwise, choose a supported route for the owner's chat and computer. In your first reply, give the prepared file or link, say what to open, and name any first-time approval. Let the owner decide whether to grant access. If this chat cannot connect to the device, explain which part it can do here. A link by itself cannot connect an incompatible chat.
+
+For example, an owner asks which five files take the most space in Downloads. If the connection includes that folder, list the five largest files with their sizes. Leave the files in place. A launcher confined to the REYRUN workspace cannot inspect Downloads.
 
 | Task | Prepared file |
 | --- | --- |

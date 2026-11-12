@@ -1,10 +1,10 @@
-# Instrukcija MI · REYRUN Tilts
+# Pamācība čatam · REYRUN Tilts
 
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
 [Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
-Gatavais failu palaidējs pieslēdz vienu darba mapi jau uzstādītai Claude Desktop lietotnei. Pēc palaidēja atvēršanas pilnībā aizver un vēlreiz atver Claude Desktop. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
+Ja lieto Claude Desktop, Windows vai Mac palaidējs pievienos tam vienu REYRUN darba mapi. Pēc tam pilnībā aizver un atkal atver Claude Desktop. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-linux)
 
@@ -22,33 +22,33 @@ Files lietotnē izsauc list_allowed_directories. Izveido testa failu tikai parā
 
 ## 1. Filesystem MCP · 2.3.0
 
-Windows, macOS. Vislabāk der failu sagatavošanai vienā darba mapē. MI palīgs var sakārtot projektu un pārkopēt failus, saglabājot to baitus.
+Windows, macOS. Čats var sakārtot failus izvēlētajā mapē un izveidot precīzas to kopijas.
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip)
 
-**Pārbaude.** Linux testa vidē palaidām īsto 2.3.0 serveri. Tas parādīja atļautās mapes, nolasīja faila informāciju, precīzi pārkopēja bināru failu un atteica piekļuvi ārpus izvēlētajām mapēm. Uz fiziska Windows datora svaiga uzstādīšana ar esošu Node aizņēma 6,68 sekundes. Latviešu teksta fails tika ierakstīts un precīzi nolasīts. Piekļuve ārpus darba mapes tika atteikta.
+**Pārbaude.** Linux vidē pārbaudījām servera versiju 2.3.0. Tas parādīja atļautās mapes, nolasīja faila informāciju, precīzi pārkopēja bināru failu un atteica piekļuvi ārpus izvēlētajām mapēm. Windows datorā, kurā jau bija Node, uzstādīšana aizņēma 6,68 sekundes. Pārbaudē ierakstījām un nolasījām to pašu tekstu latviski. Failiem ārpus darba mapes piekļūt nevarēja.
 
 **2026. gada pieredze.** Martā lietotājs ziņoja, ka klienta norādītās mapes aizstāja komandrindas sarakstu. Šeit lietojam --confine-roots un pārbaudām faktisko atļauju sarakstu.
 
-Vienai lasīšanas sesijai pievieno --read-only. Kopējot esošu failu, vispirms pārbaudi, vai mērķis jau pastāv. copy_file nepieļauj pārrakstīšanu. Parasts čats bez vietēja savienojuma dod norādes spēlētājam.
+Lai atļautu tikai lasīšanu, pievieno --read-only. Pirms kopēšanas pārbaudi, vai mapē jau nav faila ar tādu nosaukumu. Komanda copy_file esošu failu nepārraksta. Bez savienojuma ar datoru čats var izskaidrot darbības.
 
-**Vienlaicīgs darbs.** Vienas mapes rakstīšanu uztici vienam čatam. Atsevišķām mapēm var izmantot atsevišķus savienojumus.
+**Vienlaicīgs darbs.** Vienā mapē failus vienlaikus ļauj mainīt tikai vienam čatam. Atsevišķām mapēm var izmantot atsevišķus savienojumus.
 
 [Filesystem MCP · tools and directory rules](https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md) · [Filesystem 2.3.0 release](https://github.com/modelcontextprotocol/servers/releases/tag/v2.4.0) · [Desktop client setup for Windows and macOS](https://modelcontextprotocol.io/docs/develop/connect-local-servers) · [User report on effective roots, 16 March 2026](https://github.com/modelcontextprotocol/servers/issues/3602) · [GitHub · modelcontextprotocol/servers](https://api.github.com/repos/modelcontextprotocol/servers) · [Windows · JSON](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/windows-filesystem.json) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
 ## 2. REYRUN Task Bridge · 1.0.0
 
-Windows, macOS. Nodod nākamajam čatam precīzi to vietu, kur darbs apstājās. Katram darbam ir sava pierakstu vēsture.
+Windows, macOS. Saglabā paveikto, lai cits čats var turpināt no tās pašas vietas. Katram uzdevumam ir savi pieraksti.
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip)
 
-**Pārbaude.** Windows dators, Node 24.19, plkst. 01.11 Rīgā. Palaidējs divreiz pareizi sagatavoja savienojumu testa mapēs ar atstarpēm nosaukumā un saglabāja iepriekšējo iestatījumu. Viens klienta process ierakstīja 1. redakciju. Otrs to nolasīja. Mēģinājums rakstīt pāri no vecākas redakcijas tika noraidīts. Četri vienlaicīgi lokāli klienti saglabāja četrus atsevišķus darbus. Kopīgajā ierakstā uzvarēja viens no četriem. Pēc restartēšanas varēja nolasīt visus piecus darbus.
+**Pārbaude.** Windows dators, Node 24.19, plkst. 01.11 Rīgā. Palaidējs divreiz pareizi sagatavoja savienojumu testa mapēs ar atstarpēm nosaukumā un saglabāja iepriekšējo iestatījumu. Viens klienta process ierakstīja 1. redakciju. Otrs to nolasīja. Mēģinājums rakstīt pāri no vecākas redakcijas tika noraidīts. Četri vienlaicīgi lokāli klienti saglabāja četrus atsevišķus darbus. No četriem mēģinājumiem vienlaikus mainīt vienu ierakstu izdevās viens. Pēc pārstartēšanas varējām nolasīt visus piecus uzdevumus.
 
 **2026. gada pieredze.** Projekta paša 12. novembra pārbaude.
 
 Šis profils glabā darba pierakstus. Failu pārkopēšanai izvēlies Filesystem.
 
-**Vienlaicīgs darbs.** Pārbaudīti četri vienlaicīgi klienti un pieci atgūti darbi.
+**Vienlaicīgs darbs.** Četri klienti varēja darboties reizē. Pēc pārstartēšanas atradām visus piecus uzdevumus.
 
 [Windows · JSON](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/reinis.json) · [4 × stdio](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/blob/main/research/parallel.json) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
@@ -58,13 +58,13 @@ Windows, macOS. Vislabāk der sava projekta tīmekļa pārbaudēm, kad jāatrod 
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-macOS.command.zip)
 
-**Pārbaude.** Mūsu Windows un macOS pārbaudēs palaidējs atvēra atsevišķu Chrome procesu un nosūtīja čata klientam ekrānattēlu. Pārbaude atspieda reālos PNG pikseļus. Šajā testā pārlūkā bija tukša lapa.
+**Pārbaude.** Mūsu Windows un macOS pārbaudēs palaidējs atvēra atsevišķu Chrome procesu un nosūtīja čata klientam ekrānattēlu. Pārbaudē atvērām tukšu lapu un pārliecinājāmies, ka saņemto PNG attēlu var nolasīt.
 
 **2026. gada pieredze.** Japāņu praktiskajā salīdzinājumā autors atsevišķi pārbaudīja pārlūka procesu un pieteikšanās stāvokli. Paralēliem darbiem viņš iesaka skaidri izvēlēties izolētu profilu.
 
-Profils sākas bez tavas personiskās pieteikšanās. Standarta rīku saraksts ietver arī koda izpildi. --allowed-origins pats par sevi negarantē pilnīgu tīkla izolāciju. Izmanto savu uzticamu testa vietni un klienta rīku atļaujas.
+Jaunajā profilā tu neesi pierakstījies savos kontos. Standarta rīku saraksts ietver arī koda izpildi. --allowed-origins pats par sevi negarantē pilnīgu tīkla izolāciju. Izmanto savu uzticamu testa vietni un klienta rīku atļaujas.
 
-**Vienlaicīgs darbs.** Katrai vienlaicīgai sesijai savs pārlūka process un profils. Mūsu pārbaudē atvērts viens vienā operētājsistēmā.
+**Vienlaicīgs darbs.** Katrai vienlaicīgai sesijai savs pārlūka process un profils. Ar katru pārbaudīto operētājsistēmu izmēģinājām vienu sesiju.
 
 [Microsoft release · 9 November 2026](https://github.com/microsoft/playwright-mcp/releases/tag/v0.0.85) · [Microsoft · browser profiles and documented options](https://github.com/microsoft/playwright-mcp) · [Author tests on Windows, macOS and Ubuntu · 11 November](https://github.com/microsoft/playwright-mcp/actions/runs/43074928448) · [Japanese first-person profile comparison · 29 June 2026](https://zenn.dev/ruri/articles/playwright-multi-session-isolation) · [GitHub · microsoft/playwright-mcp](https://api.github.com/repos/microsoft/playwright-mcp) · [Windows + macOS · CI](https://github.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/actions/runs/43119957278)
 
@@ -74,7 +74,7 @@ Windows, macOS. Izvēlies vienkāršai vizuālai pārbaudei. Ierobežots rīku k
 
 [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-macOS.command.zip)
 
-**Pārbaude.** Mūsu Windows un macOS pārbaudēs palaidējs atvēra atsevišķu Chrome procesu un nosūtīja čata klientam ekrānattēlu. Pārbaude atspieda reālos PNG pikseļus. Šajā testā pārlūkā bija tukša lapa.
+**Pārbaude.** Mūsu Windows un macOS pārbaudēs palaidējs atvēra atsevišķu Chrome procesu un nosūtīja čata klientam ekrānattēlu. Pārbaudē atvērām tukšu lapu un pārliecinājāmies, ka saņemto PNG attēlu var nolasīt.
 
 **2026. gada pieredze.** macOS lietotājs ziņoja, ka pēc servera avārijas var palikt atvērts testa Chrome process. Ķīniešu autors atsevišķi aprakstīja praktisku pārbaudi Debian vidē un precīzi norādīja neizmēģinātās iespējas.
 
@@ -272,9 +272,9 @@ Lejupielādē un atver Windows palaidēju. Tas meklē spēli Steam, Rockstar un 
 
 Katram čatam piešķir savu darba nosaukumu un atsevišķu mapi. Tekstu, failu salīdzināšanu un pārbaudes var dalīt. Par izmaiņām vienā spēles mapē atbild viens čats. Pārlūkprogrammai katrai sesijai dod savu profilu. Uz kopīgas darbvirsmas peli vada tikai viena sesija.
 
-## Ko darīt, kad savienojums pārtrūkst?
+## Ko darīt, ja pārtrūkst savienojums?
 
-Jaunajā čatā nosauc to pašu darbu. Palūdz nolasīt pēdējo saglabāto soli un pārbaudīt, kuri faili jau izveidoti. Pēc noildzes vispirms pārbaudi esošo darbu. Lejupielādi vai kopēšanu atkārto tikai tad, kad redzams, ka tā nav pabeigta. Diviem čatiem saglabājot vienu redakciju, jaunākais ieraksts ir jāizlasa pirms nākamā mēģinājuma.
+Jaunajā čatā nosauc iepriekšējo uzdevumu. Palūdz apskatīt pēdējo saglabāto ierakstu un pārbaudīt, kuri faili jau ir gatavi. Ja pārtrūka lejupielāde vai kopēšana, vispirms pārbaudi failu. Ja divi čati reizē mainīja vienu ierakstu, pirms nākamās izmaiņas nolasi saglabāto versiju.
 
 ## Ko čatbots drīkst darīt manā datorā?
 

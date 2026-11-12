@@ -43,7 +43,8 @@ def theme_button(lang):
 
 def metadata(site, lang, route, title, description):
     kind = "phone" if route.endswith("/phone/") else ("check" if route == START[lang] else "bridge")
-    image = f"{site}/assets/{kind}-{lang}-v2.jpg"
+    version = 3 if kind == "bridge" else 2
+    image = f"{site}/assets/{kind}-{lang}-v{version}.jpg"
     props = [
         ("og:type", "website"), ("og:site_name", NAMES[lang]),
         ("og:url", site + route), ("og:title", title), ("og:description", description),

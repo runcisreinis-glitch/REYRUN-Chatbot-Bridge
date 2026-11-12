@@ -7,13 +7,13 @@ from playwright.sync_api import sync_playwright
 
 WEB = Path(__file__).resolve().parents[1] / "web"
 COPY = {
-    "lv": {"bridge": ("Dod čatbotam", "rokas un acis.", "Windows · Mac · Linux · Android · iPhone"),
+    "lv": {"bridge": ("Tilts no čata", "uz tavu datoru", "Windows · Mac · Linux · Android · iPhone"),
            "check": ("Pārbaudi failu", "telefonā.", "Pārbaudi izvēlēto failu un saņem apliecinājumu."),
            "phone": ("No čata", "uz telefonu.", "Saglabā piezīmi vai atver e-pasta melnrakstu.")},
-    "en": {"bridge": ("Give your chatbot", "hands and eyes.", "Windows · Mac · Linux · Android · iPhone"),
+    "en": {"bridge": ("Your AI chat", "on your computer", "Windows · Mac · Linux · Android · iPhone"),
            "check": ("Check a file", "on your phone.", "Choose a file and get a checksum receipt."),
            "phone": ("From your chat", "to your phone.", "Save a note or open an email draft.")},
-    "ru": {"bridge": ("Дайте чат-боту", "руки и глаза.", "Windows · Mac · Linux · Android · iPhone"),
+    "ru": {"bridge": ("Из чата", "на компьютер", "Windows · Mac · Linux · Android · iPhone"),
            "check": ("Проверьте файл", "на телефоне.", "Выберите файл и получите результат проверки."),
            "phone": ("Из чата", "на телефон.", "Сохраните заметку или откройте черновик письма.")},
 }
@@ -37,6 +37,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--browser", choices=["chromium", "webkit"], default="chromium")
     parser.add_argument("--executable-path")
+    parser.add_argument("--kind", choices=["bridge", "check", "phone"])
     args = parser.parse_args()
     logo = asset_uri("reyrun.png", "image/png")
     art = asset_uri("bridge-model.webp", "image/webp")
@@ -45,13 +46,16 @@ def main():
         page = browser.new_page(viewport={"width":1200, "height":630}, reduced_motion="reduce")
         for lang, cards in COPY.items():
             for kind, (first, second, caption) in cards.items():
+                if args.kind and args.kind != kind:
+                    continue
                 page.set_content(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{STYLE}</style>'
                     f'<main><div class="brand"><img src="{logo}">REYRUN</div><h1>{escape(first)}<span>{escape(second)}</span></h1>'
                     f'<img class="art" src="{art}"><footer>{escape(caption)}</footer></main></html>')
                 page.evaluate("Promise.all(Array.from(document.images, i=>i.decode()))")
                 if page.locator("h1").bounding_box()["width"] > 580:
                     page.locator("h1").evaluate("e=>e.style.fontSize='58px'")
-                page.screenshot(path=str(WEB / "assets" / f"{kind}-{lang}-v2.jpg"),
+                version = 3 if kind == "bridge" else 2
+                page.screenshot(path=str(WEB / "assets" / f"{kind}-{lang}-v{version}.jpg"),
                                 type="jpeg", quality=94)
         browser.close()
 

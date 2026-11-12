@@ -48,9 +48,9 @@
         }
       ],
       "use": {
-        "lv": "Vislabāk der failu sagatavošanai vienā darba mapē. MI palīgs var sakārtot projektu un pārkopēt failus, saglabājot to baitus.",
-        "en": "Best for files in a selected job folder. An AI assistant can organize the project and copy files without changing their bytes.",
-        "ru": "Подходит для файлов в выбранной рабочей папке. Помощник может упорядочить проект и скопировать файлы без изменения их содержимого."
+        "lv": "Čats var sakārtot failus izvēlētajā mapē un izveidot precīzas to kopijas.",
+        "en": "Your AI can organize the files in one folder and make exact copies.",
+        "ru": "ИИ может навести порядок в выбранной папке и сделать точные копии файлов."
       },
       "start": {
         "lv": "Datora MI lietotnē vajag vietējo MCP savienojumu un Node.js 24 vai jaunāku. Izvēlies tikai konkrētā darba mapes. Palūdz parādīt atļautās mapes un nolasīt viena paredzēta faila informāciju.",
@@ -58,14 +58,14 @@
         "ru": "Нужны настольное приложение с поддержкой локального MCP и Node.js 24 или новее. Выберите папки задачи. Попросите показать список доступных папок и сведения об одном ожидаемом файле."
       },
       "limit": {
-        "lv": "Vienai lasīšanas sesijai pievieno --read-only. Kopējot esošu failu, vispirms pārbaudi, vai mērķis jau pastāv. copy_file nepieļauj pārrakstīšanu. Parasts čats bez vietēja savienojuma dod norādes spēlētājam.",
+        "lv": "Lai atļautu tikai lasīšanu, pievieno --read-only. Pirms kopēšanas pārbaudi, vai mapē jau nav faila ar tādu nosaukumu. Komanda copy_file esošu failu nepārraksta. Bez savienojuma ar datoru čats var izskaidrot darbības.",
         "en": "For a read-only session add --read-only. Check whether the destination exists before copying. The copy_file tool refuses to overwrite an existing file. Browser-only chats without a local connection can guide the user.",
         "ru": "Для сеанса чтения добавьте --read-only. Проверьте, существует ли файл назначения. Команда copy_file откажется его перезаписывать. Обычный веб-чат без локального подключения может вести пользователя по шагам."
       },
       "verified": {
-        "lv": "Linux testa vidē palaidām īsto 2.3.0 serveri. Tas parādīja atļautās mapes, nolasīja faila informāciju, precīzi pārkopēja bināru failu un atteica piekļuvi ārpus izvēlētajām mapēm.",
-        "en": "We ran the actual 2.3.0 server on Linux. It listed the allowed folders, read file metadata, copied binary data intact and refused access outside the selected folders.",
-        "ru": "В Linux запущен настоящий сервер 2.3.0. Он показал разрешённые папки, прочитал сведения о файле, точно скопировал двоичные данные и отказал в доступе за пределами выбранных папок."
+        "lv": "Linux vidē pārbaudījām servera versiju 2.3.0. Tas parādīja atļautās mapes, nolasīja faila informāciju, precīzi pārkopēja bināru failu un atteica piekļuvi ārpus izvēlētajām mapēm.",
+        "en": "We tested server version 2.3.0 on Linux. It listed the allowed folders, read file metadata, copied binary data intact and refused access outside the selected folders.",
+        "ru": "В Linux мы проверили сервер версии 2.3.0. Он показал разрешённые папки, прочитал сведения о файле, точно скопировал двоичные данные и отказал в доступе за пределами выбранных папок."
       },
       "community": {
         "lv": "Martā lietotājs ziņoja, ka klienta norādītās mapes aizstāja komandrindas sarakstu. Šeit lietojam --confine-roots un pārbaudām faktisko atļauju sarakstu.",
@@ -135,7 +135,7 @@
         "ru": "Нужны локальный MCP-клиент, Node.js 18 или новее и установленный Chrome. Запускайте с --headless и --isolated. Разрешите в клиенте только нужные операции, например переход и чтение структуры страницы."
       },
       "limit": {
-        "lv": "Profils sākas bez tavas personiskās pieteikšanās. Standarta rīku saraksts ietver arī koda izpildi. --allowed-origins pats par sevi negarantē pilnīgu tīkla izolāciju. Izmanto savu uzticamu testa vietni un klienta rīku atļaujas.",
+        "lv": "Jaunajā profilā tu neesi pierakstījies savos kontos. Standarta rīku saraksts ietver arī koda izpildi. --allowed-origins pats par sevi negarantē pilnīgu tīkla izolāciju. Izmanto savu uzticamu testa vietni un klienta rīku atļaujas.",
         "en": "The new profile starts without your personal sign-in. The default tool list includes code execution. The project says --allowed-origins is not a complete network boundary. Use a trusted test site and client-side tool permissions.",
         "ru": "Новый профиль не содержит личных сеансов входа. В стандартном наборе есть выполнение кода. Авторы указывают, что --allowed-origins не гарантирует полной сетевой изоляции. Используйте доверенный тестовый сайт и ограничения инструментов клиента."
       },

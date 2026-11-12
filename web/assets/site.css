@@ -83,3 +83,14 @@ footer{border-top:1px solid var(--seam);padding:1.5rem 0}footer .wrap{justify-co
 }
 @media(max-width:360px){.wrap{width:calc(100% - 1.35rem)}.masthead .wrap{gap:.15rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.start-chat{display:flex;gap:.5rem 1rem;align-items:baseline;flex-wrap:wrap}
+.hero-intro{min-width:0}.hero-intro p{max-width:54ch}
+.device-choice{margin-top:2rem}.device-choice p{font-weight:650;margin-bottom:.5rem}
+.author-support{max-width:50rem;margin:2.25rem 0 1.5rem}
+.technical{margin:1.3rem 0 3rem}.technical>summary{min-height:44px;align-content:center}
+.technical[open] .content{margin-block:2rem}
+
+.hero-intro p.chat-definition{font-size:.94rem;line-height:1.45;margin:1rem 0 .3rem}
+.chat-difference summary{color:var(--link);cursor:pointer;padding:.15rem 0;font-size:.94rem}
+.chat-difference p{font-size:.94rem;line-height:1.45;margin:.4rem 0 0}

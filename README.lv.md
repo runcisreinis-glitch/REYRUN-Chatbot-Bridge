@@ -1,16 +1,33 @@
-# REYRUN Tilts — Dod čatbotam rokas un acis.
+# REYRUN Tilts · Tilts no čata uz tavu datoru
+
+Datorā trūkst vietas, bet nezini, kas to aizņem? Ar šo tiltu vari palūgt čatam apskatīt lejupielāžu mapi un parādīt piecus lielākos failus. Telefonā vari atvērt un saglabāt čata sagatavotu iepirkumu sarakstu.
+
+Pieslēgt un lietot šo tiltu vari pilnīgi bez maksas. Īpašas datora zināšanas nav vajadzīgas. Iekopē šīs lapas adresi tur, kur parasti uzdod jautājumus mākslīgajam intelektam. Tas pateiks, ko darīt tālāk.
+
+[Atvērt lapu un nokopēt tās adresi](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/)
+
+Visticamāk, tu jau sarunājies ar čatbotu internetā, piemēram, ar ChatGPT. Tev datorā nav jāuzstāda pats mākslīgais intelekts.
+
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
+<details>
+<summary>Norādes čatbotam un tehniskā informācija</summary>
+
+Prasme (skill) tavam čatam · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
+
+Ja lietotājs čatā ielīmējis tikai šīs lapas adresi, palīdzi pieslēgt čatu viņa datoram. Ja pietiek ar esošo savienojumu, izmanto to. Citādi noskaidro datora operētājsistēmu, ja tā vēl nav zināma, un vispirms iedod atbilstošo gatavo palaidēju vai oficiālo uzstādīšanas saiti. Pasaki vienkārši, ko atvērt un ko apstiprināt. Ja šis čats neatbalsta savienojumu, paskaidro, ar kuru saderīgu čatu to var izmantot.
+
+> Palīdzi man pieslēgt šo čatu datoram. Atrodi piecus lielākos failus lejupielāžu mapē un parādi to izmērus. Neko nedzēs. Izmanto REYRUN prasmi (skill) un pasaki, kad man jānoklikšķina. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ https://raw.githubusercontent.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/main/skill/reyrun-chatbot-bridge/SKILL.md
+
+Windows datorā lejupielādē un atver vienu failu. Pirmoreiz savienojot datoru ar ChatGPT, tas vēl jāapstiprina pārlūkā. Ja savienojums jau darbojas, vari uzreiz lūgt pārbaudīt mapi.
 
 [Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
-Gatavais failu palaidējs pieslēdz vienu darba mapi jau uzstādītai Claude Desktop lietotnei. Pēc palaidēja atvēršanas pilnībā aizver un vēlreiz atver Claude Desktop. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
+Ja lieto Claude Desktop, Windows vai Mac palaidējs pievienos tam vienu REYRUN darba mapi. Pēc tam pilnībā aizver un atkal atver Claude Desktop. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
 
 [Latviski](README.lv.md) · [English](README.md) · [Русский](README.ru.md) · [REYRUN Tilts](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/)
 
-## Ko pateikt savam čatbotam
-
-> Izvēlies šajā lapā risinājumu manai ierīcei un čatam. Datoram iedod gatavo palaidēju vai oficiālo uzstādīšanas soli. Telefonam piedāvā vienu konkrētu darbību un pasaki, kur varēšu ieraudzīt rezultātu. Ja šim čatam ir pieejama tikai saite, sagatavo man piezīmi, kuru varu atvērt telefonā. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/
-
-[Instrukcija MI](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
+[Pamācība čatam](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
 ## Uzstādi RDR2 tulkojumu
 
@@ -32,12 +49,12 @@ Lejupielādē un atver Windows palaidēju. Tas meklē spēli Steam, Rockstar un 
 
 Piesaisti savu Windows, Mac vai Linux datoru, sekojot Desktop Commander pamācībai. Kad terminālī redzi “Device ready”, ChatGPT var strādāt ar šī datora failiem arī tad, kad pats čatu atver telefonā. Lai veiktu darbību pašā telefonā, augstāk izvēlies Android vai iPhone. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Bezmaksas plāns](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
-## Izvēlies savam darbam piemērotu tiltu
+## Citi savienojumi un to pārbaudes
 
-Vispirms ir risinājumi ar šauru piekļuvi, kurus var izmēģināt fonā. Tālāk ir specializēti rīki un failu apmaiņa. GitHub zvaigznes rāda interesi par konkrēto repozitoriju. Atver kartīti, lai apskatītu pārbaudi, versiju un avotus. Telefonā paraugs pārbauda vienu failu. LocalSend, Nextcloud un Apple komandas palīdz nodot failus starp jau savienotām lietotnēm. Pilnas telefona ekrāna vadības šie varianti nedod.
+Izvēlies ierīci un atver interesējošā rīka aprakstu. Tur atradīsi pārbaudes rezultātus, ierobežojumus un avotus.
 
-1. **Filesystem MCP · 2.3.0** (Windows, macOS) — Vislabāk der failu sagatavošanai vienā darba mapē. MI palīgs var sakārtot projektu un pārkopēt failus, saglabājot to baitus. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
-2. **REYRUN Task Bridge · 1.0.0** (Windows, macOS) — Nodod nākamajam čatam precīzi to vietu, kur darbs apstājās. Katram darbam ir sava pierakstu vēsture. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
+1. **Filesystem MCP · 2.3.0** (Windows, macOS) — Čats var sakārtot failus izvēlētajā mapē un izveidot precīzas to kopijas. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
+2. **REYRUN Task Bridge · 1.0.0** (Windows, macOS) — Saglabā paveikto, lai cits čats var turpināt no tās pašas vietas. Katram uzdevumam ir savi pieraksti. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 3. **Microsoft Playwright MCP · 0.0.85** (Windows, macOS) — Vislabāk der sava projekta tīmekļa pārbaudēm, kad jāatrod poga, jāpāriet uz nākamo lapu vai jāpārbauda salasāmība. Katram darbam var būt savs pārlūka profils. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 4. **Chrome DevTools MCP · 1.13.0** (Windows, macOS) — Izvēlies vienkāršai vizuālai pārbaudei. Ierobežots rīku komplekts var atvērt atļauto projekta lapu un uzņemt tās ekrānattēlu. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 5. **Desktop Commander · Remote / Local** (Windows, macOS) — Fonā strādā ar failiem un termināļa sesijām. Šejienes lokālais palaidējs dod čatam trīs rīkus vienas darba mapes apskatei. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-macOS.command.zip) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
@@ -58,8 +75,10 @@ Vispirms ir risinājumi ar šauru piekļuvi, kurus var izmēģināt fonā. Tāl�
 
 Katram čatam piešķir savu darba nosaukumu un atsevišķu mapi. Tekstu, failu salīdzināšanu un pārbaudes var dalīt. Par izmaiņām vienā spēles mapē atbild viens čats. Pārlūkprogrammai katrai sesijai dod savu profilu. Uz kopīgas darbvirsmas peli vada tikai viena sesija.
 
-### Ko darīt, kad savienojums pārtrūkst?
+### Ko darīt, ja pārtrūkst savienojums?
 
-Jaunajā čatā nosauc to pašu darbu. Palūdz nolasīt pēdējo saglabāto soli un pārbaudīt, kuri faili jau izveidoti. Pēc noildzes vispirms pārbaudi esošo darbu. Lejupielādi vai kopēšanu atkārto tikai tad, kad redzams, ka tā nav pabeigta. Diviem čatiem saglabājot vienu redakciju, jaunākais ieraksts ir jāizlasa pirms nākamā mēģinājuma.
+Jaunajā čatā nosauc iepriekšējo uzdevumu. Palūdz apskatīt pēdējo saglabāto ierakstu un pārbaudīt, kuri faili jau ir gatavi. Ja pārtrūka lejupielāde vai kopēšana, vispirms pārbaudi failu. Ja divi čati reizē mainīja vienu ierakstu, pirms nākamās izmaiņas nolasi saglabāto versiju.
 
-Tilti un spēles tulkojums ir brīvi pieejami. Ja tie tev palīdzēja, tavs atbalsts dos Reinim laiku nākamajam tulkojumam un jaunām pārbaudēm. [Atbalstīt Reini](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/atbalsts.html) · [REYRUN meklēšana](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.lv.html)
+Par tiltu un spēles tulkojumu es neprasu naudu. Ja vēlies atbalstīt manu darbu, būšu pateicīgs. [Atbalstīt Reini](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/atbalsts.html) · [REYRUN meklēšana](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.lv.html)
+
+</details>

@@ -24,9 +24,26 @@ function CheckGameClosed {
         throw (Message 'Aizver Red Dead Redemption 2 un palaid failu vēlreiz.' 'Close Red Dead Redemption 2 and open this file again.' 'Закройте Red Dead Redemption 2 и запустите этот файл ещё раз.')
     }
 }
+function Get-EpicGameFolders([string]$programDataRoot) {
+    if (!$programDataRoot) { return }
+    $directory = Join-Path $programDataRoot 'Epic\EpicGamesLauncher\Data\Manifests'
+    $manifests = Get-ChildItem -LiteralPath $directory -File -Filter '*.item' -ErrorAction SilentlyContinue
+    foreach ($manifest in $manifests) {
+        if ($manifest.Length -gt 2MB) { continue }
+        try {
+            $entry = [IO.File]::ReadAllText($manifest.FullName) | ConvertFrom-Json
+            if ($entry.DisplayName -isnot [string] -or $entry.DisplayName.Trim() -ine 'Red Dead Redemption 2') { continue }
+            if ($entry.InstallLocation -isnot [string] -or $entry.InstallLocation -notmatch '^[A-Za-z]:[\\/]') { continue }
+            $folder = [IO.Path]::GetFullPath($entry.InstallLocation)
+            if ([IO.File]::Exists([IO.Path]::Combine($folder, 'RDR2.exe'))) { $folder }
+        } catch {
+            # Ignore incomplete or stale Epic records and keep looking.
+        }
+    }
+}
 function ChooseGame {
     if($env:REYRUN_XML_GAME){return [IO.Path]::GetFullPath($env:REYRUN_XML_GAME)}
-    $candidates = @()
+    $candidates = @(Get-EpicGameFolders $env:ProgramData)
     if(${env:ProgramFiles(x86)}){$candidates+=Join-Path ${env:ProgramFiles(x86)} 'Steam\steamapps\common\Red Dead Redemption 2'}
     $steam=(Get-ItemProperty -LiteralPath 'HKCU:\Software\Valve\Steam' -ErrorAction SilentlyContinue).SteamPath
     if($steam){

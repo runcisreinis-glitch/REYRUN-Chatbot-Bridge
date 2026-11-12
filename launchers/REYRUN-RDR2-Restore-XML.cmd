@@ -5,7 +5,9 @@ set "REYRUN_XML_LAUNCHER=%~f0"
 set "REYRUN_XML_GAME=%~1"
 powershell.exe -NoLogo -NoProfile -STA -Command "$s=[IO.File]::ReadAllText($env:REYRUN_XML_LAUNCHER,[Text.Encoding]::UTF8); $start=$s.IndexOf([char]10+'#REYRUN_XML_BODY'); if($start -lt 0){exit 1}; & ([ScriptBlock]::Create($s.Substring($start+1)))"
 set "result=%errorlevel%"
-if not defined REYRUN_XML_GAME pause
+if not defined REYRUN_XML_GAME (
+    if "%result%"=="0" (timeout /t 8 >nul) else (pause)
+)
 exit /b %result%
 #REYRUN_XML_BODY
 # The Windows launcher runs this local, bundled script. Only translation data is downloaded.
@@ -34,9 +36,26 @@ function CheckGameClosed {
         throw (Message 'Aizver Red Dead Redemption 2 un palaid failu vēlreiz.' 'Close Red Dead Redemption 2 and open this file again.' 'Закройте Red Dead Redemption 2 и запустите этот файл ещё раз.')
     }
 }
+function Get-EpicGameFolders([string]$programDataRoot) {
+    if (!$programDataRoot) { return }
+    $directory = Join-Path $programDataRoot 'Epic\EpicGamesLauncher\Data\Manifests'
+    $manifests = Get-ChildItem -LiteralPath $directory -File -Filter '*.item' -ErrorAction SilentlyContinue
+    foreach ($manifest in $manifests) {
+        if ($manifest.Length -gt 2MB) { continue }
+        try {
+            $entry = [IO.File]::ReadAllText($manifest.FullName) | ConvertFrom-Json
+            if ($entry.DisplayName -isnot [string] -or $entry.DisplayName.Trim() -ine 'Red Dead Redemption 2') { continue }
+            if ($entry.InstallLocation -isnot [string] -or $entry.InstallLocation -notmatch '^[A-Za-z]:[\\/]') { continue }
+            $folder = [IO.Path]::GetFullPath($entry.InstallLocation)
+            if ([IO.File]::Exists([IO.Path]::Combine($folder, 'RDR2.exe'))) { $folder }
+        } catch {
+            # Ignore incomplete or stale Epic records and keep looking.
+        }
+    }
+}
 function ChooseGame {
     if($env:REYRUN_XML_GAME){return [IO.Path]::GetFullPath($env:REYRUN_XML_GAME)}
-    $candidates = @()
+    $candidates = @(Get-EpicGameFolders $env:ProgramData)
     if(${env:ProgramFiles(x86)}){$candidates+=Join-Path ${env:ProgramFiles(x86)} 'Steam\steamapps\common\Red Dead Redemption 2'}
     $steam=(Get-ItemProperty -LiteralPath 'HKCU:\Software\Valve\Steam' -ErrorAction SilentlyContinue).SteamPath
     if($steam){

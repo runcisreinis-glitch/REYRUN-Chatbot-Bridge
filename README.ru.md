@@ -1,14 +1,31 @@
-# REYRUN Мост — Дайте чат-боту руки и глаза.
+# REYRUN Мост · Из чата на ваш компьютер
+
+На компьютере заканчивается место? С этим мостом можно попросить ИИ найти пять самых больших файлов в папке загрузок. А на телефоне можно открыть и сохранить список покупок, который он для вас составил.
+
+Подключить этот мост и пользоваться им можно совершенно бесплатно. Специальные знания не нужны. Скопируйте адрес этой страницы туда, где вы обычно задаёте вопросы ИИ. Он подскажет, что делать дальше.
+
+[Открыть страницу и скопировать её адрес](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
+Скорее всего, вы уже общаетесь с чат-ботом в интернете, например с ChatGPT. Устанавливать сам ИИ на компьютер не нужно.
+
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
+<details>
+<summary>Инструкция для ИИ и технические сведения</summary>
+
+Умение (skill) для вашего чата · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
+
+Если пользователь прислал только адрес этой страницы, помогите подключить чат к его компьютеру. Используйте уже доступное подключение, если оно подходит. Иначе уточните операционную систему, только если она неизвестна, и сразу дайте готовый файл или официальную ссылку на установку. Объясните, что открыть и что подтвердить. Если этот чат не поддерживает подключение, назовите совместимый чат.
+
+> Помоги подключить этот чат к моему компьютеру. Найди пять самых больших файлов в папке загрузок и покажи их размер. Ничего не удаляй. Используй умение (skill) REYRUN и скажи, когда мне нужно нажать. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/ https://raw.githubusercontent.com/runcisreinis-glitch/REYRUN-Chatbot-Bridge/main/skill/reyrun-chatbot-bridge/SKILL.md
+
+В Windows скачайте и откройте один файл. При первом подключении к ChatGPT понадобится ещё подтвердить устройство в браузере. Если связь уже работает, можно сразу попросить чат проверить папку.
 
 [Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
-Готовый файл запуска подключает одну рабочую папку к установленному приложению Claude Desktop. После запуска полностью закройте и снова откройте Claude Desktop. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
+Если вы пользуетесь Claude Desktop, файл для Windows или Mac подключит к нему одну рабочую папку REYRUN. После этого полностью закройте и снова откройте Claude Desktop. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
 
 [Latviski](README.lv.md) · [English](README.md) · [Русский](README.ru.md) · [REYRUN Мост](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
-
-## Что сказать своему чат-боту
-
-> Выбери на этой странице вариант для моего устройства и чата. Для компьютера дай готовый файл запуска или официальный шаг установки. Для телефона предложи одно действие и скажи, где проверить результат. Если в чате можно передать только ссылку, подготовь заметку, которую я смогу открыть на телефоне. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/
 
 [Инструкция для ИИ](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
@@ -32,12 +49,12 @@
 
 Подключите компьютер с Windows, macOS или Linux по инструкции Desktop Commander. Когда в терминале появится «Device ready», ChatGPT сможет работать с файлами этого компьютера, даже если вы открыли чат на телефоне. Для действий на самом телефоне выберите выше Android или iPhone. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
-## Выберите мост для своей задачи
+## Другие способы подключения и результаты проверок
 
-Сначала идут инструменты с ограниченным доступом для работы в фоне. Далее — специализированные средства и обмен файлами. Звёзды GitHub отражают интерес к конкретному репозиторию. Откройте карточку, чтобы увидеть версию, результат проверки и источники. На телефоне пример проверяет один файл. LocalSend, Nextcloud и команды Apple помогают передавать файлы между уже настроенными приложениями. Полного управления экраном телефона эти варианты не дают.
+Выберите устройство и откройте описание инструмента. Там указано, для чего он подходит, что удалось проверить и где найти документацию.
 
-1. **Filesystem MCP · 2.3.0** (Windows, macOS) — Подходит для файлов в выбранной рабочей папке. Помощник может упорядочить проект и скопировать файлы без изменения их содержимого. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
-2. **REYRUN Task Bridge · 1.0.0** (Windows, macOS) — Передайте следующему чату точную точку остановки. У каждого задания своя история версий. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+1. **Filesystem MCP · 2.3.0** (Windows, macOS) — ИИ может навести порядок в выбранной папке и сделать точные копии файлов. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+2. **REYRUN Task Bridge · 1.0.0** (Windows, macOS) — Сохраните, на чём остановились, чтобы другой чат мог продолжить работу. У каждого задания своя история версий. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-jobs-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 3. **Microsoft Playwright MCP · 0.0.85** (Windows, macOS) — Подходит для проверки собственного сайта: найти кнопку, перейти на следующую страницу, проверить читаемость. Каждой задаче можно дать отдельный профиль браузера. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-playwright-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 4. **Chrome DevTools MCP · 1.13.0** (Windows, macOS) — Удобен для визуальной проверки. Ограниченный набор инструментов открывает разрешённую страницу проекта и делает снимок экрана. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-devtools-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 5. **Desktop Commander · Remote / Local** (Windows, macOS) — Работает с файлами и сеансами терминала в фоне. Наш локальный файл запуска открывает три инструмента для просмотра одной рабочей папки. [Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-Windows.cmd) · [macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-commander-macOS.command.zip) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
@@ -58,8 +75,10 @@
 
 Выделите каждому чату имя задачи и отдельную папку. Текст, сравнение и проверку файлов можно разделить. Изменения в папке игры поручите одному чату. Каждой сессии браузера нужен свой профиль. На общем рабочем столе мышью управляет одна сессия.
 
-### Что делать при обрыве связи?
+### Что делать, если связь прервалась?
 
-Назовите новому чату то же имя задачи. Попросите прочитать последнюю запись и проверить созданные файлы. После тайм-аута сначала проверьте прежнее задание. Повторяйте скачивание или копирование только после проверки результата. При конфликте версий сначала прочитайте сохранённую запись.
+Назовите новому чату прежнюю задачу. Попросите прочитать последнюю запись и проверить, какие файлы уже готовы. Если скачивание или копирование прервалось, сначала проверьте сам файл. Если два чата одновременно изменили одну запись, прочитайте сохранённую версию перед следующей правкой.
 
-Мосты и перевод игры доступны бесплатно. Если они вам помогли, ваша поддержка даст Рейнису время на следующий перевод и новые испытания. [Поддержать Рейниса](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/support.ru.html) · [Поиск REYRUN](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.ru.html)
+Мост и перевод игры я отдаю бесплатно. Если захотите поддержать мою работу, буду благодарен. [Поддержать Рейниса](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/support.ru.html) · [Поиск REYRUN](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.ru.html)
+
+</details>
