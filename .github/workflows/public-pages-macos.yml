@@ -1,0 +1,29 @@
+name: Observe public pages in macOS WebKit
+on:
+  push:
+    branches: [qa/public-pages-macos-20261112]
+    paths: ['.github/workflows/public-pages-macos.yml']
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: macos-15
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Open the public homepages with unmodified native desktop WebKit
+        run: |
+          set -euo pipefail
+          /usr/bin/sw_vers
+          xcrun clang -fobjc-arc -framework WebKit -framework AppKit -framework Foundation tests/public-macos/Probe.m -o "$RUNNER_TEMP/reyrun-page-probe"
+          for site in reyrun-rekursive-deep-search reyrun-rdr2-latviski reyrun-chatbot-bridge; do
+            "$RUNNER_TEMP/reyrun-page-probe" "https://${site}.runcisreinis.chatgpt.site/" | tee -a macos-webkit.jsonl
+          done
+          python3 -c 'import json; rows=[json.loads(row) for row in open("macos-webkit.jsonl")]; assert len(rows)==3; assert all(row.get("responses") or row.get("error") for row in rows)'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-pages-macos-webkit
+          path: macos-webkit.jsonl
+          if-no-files-found: error
