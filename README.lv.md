@@ -2,13 +2,13 @@
 
 [Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
-Lejupielādē un atver. Palaidējs pievieno darba mapi jau uzstādītai Claude Desktop lietotnei. Pilnībā aizver un atver lietotni, kad tev ērti. Citam čatam izvēlies pārlūka paraugu. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
+Gatavais failu palaidējs pieslēdz vienu darba mapi jau uzstādītai Claude Desktop lietotnei. Pēc palaidēja atvēršanas pilnībā aizver un vēlreiz atver Claude Desktop. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
 
 [Latviski](README.lv.md) · [English](README.md) · [Русский](README.ru.md) · [REYRUN Tilts](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/)
 
 ## Ko pateikt savam čatbotam
 
-> Iedod man gatavu REYRUN palaidēju manai ierīcei. Kad to atvēršu, izveido mazu testa failu REYRUN darba mapē, nolasi to un pasaki, kas tajā rakstīts. Ja mūsu čats nevar pieslēgt vietējos rīkus, iedod saiti uz faila pārbaudi pārlūkā. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/
+> Izvēlies šajā lapā risinājumu manai ierīcei un čatam. Datoram iedod gatavo palaidēju vai oficiālo uzstādīšanas soli. Telefonam piedāvā vienu konkrētu darbību un pasaki, kur varēšu ieraudzīt rezultātu. Ja šim čatam ir pieejama tikai saite, sagatavo man piezīmi, kuru varu atvērt telefonā. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/
 
 [Instrukcija MI](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
@@ -22,11 +22,15 @@ Lejupielādē un atver Windows palaidēju. Tas meklē spēli Steam, Rockstar un 
 
 [Lejupielādēt RDR2 palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Atvērt tulkojuma instrukciju](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/uzstadisana/)
 
+[Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-linux)
+
+[Piezīme vai e-pasts telefonā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/phone/)
+
 ## Vai lieto ChatGPT pārlūkā?
 
 [Windows palaidējs ChatGPT](https://mcp.desktopcommander.app/remote-windows.cmd) · [Atvērt ChatGPT savienotāju](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
 
-Lai ChatGPT varētu strādāt ar Windows failiem, iedod tam Desktop Commander oficiālo palaidēju. Ja tavs dators jau piesaistīts, atver savienotāju un palūdz nolasīt vienu testa failu. Pirmajā reizē savienojumu apstiprini savā kontā, salīdzinot ierīces kodu. Bezmaksas plāns 2026. gada novembrī ietver 10 000 rīku izsaukumu mēnesī. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Bezmaksas plāns](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+Piesaisti savu Windows, Mac vai Linux datoru, sekojot Desktop Commander pamācībai. Kad terminālī redzi “Device ready”, ChatGPT var strādāt ar šī datora failiem arī tad, kad pats čatu atver telefonā. Lai veiktu darbību pašā telefonā, augstāk izvēlies Android vai iPhone. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Bezmaksas plāns](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
 ## Izvēlies savam darbam piemērotu tiltu
 
@@ -44,6 +48,9 @@ Vispirms ir risinājumi ar šauru piekļuvi, kurus var izmēģināt fonā. Tāl�
 10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Saglabā čata sagatavoto failu savā Nextcloud mapē un turpini tajā pašā mapē no datora. [Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 11. **Termux** (Android) — Android telefonā pārbaudi gatavu skriptu Termux privātajā mapē. [Gatavais Termux skripts](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-termux.sh) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 12. **Apple Shortcuts** (iOS, macOS) — Nodod failu jau iestatītai Apple komandai caur kopīgošanas izvēlni. [Atvērt gatavo paraugu](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
+13. **Desktop Commander Remote · ChatGPT** (Windows, macOS, Linux) — Strādā ar piesaistītā datora failiem no tīmekļa čata. [Atvērt pamācību](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#devices) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
+14. **Google Gemini · Device assistance** (Android) — Palūdz Gemini iestatīt taimeri telefona lietotnē Pulkstenis. [Atvērt pamācību](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-android) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
+15. **Claude · Apple Reminders** (iOS) — Izveido atgādinājumu jau esošā iPhone vai iPad sarakstā. [Atvērt pamācību](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-iphone) [Pārbaude](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#bridges)
 
 [Pārbaudes un avoti](skill/reyrun-chatbot-bridge/references/START-lv.md) · [JSON](research/)
 

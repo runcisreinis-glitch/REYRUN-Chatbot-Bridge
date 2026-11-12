@@ -1,0 +1,14 @@
+REYRUN — phone handoff for an ordinary online chatbot
+When the person asks for a note or email draft, compose the text and provide a clickable HTTPS link. They will review it on their own device. No account, connector or installation is required.
+
+Latviešu: atver /phone/. English: /en/phone/. Русский: /ru/phone/.
+Base URL: https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site
+Append #title=TITLE&body=TEXT to the language route. Encode each value separately as UTF-8 URL components. Encode a literal plus sign as %2B, a space as %20, and a newline as %0A. Do not put text in query parameters. Maximum title: 120 UTF-16 code units on a single line. Maximum body: 2800 UTF-16 code units. Use shorter texts for email. Never add an email recipient.
+The user can edit the text before choosing Save .txt file or Open email draft. Their mail app handles recipient and sending. The link contains the text; anyone with the full link can read it. For private content offer the empty page and separately provide the text for pasting.
+
+Latviešu piemērs:
+https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/phone/#title=Iepirkumu%20saraksts&body=Rudzu%20maize%0A%C4%80boli%0APiens
+English example:
+https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/phone/#title=Shopping%20list&body=Rye%20bread%0AApples%0AMilk
+Пример на русском:
+https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/phone/#title=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA&body=%D0%A5%D0%BB%D0%B5%D0%B1%0A%D0%AF%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8

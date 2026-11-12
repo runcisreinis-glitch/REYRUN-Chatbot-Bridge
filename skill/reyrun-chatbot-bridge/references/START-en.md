@@ -4,13 +4,17 @@
 
 [Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
-Download and open the file. It connects a workspace to an existing Claude Desktop installation. Fully quit and reopen the app when convenient. For an ordinary web chat, try the browser sample. On Mac open the .command file inside the ZIP. Your system may show its own first-use confirmation.
+The file launcher connects one workspace to an existing Claude Desktop installation. After opening the launcher, quit and reopen Claude Desktop. On Mac open the .command file inside the ZIP. Your system may show its own first-use confirmation.
+
+[Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-linux)
+
+[Prepare a note or email on your phone](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/phone/)
 
 ## Using ChatGPT on the web?
 
 [Windows launcher for ChatGPT](https://mcp.desktopcommander.app/remote-windows.cmd) · [Open the ChatGPT connector](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
 
-For ChatGPT to work with Windows files, start with Desktop Commander’s official launcher. If your computer is already paired, open the connector and ask it to read one test file. On first use, verify your device code in your account. In November 2026 the free plan includes 10,000 tool calls per month. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Free plan](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+Pair your Windows, Mac or Linux computer using the Desktop Commander guide. When the terminal shows “Device ready”, ChatGPT can work with files on that computer, even if you open your chat on a phone. To act on the phone itself, use the Android or iPhone guide above. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Free plan](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
 ## Checks after opening the launcher
 
@@ -207,6 +211,54 @@ Requires an existing shortcut configured to accept files. The browser sample is 
 **Parallel work.** Give each job its own file or receipt. One action uses the phone share sheet at a time.
 
 [Apple · iPhone](https://support.apple.com/guide/shortcuts/launch-a-shortcut-from-another-app-apd163eb9f95/ios) · [Apple · Share](https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios) · [Apple · Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios) · [anyprogram · iPhone/iPad · 日本語](https://qiita.com/anyprogram/items/6cc1394569c687ed506c) · [iPhone 16 Pro Max · 2026](https://github.com/net00-1/SW-DLT/issues/133) · [REYRUN · mobile-request.json](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-request.json)
+
+## 13. Desktop Commander Remote · ChatGPT
+
+Windows, macOS, Linux. Work on a paired computer’s files from a web chat.
+
+[Open setup guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#devices)
+
+**Test result.** The developer documents Windows, macOS and Linux.
+
+**2026 field notes.** Developer documentation.
+
+The connection needs to run on the target computer.
+
+**Parallel work.** Concurrent sessions have not been measured for this route.
+
+[Desktop Commander Remote · ChatGPT](https://desktopcommander.app/help/devices/connect-computer)
+
+## 14. Google Gemini · Device assistance
+
+Android. Ask Gemini to set a timer in the phone’s Clock app.
+
+[Open setup guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-android)
+
+**Test result.** Google documents the action in the Android Gemini app.
+
+**2026 field notes.** Developer documentation.
+
+Requires the Gemini Android app.
+
+**Parallel work.** Concurrent sessions have not been measured for this route.
+
+[Google Gemini · Device assistance](https://support.google.com/gemini/answer/15235441)
+
+## 15. Claude · Apple Reminders
+
+iOS. Add a reminder to an existing list on your iPhone or iPad.
+
+[Open setup guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-iphone)
+
+**Test result.** Anthropic documents creating reminders with permission.
+
+**2026 field notes.** Developer documentation.
+
+Requires the Claude mobile app and access to Reminders.
+
+**Parallel work.** Concurrent sessions have not been measured for this route.
+
+[Claude · Apple Reminders](https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps)
 
 ## Install RDR2 in Latvian
 

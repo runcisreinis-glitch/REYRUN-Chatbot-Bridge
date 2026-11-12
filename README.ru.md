@@ -2,13 +2,13 @@
 
 [Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
-Скачайте и откройте файл. Он подключит рабочую папку к уже установленному Claude Desktop. Полностью закройте и снова откройте приложение, когда вам удобно. Для обычного веб-чата откройте пример в браузере. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
+Готовый файл запуска подключает одну рабочую папку к установленному приложению Claude Desktop. После запуска полностью закройте и снова откройте Claude Desktop. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
 
 [Latviski](README.lv.md) · [English](README.md) · [Русский](README.ru.md) · [REYRUN Мост](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
 ## Что сказать своему чат-боту
 
-> Дай мне готовый файл запуска REYRUN для моего устройства. Когда я его открою, создай в рабочей папке REYRUN небольшой файл, прочитай его и скажи, что там написано. Если в этом чате нельзя подключить локальные инструменты, дай мне ссылку на проверку файла в браузере. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/
+> Выбери на этой странице вариант для моего устройства и чата. Для компьютера дай готовый файл запуска или официальный шаг установки. Для телефона предложи одно действие и скажи, где проверить результат. Если в чате можно передать только ссылку, подготовь заметку, которую я смогу открыть на телефоне. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/
 
 [Инструкция для ИИ](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
@@ -22,11 +22,15 @@
 
 [Скачать файл запуска для RDR2](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/ru/install/)
 
+[Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-linux)
+
+[Заметка или письмо на телефоне](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/phone/)
+
 ## Пользуетесь ChatGPT в браузере?
 
 [Запуск для ChatGPT на Windows](https://mcp.desktopcommander.app/remote-windows.cmd) · [Открыть подключение в ChatGPT](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
 
-Чтобы ChatGPT работал с файлами Windows, начните с официального файла запуска Desktop Commander. Если компьютер уже подключён, откройте приложение в ChatGPT и попросите прочитать один тестовый файл. При первом подключении сверьте и подтвердите код устройства в своём аккаунте. В ноябре 2026 года бесплатный план включает 10 000 обращений к инструментам в месяц. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+Подключите компьютер с Windows, macOS или Linux по инструкции Desktop Commander. Когда в терминале появится «Device ready», ChatGPT сможет работать с файлами этого компьютера, даже если вы открыли чат на телефоне. Для действий на самом телефоне выберите выше Android или iPhone. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
 ## Выберите мост для своей задачи
 
@@ -44,6 +48,9 @@
 10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Сохраните подготовленный чатом файл в папке Nextcloud и продолжите работу с ним на компьютере. [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 11. **Termux** (Android) — Проверьте готовый скрипт в закрытой папке Termux на Android. [Готовый скрипт для Termux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-termux.sh) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 12. **Apple Shortcuts** (iOS, macOS) — Передайте файл уже настроенной команде Apple через меню «Поделиться». [Открыть готовый пример](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+13. **Desktop Commander Remote · ChatGPT** (Windows, macOS, Linux) — Работайте с файлами подключённого компьютера из веб-чата. [Открыть инструкцию](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#devices) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+14. **Google Gemini · Device assistance** (Android) — Попросите Gemini поставить таймер в приложении Часы. [Открыть инструкцию](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-android) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
+15. **Claude · Apple Reminders** (iOS) — Добавьте напоминание в существующий список на iPhone или iPad. [Открыть инструкцию](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-iphone) [Проверка](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#bridges)
 
 [Проверки и источники](skill/reyrun-chatbot-bridge/references/START-ru.md) · [JSON](research/)
 

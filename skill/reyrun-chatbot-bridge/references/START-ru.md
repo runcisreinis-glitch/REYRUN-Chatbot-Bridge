@@ -4,13 +4,17 @@
 
 [Скачать для Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Скачать для Mac](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Попробовать на телефоне или в браузере](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/start/)
 
-Скачайте и откройте файл. Он подключит рабочую папку к уже установленному Claude Desktop. Полностью закройте и снова откройте приложение, когда вам удобно. Для обычного веб-чата откройте пример в браузере. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
+Готовый файл запуска подключает одну рабочую папку к установленному приложению Claude Desktop. После запуска полностью закройте и снова откройте Claude Desktop. На Mac откройте файл .command из архива. При первом запуске система может запросить подтверждение.
+
+[Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-linux)
+
+[Заметка или письмо на телефоне](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/phone/)
 
 ## Пользуетесь ChatGPT в браузере?
 
 [Запуск для ChatGPT на Windows](https://mcp.desktopcommander.app/remote-windows.cmd) · [Открыть подключение в ChatGPT](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
 
-Чтобы ChatGPT работал с файлами Windows, начните с официального файла запуска Desktop Commander. Если компьютер уже подключён, откройте приложение в ChatGPT и попросите прочитать один тестовый файл. При первом подключении сверьте и подтвердите код устройства в своём аккаунте. В ноябре 2026 года бесплатный план включает 10 000 обращений к инструментам в месяц. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+Подключите компьютер с Windows, macOS или Linux по инструкции Desktop Commander. Когда в терминале появится «Device ready», ChatGPT сможет работать с файлами этого компьютера, даже если вы открыли чат на телефоне. Для действий на самом телефоне выберите выше Android или iPhone. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Бесплатный план](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
 ## Проверка после запуска
 
@@ -207,6 +211,54 @@ iOS, macOS. Передайте файл уже настроенной коман
 **Параллельная работа.** У каждого задания свой файл или квитанция. Меню отправки телефона обслуживает одно действие за раз.
 
 [Apple · iPhone](https://support.apple.com/guide/shortcuts/launch-a-shortcut-from-another-app-apd163eb9f95/ios) · [Apple · Share](https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios) · [Apple · Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios) · [anyprogram · iPhone/iPad · 日本語](https://qiita.com/anyprogram/items/6cc1394569c687ed506c) · [iPhone 16 Pro Max · 2026](https://github.com/net00-1/SW-DLT/issues/133) · [REYRUN · mobile-request.json](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-request.json)
+
+## 13. Desktop Commander Remote · ChatGPT
+
+Windows, macOS, Linux. Работайте с файлами подключённого компьютера из веб-чата.
+
+[Открыть инструкцию](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#devices)
+
+**Проверка.** Разработчик описывает Windows, macOS и Linux.
+
+**Опыт за 2026 год.** Документация разработчика.
+
+Подключение должно работать на целевом компьютере.
+
+**Параллельная работа.** Число одновременных сеансов для этого варианта не измерялось.
+
+[Desktop Commander Remote · ChatGPT](https://desktopcommander.app/help/devices/connect-computer)
+
+## 14. Google Gemini · Device assistance
+
+Android. Попросите Gemini поставить таймер в приложении Часы.
+
+[Открыть инструкцию](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-android)
+
+**Проверка.** Google описывает действие в приложении Gemini для Android.
+
+**Опыт за 2026 год.** Документация разработчика.
+
+Требуется приложение Gemini для Android.
+
+**Параллельная работа.** Число одновременных сеансов для этого варианта не измерялось.
+
+[Google Gemini · Device assistance](https://support.google.com/gemini/answer/15235441)
+
+## 15. Claude · Apple Reminders
+
+iOS. Добавьте напоминание в существующий список на iPhone или iPad.
+
+[Открыть инструкцию](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/#device-iphone)
+
+**Проверка.** Anthropic описывает создание напоминаний с разрешения пользователя.
+
+**Опыт за 2026 год.** Документация разработчика.
+
+Нужны мобильное приложение Claude и доступ к напоминаниям.
+
+**Параллельная работа.** Число одновременных сеансов для этого варианта не измерялось.
+
+[Claude · Apple Reminders](https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps)
 
 ## Установите латышский перевод RDR2
 

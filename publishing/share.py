@@ -8,9 +8,9 @@ HOME = {"lv": "/", "en": "/en/", "ru": "/ru/"}
 START = {"lv": "/start/", "en": "/en/start/", "ru": "/ru/start/"}
 NAMES = {"lv": "REYRUN Tilts", "en": "REYRUN Bridge", "ru": "Мост REYRUN"}
 SUMMARY = {
-    "lv": "Lejupielādē gatavu palaidēju un pievieno čatbotam darba mapi. Telefonā vari izmēģināt faila pārbaudi pārlūkā.",
-    "en": "Download a launcher to give your chatbot access to a project folder. On a phone, try the file check in your browser.",
-    "ru": "Скачайте готовый файл запуска, чтобы чат-бот мог работать с папкой проекта. На телефоне можно проверить файл прямо в браузере.",
+    "lv": "Atrodi savam datoram vai telefonam piemērotu tiltu. Izvēlies Windows, Mac, Linux, Android vai iPhone un izmēģini vienu konkrētu darbību.",
+    "en": "Connect a chatbot to your computer or phone. Choose Windows, Mac, Linux, Android or iPhone and try a device-specific task.",
+    "ru": "Подключите чат-бота к своему компьютеру или телефону. Выберите Windows, Mac, Linux, Android или iPhone и попробуйте конкретное действие.",
 }
 ART = {
     "lv": "Gaismas tilts savieno smadzeņu zīmējumu ar datoru. Stūrī ir REYRUN logo.",

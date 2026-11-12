@@ -4,13 +4,17 @@
 
 [Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)
 
-Lejupielādē un atver. Palaidējs pievieno darba mapi jau uzstādītai Claude Desktop lietotnei. Pilnībā aizver un atver lietotni, kad tev ērti. Citam čatam izvēlies pārlūka paraugu. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
+Gatavais failu palaidējs pieslēdz vienu darba mapi jau uzstādītai Claude Desktop lietotnei. Pēc palaidēja atvēršanas pilnībā aizver un vēlreiz atver Claude Desktop. Mac datorā atver arhīvā esošo .command failu. Pirmajā reizē sistēma var parādīt savu apstiprinājumu.
+
+[Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-linux)
+
+[Piezīme vai e-pasts telefonā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/phone/)
 
 ## Vai lieto ChatGPT pārlūkā?
 
 [Windows palaidējs ChatGPT](https://mcp.desktopcommander.app/remote-windows.cmd) · [Atvērt ChatGPT savienotāju](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
 
-Lai ChatGPT varētu strādāt ar Windows failiem, iedod tam Desktop Commander oficiālo palaidēju. Ja tavs dators jau piesaistīts, atver savienotāju un palūdz nolasīt vienu testa failu. Pirmajā reizē savienojumu apstiprini savā kontā, salīdzinot ierīces kodu. Bezmaksas plāns 2026. gada novembrī ietver 10 000 rīku izsaukumu mēnesī. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Bezmaksas plāns](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+Piesaisti savu Windows, Mac vai Linux datoru, sekojot Desktop Commander pamācībai. Kad terminālī redzi “Device ready”, ChatGPT var strādāt ar šī datora failiem arī tad, kad pats čatu atver telefonā. Lai veiktu darbību pašā telefonā, augstāk izvēlies Android vai iPhone. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Bezmaksas plāns](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
 ## Pārbaudes pēc palaidēja atvēršanas
 
@@ -207,6 +211,54 @@ iOS, macOS. Nodod failu jau iestatītai Apple komandai caur kopīgošanas izvēl
 **Vienlaicīgs darbs.** Katram darbam savs fails vai kvīts. Tālruņa kopīgošanas izvēlni izmanto viena darbība reizē.
 
 [Apple · iPhone](https://support.apple.com/guide/shortcuts/launch-a-shortcut-from-another-app-apd163eb9f95/ios) · [Apple · Share](https://support.apple.com/guide/shortcuts/share-shortcuts-apdf01f8c054/ios) · [Apple · Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios) · [anyprogram · iPhone/iPad · 日本語](https://qiita.com/anyprogram/items/6cc1394569c687ed506c) · [iPhone 16 Pro Max · 2026](https://github.com/net00-1/SW-DLT/issues/133) · [REYRUN · mobile-request.json](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-request.json)
+
+## 13. Desktop Commander Remote · ChatGPT
+
+Windows, macOS, Linux. Strādā ar piesaistītā datora failiem no tīmekļa čata.
+
+[Atvērt pamācību](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#devices)
+
+**Pārbaude.** Izstrādātājs dokumentē Windows, macOS un Linux.
+
+**2026. gada pieredze.** Izstrādātāja dokumentācija.
+
+Savienojumam jādarbojas mērķa datorā.
+
+**Vienlaicīgs darbs.** Vienlaicīgu savienojumu skaits šim variantam nav mērīts.
+
+[Desktop Commander Remote · ChatGPT](https://desktopcommander.app/help/devices/connect-computer)
+
+## 14. Google Gemini · Device assistance
+
+Android. Palūdz Gemini iestatīt taimeri telefona lietotnē Pulkstenis.
+
+[Atvērt pamācību](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-android)
+
+**Pārbaude.** Google apraksta darbību Gemini Android lietotnē.
+
+**2026. gada pieredze.** Izstrādātāja dokumentācija.
+
+Jāizmanto Gemini Android lietotne.
+
+**Vienlaicīgs darbs.** Vienlaicīgu savienojumu skaits šim variantam nav mērīts.
+
+[Google Gemini · Device assistance](https://support.google.com/gemini/answer/15235441)
+
+## 15. Claude · Apple Reminders
+
+iOS. Izveido atgādinājumu jau esošā iPhone vai iPad sarakstā.
+
+[Atvērt pamācību](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/#device-iphone)
+
+**Pārbaude.** Anthropic apraksta atgādinājumu izveidi ar lietotāja atļauju.
+
+**2026. gada pieredze.** Izstrādātāja dokumentācija.
+
+Vajadzīga Claude mobilā lietotne un atļauja atgādinājumiem.
+
+**Vienlaicīgs darbs.** Vienlaicīgu savienojumu skaits šim variantam nav mērīts.
+
+[Claude · Apple Reminders](https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps)
 
 ## Uzstādi RDR2 tulkojumu
 

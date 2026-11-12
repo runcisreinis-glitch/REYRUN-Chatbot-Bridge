@@ -2,13 +2,13 @@
 
 [Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
 
-Download and open the file. It connects a workspace to an existing Claude Desktop installation. Fully quit and reopen the app when convenient. For an ordinary web chat, try the browser sample. On Mac open the .command file inside the ZIP. Your system may show its own first-use confirmation.
+The file launcher connects one workspace to an existing Claude Desktop installation. After opening the launcher, quit and reopen Claude Desktop. On Mac open the .command file inside the ZIP. Your system may show its own first-use confirmation.
 
 [Latviski](README.lv.md) · [English](README.md) · [Русский](README.ru.md) · [REYRUN Bridge](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/)
 
 ## What to say to your chatbot
 
-> Give me the ready-made REYRUN launcher for my device. After I open it, write a small file in the REYRUN workspace, read it back and tell me what it says. If this chat cannot connect to local tools, give me the link to the browser file check. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/
+> Choose the route on this page that fits my device and chat. For a computer, give me the ready-made launcher or the official setup step. For a phone, suggest one action and tell me where to check the result. If this chat can only share a link, prepare a note that I can open on my phone. https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/
 
 [Guide for AI](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/download/REYRUN-Bridge-Skill.zip) · [SKILL.md](skill/reyrun-chatbot-bridge/SKILL.md)
 
@@ -22,11 +22,15 @@ Download and open the Windows launcher. It looks for the game in Steam, Rockstar
 
 [Download the RDR2 launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Open translation instructions](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/en/install/)
 
+[Windows](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-windows) · [Mac · macOS](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-mac) · [Android](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-android) · [iPhone · iPad](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-iphone) · [Linux](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-linux)
+
+[Prepare a note or email on your phone](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/phone/)
+
 ## Using ChatGPT on the web?
 
 [Windows launcher for ChatGPT](https://mcp.desktopcommander.app/remote-windows.cmd) · [Open the ChatGPT connector](https://chatgpt.com/apps/remote-desktop-commander/asdk_app_6a057d268ebc81919918d37eec718425)
 
-For ChatGPT to work with Windows files, start with Desktop Commander’s official launcher. If your computer is already paired, open the connector and ask it to read one test file. On first use, verify your device code in your account. In November 2026 the free plan includes 10,000 tool calls per month. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Free plan](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
+Pair your Windows, Mac or Linux computer using the Desktop Commander guide. When the terminal shows “Device ready”, ChatGPT can work with files on that computer, even if you open your chat on a phone. To act on the phone itself, use the Android or iPhone guide above. [Desktop Commander](https://desktopcommander.app/help/devices/connect-computer) · [Free plan](https://desktopcommander.app/help/account-billing/plans-and-tool-call-limits)
 
 ## Choose a bridge for the job
 
@@ -44,6 +48,9 @@ Start with limited-access tools you can try in the background. Specialised tools
 10. **Nextcloud Files** (Windows, macOS, Android, iOS) — Save a file prepared by the chat to your Nextcloud folder and pick it up on your computer. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 11. **Termux** (Android) — Check a ready-made script in Termux’s private directory on Android. [Ready-made Termux script](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/mobile-termux.sh) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 12. **Apple Shortcuts** (iOS, macOS) — Pass a file to an existing Apple shortcut through the share sheet. [Open the ready-made sample](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+13. **Desktop Commander Remote · ChatGPT** (Windows, macOS, Linux) — Work on a paired computer’s files from a web chat. [Open setup guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#devices) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+14. **Google Gemini · Device assistance** (Android) — Ask Gemini to set a timer in the phone’s Clock app. [Open setup guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-android) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
+15. **Claude · Apple Reminders** (iOS) — Add a reminder to an existing list on your iPhone or iPad. [Open setup guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#device-iphone) [Test result](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/#bridges)
 
 [Tests and sources](skill/reyrun-chatbot-bridge/references/START-en.md) · [JSON](research/)
 

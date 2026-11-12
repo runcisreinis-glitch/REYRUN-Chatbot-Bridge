@@ -9,19 +9,21 @@ if(copy)copy.addEventListener('click',async()=>{
  try{await navigator.clipboard.writeText(node.textContent.trim());copy.textContent=copy.dataset.ok}
  catch{const s=getSelection();const r=document.createRange();r.selectNodeContents(node);s.removeAllRanges();s.addRange(r);copy.textContent=copy.dataset.selected}
 });
-const launch=document.getElementById('first-launch');
-const browserStart=document.getElementById('browser-start');
-if(launch&&browserStart){
- const ua=navigator.userAgent;
- const mobile=/Android|iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
- if(mobile){
-   const options=launch.parentElement.querySelector('p.small');
-   const desktop=Array.from(launch.children);
-   launch.prepend(browserStart);
-   browserStart.className='btn primary';
-   for(const link of desktop){link.className='';options.append(link);}
- }else if(/Mac/.test(navigator.platform)){
-   const mac=launch.lastElementChild,win=launch.firstElementChild;
-   launch.prepend(mac);mac.classList.add('primary');win.classList.remove('primary');
+
+function openLinkedDevice() {
+ const id=location.hash.slice(1);
+ const target=document.getElementById(id);
+ if (!target || !target.matches('.device-guide')) return;
+ target.open=true;
+ for (const link of document.querySelectorAll('.langs a')) {
+   const next=new URL(link.href);
+   next.hash=id;
+   link.href=next.href;
  }
 }
+window.addEventListener('hashchange',openLinkedDevice);
+document.querySelectorAll('.device-links a').forEach(link=>link.addEventListener('click',()=>{
+ const target=document.getElementById(link.hash.slice(1));
+ if(target)target.open=true;
+}));
+openLinkedDevice();
