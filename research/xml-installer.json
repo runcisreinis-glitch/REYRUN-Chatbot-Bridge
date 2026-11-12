@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-12",
+  "platform": "Windows 11 (10.0.26200)",
+  "environment": "Disposable game folders, using copies of the tested dependencies and release XML",
+  "xml_sha256": "c72337da664b3999ca4fc2de2600c1e79c551b29fa1e69d79d1330485aef5045",
+  "tests_passed": [
+    "Reject missing dependencies",
+    "Preserve conflicting base translation",
+    "Install in a clean folder",
+    "Repeat install without replacing verified XML",
+    "Restore a previously empty folder",
+    "Repeat restore",
+    "Replace a previous Latvian XML and back it up",
+    "Preserve manual edits when restoring",
+    "Restore previous XML bytes",
+    "Reject an unrecognized translator plug-in"
+  ],
+  "scope": "File installation and rollback. Story Mode rendering is a separate in-game check."
+}

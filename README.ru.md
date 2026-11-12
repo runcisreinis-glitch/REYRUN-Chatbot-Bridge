@@ -14,6 +14,10 @@
 
 ## Установите латышский перевод RDR2
 
+Для сюжетного режима в Windows. Если в игре уже стоят проверенные сборки Universal RDR2 String Translator и Ultimate ASI Loader x64 9.7.4, закройте игру, скачайте и откройте установщик XML. Он сверит контрольные суммы обоих файлов, сохранит прежний латышский XML и установит проверенный перевод. Если в папке есть другой основной перевод или не хватает плагина, установщик остановится и покажет ссылку на инструкцию.
+
+[Установить латышский XML](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-RDR2-Install-XML.cmd) · [Восстановить прежний XML](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-RDR2-Restore-XML.cmd)
+
 Скачайте и откройте файл запуска для Windows. Он ищет игру в библиотеках Steam, Rockstar и Epic и подготавливает проверенный файл латышского перевода в рабочей папке. Если найдётся несколько папок, вы выбираете нужную. Передайте ИИ инструкцию по установке плагина, загрузчика, резервному копированию и проверке в сюжетном режиме.
 
 [Скачать файл запуска для RDR2](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Открыть инструкцию по переводу](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/ru/install/)

@@ -1,6 +1,6 @@
 """Build deterministic single-file, user-invoked launchers without an administrator or network listener."""
 from pathlib import Path
-import base64, hashlib, io, json, zipfile, textwrap
+import base64, hashlib, io, json, zipfile, textwrap, runpy
 
 root=Path(__file__).resolve().parents[1]
 target=root/'launchers';target.mkdir(exist_ok=True)
@@ -123,5 +123,6 @@ for mode in ['jobs','filesystem','playwright','devtools','commander','git-handof
   (target/name).write_bytes(data);(target/name).chmod(0o755);(target/(name+'.zip')).write_bytes(archive([(name,data,0o100755)]))
 manifest={'manifest_version':'0.3','name':'reyrun-task-bridge','version':'1.0.0','display_name':'REYRUN Task Bridge','description':'Local, revision-checked job notes. Resume a task in a second compatible chat.','author':{'name':'REYRUN'},'homepage':site,'server':{'type':'node','entry_point':'server/bridge.cjs','mcp_config':{'command':'node','args':['${__dirname}/server/bridge.cjs']}}}
 (target/'REYRUN-Task-Bridge.mcpb').write_bytes(archive([('manifest.json',json.dumps(manifest,indent=2).encode(),0o100644),('server/bridge.cjs',(root/'scripts/bridge.cjs').read_bytes(),0o100644)]))
+runpy.run_path(str(root/'scripts/rdr2/build-xml-launchers.py'))
 checks=''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in sorted(target.iterdir()) if p.is_file() and p.name!='SHA256SUMS.txt')
 (target/'SHA256SUMS.txt').write_text(checks)

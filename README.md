@@ -14,6 +14,10 @@ Download and open the file. It connects a workspace to an existing Claude Deskto
 
 ## Install RDR2 in Latvian
 
+For Story Mode on Windows. If your game already has the tested builds of Universal RDR2 String Translator and Ultimate ASI Loader x64 9.7.4, close the game, download the XML installer and open it. It checks both plug-ins by checksum, saves a copy of any previous Latvian XML and installs the verified translation. If it finds a different base translation or a missing plug-in, it stops and gives you the installation guide.
+
+[Install Latvian XML](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-RDR2-Install-XML.cmd) · [Restore previous XML](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-RDR2-Restore-XML.cmd)
+
 Download and open the Windows launcher. It looks for the game in Steam, Rockstar and Epic libraries and stages a verified Latvian translation file in the workspace. If several folders match, you choose the right one. Give your AI the installer guide for the plug-in, loader, backup and Story Mode check.
 
 [Download the RDR2 launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Open translation instructions](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/en/install/)

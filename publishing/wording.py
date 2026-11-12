@@ -46,3 +46,10 @@ COPY['chatgpt_intro']=('Lai ChatGPT varētu strādāt ar Windows failiem, iedod 
 COPY['chatgpt_file']=('Windows palaidējs ChatGPT','Windows launcher for ChatGPT','Запуск для ChatGPT на Windows')
 COPY['chatgpt_open']=('Atvērt ChatGPT savienotāju','Open the ChatGPT connector','Открыть подключение в ChatGPT')
 COPY['parallel_label']=('Vienlaicīgs darbs','Parallel work','Параллельная работа')
+
+COPY['xml_install']=('Uzstādīt latviešu XML','Install Latvian XML','Установить латышский XML')
+COPY['xml_restore']=('Atjaunot iepriekšējo XML','Restore previous XML','Восстановить прежний XML')
+COPY['xml_help']=(
+    'Stāsta režīmam Windows datorā. Ja spēlei jau ir pārbaudītās Universal RDR2 String Translator un Ultimate ASI Loader x64 9.7.4 versijas, aizver spēli, lejupielādē un atver XML uzstādītāju. Tas atpazīst zināmos spraudņu failus pēc kontrolsummas, saglabā veco latviešu XML un uzstāda pārbaudīto tulkojumu. Ja atrod citu pamata tulkojumu vai trūkst spraudņa, palaidējs apstājas un parāda pamācības saiti.',
+    'For Story Mode on Windows. If your game already has the tested builds of Universal RDR2 String Translator and Ultimate ASI Loader x64 9.7.4, close the game, download the XML installer and open it. It checks both plug-ins by checksum, saves a copy of any previous Latvian XML and installs the verified translation. If it finds a different base translation or a missing plug-in, it stops and gives you the installation guide.',
+    'Для сюжетного режима в Windows. Если в игре уже стоят проверенные сборки Universal RDR2 String Translator и Ultimate ASI Loader x64 9.7.4, закройте игру, скачайте и откройте установщик XML. Он сверит контрольные суммы обоих файлов, сохранит прежний латышский XML и установит проверенный перевод. Если в папке есть другой основной перевод или не хватает плагина, установщик остановится и покажет ссылку на инструкцию.')

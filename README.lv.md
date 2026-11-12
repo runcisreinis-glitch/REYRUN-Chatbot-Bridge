@@ -14,6 +14,10 @@ Lejupielādē un atver. Palaidējs pievieno darba mapi jau uzstādītai Claude D
 
 ## Uzstādi RDR2 tulkojumu
 
+Stāsta režīmam Windows datorā. Ja spēlei jau ir pārbaudītās Universal RDR2 String Translator un Ultimate ASI Loader x64 9.7.4 versijas, aizver spēli, lejupielādē un atver XML uzstādītāju. Tas atpazīst zināmos spraudņu failus pēc kontrolsummas, saglabā veco latviešu XML un uzstāda pārbaudīto tulkojumu. Ja atrod citu pamata tulkojumu vai trūkst spraudņa, palaidējs apstājas un parāda pamācības saiti.
+
+[Uzstādīt latviešu XML](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-RDR2-Install-XML.cmd) · [Atjaunot iepriekšējo XML](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-RDR2-Restore-XML.cmd)
+
 Lejupielādē un atver Windows palaidēju. Tas meklē spēli Steam, Rockstar un Epic bibliotēkās un sagatavo pārbaudītu latviešu tulkojuma failu darba mapē. Ja der vairākas mapes, spēlētājs izvēlas īsto. Tad iedod MI uzstādīšanas instrukciju. Tajā ir spraudnis, ielādētājs, rezerves kopija un spēles pārbaude stāsta režīmā.
 
 [Lejupielādēt RDR2 palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-rdr2-Windows.cmd) · [Atvērt tulkojuma instrukciju](https://reyrun-rdr2-latviski.runcisreinis.chatgpt.site/uzstadisana/)
