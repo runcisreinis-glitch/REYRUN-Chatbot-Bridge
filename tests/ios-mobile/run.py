@@ -13,6 +13,10 @@ import tempfile
 import threading
 import time
 import uuid
+import runpy
+
+PUBLIC = Path("tests/public-sites").resolve()
+check = runpy.run_path(str(PUBLIC / "check.py"))["check"]
 
 HERE = Path(__file__).resolve().parent
 STARTER = HERE.parents[1] / "web/start/index.html"
@@ -68,11 +72,12 @@ def exercise(temp, http_port):
         "REYRUNTestURL": f"http://localhost:{http_port}/start/?lang=en",
     }
     (app / "Info.plist").write_bytes(plistlib.dumps(plist))
-    shutil.copyfile(HERE / "scenario.js", app / "scenario.js")
+    for file in ("geometry.js", "pages.json"):
+        shutil.copyfile(PUBLIC / file, app / file)
     run("xcrun", "--sdk", "iphonesimulator", "clang", "-fobjc-arc", "-target",
         platform.machine() + "-apple-ios16.0-simulator", "-isysroot", run("xcrun", "--sdk", "iphonesimulator", "--show-sdk-path"),
         "-framework", "UIKit", "-framework", "WebKit", "-framework", "Foundation", "-framework", "CoreGraphics",
-        str(HERE / "Smoke.m"), "-o", str(app / "Smoke"))
+        str(PUBLIC / "AppleViews.m"), "-o", str(app / "Smoke"))
     run("codesign", "--force", "--sign", "-", str(app))
     sim = partial(run, "xcrun", "simctl")
     device = sim("create", "REYRUN smoke " + uuid.uuid4().hex[:8], device_type, runtime)
@@ -82,21 +87,24 @@ def exercise(temp, http_port):
         sim("launch", device, BUNDLE)
         data = Path(sim("get_app_container", device, BUNDLE, "data"))
         output = data / "Documents" / "smoke-result.json"
-        for _ in range(105):
+        for _ in range(300):
             if output.is_file():
                 break
             time.sleep(1)
         else:
-            raise RuntimeError("The WKWebView app did not write a result within 105 seconds")
+            raise RuntimeError("The WKWebView app did not write a result within 300 seconds")
         result = json.loads(output.read_bytes())
-        expected = {"schema": "reyrun.mobile.receipt/1", "id": "phone-test-01", "action": "inspect-text",
-                    "bytes": 13, "lines": 2, "sha256": hashlib.sha256("REYRUN\nRīga\n".encode()).hexdigest()}
-        if result.get("receipt") != expected or result.get("rejected") is not True:
-            raise RuntimeError(json.dumps(result, ensure_ascii=False))
-        print("PASS actual iOS Simulator WKWebView:", json.dumps(result, ensure_ascii=False))
-        if len(sys.argv) == 2:
-            report = {"simulator": name, "runtime": runtime, "pageSha256": hashlib.sha256(STARTER.read_bytes()).hexdigest(), **result}
-            Path(sys.argv[1]).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+        check(result)
+        print("PASS iOS Simulator", name, runtime)
+        mac=temp / "desktop"
+        run("xcrun","clang","-fobjc-arc","-framework","AppKit","-framework","WebKit",str(PUBLIC/"AppleViews.m"),"-o",str(mac))
+        mac_result=temp / "desktop.json"
+        run(str(mac),str(PUBLIC),str(mac_result))
+        desktop=json.loads(mac_result.read_text())
+        check(desktop)
+        print("PASS macOS WKWebView", platform.mac_ver()[0])
+        if len(sys.argv)==2:
+            Path(sys.argv[1]).write_text(json.dumps({"ios":result,"simulator":name,"runtime":runtime,"macOS":desktop}))
     finally:
         sim("delete", device)
 

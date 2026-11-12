@@ -8,7 +8,7 @@ sdk="${ANDROID_HOME:?Android SDK required}"
 platform="$sdk/platforms/android-35/android.jar"
 tools="$sdk/build-tools/35.0.0"
 mkdir -p "$build/assets" "$build/classes" "$build/dex"
-cp web/start/index.html "$build/assets/index.html"
+cp tests/public-sites/pages.json tests/public-sites/geometry.js "$build/assets/"
 "$tools/aapt2" link -I "$platform" --manifest "$suite/AndroidManifest.xml" -A "$build/assets" -o "$build/probe.apk"
 javac --release 11 -cp "$platform" -d "$build/classes" "$suite/ProbeActivity.java"
 jar cf "$build/probe.jar" -C "$build/classes" .
