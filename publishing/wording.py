@@ -17,7 +17,7 @@ COPY={
 'method':('Pamācība čatam', 'Instructions for your AI', 'Инструкция для ИИ'),
 'show_prompt':('Izlasīt ziņu', 'Read the message', 'Прочитать сообщение'),
 'actions':('Windows datorā lejupielādē un atver vienu failu. Pirmoreiz savienojot datoru ar ChatGPT, tas vēl jāapstiprina pārlūkā. Ja savienojums jau darbojas, vari uzreiz lūgt pārbaudīt mapi.', 'On Windows, download and open one file. The first time you connect to ChatGPT, you also need to confirm your computer in the browser. If it’s already connected, you can ask about your files right away.', 'В Windows скачайте и откройте один файл. При первом подключении к ChatGPT понадобится ещё подтвердить устройство в браузере. Если связь уже работает, можно сразу попросить чат проверить папку.'),
-'how':('Īpašas zināšanas nav vajadzīgas. Iekopējiet šīs lapas adresi savā čatā. Tas pateiks, ko darīt tālāk.', 'You don’t need any technical skills. Paste this page’s address into your usual AI chat. It will tell you what to do next.', 'Специальные знания не нужны. Вставьте адрес этой страницы в свой чат. ИИ подскажет, что делать дальше.'),
+'how':('Īpašas zināšanas nav vajadzīgas. Iekopējiet šīs lapas adresi savā čatā. Ja savienojumam vajag dažus klikšķus, čats pateiks, kur jānospiež.', 'You don’t need any technical skills. Paste this page’s address into your usual AI chat. If the connection needs a few clicks, your chat will show you where to click.', 'Специальные знания не нужны. Вставьте адрес этой страницы в свой чат. Если для подключения понадобится несколько нажатий, чат подскажет, куда нажать.'),
 'title':('REYRUN Tilts','REYRUN Bridge','REYRUN Мост'),
 'h1':('Tilts no čata', 'From AI chat', 'Из чата'),
 'accent':('uz jūsu ierīci', 'to your device', 'на ваше устройство'),
