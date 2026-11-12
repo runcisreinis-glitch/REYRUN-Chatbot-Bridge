@@ -16,6 +16,8 @@ REYRUN 做的这个“桥”，可以把你平时用来聊天的 AI 连到你允
 
 先阅读[设备连接技能（skill）](skill/reyrun-chatbot-bridge/SKILL.md)。用中文回复，优先复用已经可用的连接，只询问会影响选择的信息。按用户实际使用的聊天客户端、设备和任务选一种连接方式，给出对应的下载或设置入口。公开网页的演示只处理用户选择的文件，不能据此声称已连接设备。
 
+如果需要安装，请按当前系统准备一个可直接运行的脚本，把准备工作和安装后的检查放在里面。如果首选方式不可用，脚本只能改用官方支持、无需扩大权限的备用方式。需要授权时交给用户确认；若没有可用的备用方式，就停止并说清原因。请用一个临时文件实测读写结果。
+
 - **Windows 或 macOS 上的 Claude Desktop**：需要操作文件时，可以用项目的文件夹连接程序。只在已授权的目录内工作。连接后先列出可访问的目录，再用临时测试文件验证读写；如果实际可访问的范围不包括“下载”，请先让用户选择或授权对应文件夹。[Windows 下载](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [macOS 下载](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip)
 - **网页版聊天**：先查看当前对话是否支持设备连接。网页版 ChatGPT 如可使用 Desktop Commander，可以按其指引配对电脑；若当前聊天只支持文字，请向用户说明并提供可用的入口。[电脑配对说明（英文）](https://desktopcommander.app/help/devices/connect-computer)
 - **手机**：先分清要处理的是手机里的文件，还是另一台电脑上的文件。手机浏览器提供本地文件示例；Android 还可以用 Termux，iPhone 和 iPad 可通过分享菜单将所选文件交给快捷指令。[手机浏览器示例](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)
