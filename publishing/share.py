@@ -18,6 +18,18 @@ ART = {
     "ru": "Светящийся мост соединяет рисунок мозга с компьютером. В углу логотип REYRUN.",
 }
 
+def theme_button(lang):
+    label, light, dark = {
+        "lv": ("Tumšais režīms", "Ieslēgt gaišo režīmu", "Ieslēgt tumšo režīmu"),
+        "en": ("Dark mode", "Switch to light mode", "Switch to dark mode"),
+        "ru": ("Тёмная тема", "Включить светлую тему", "Включить тёмную тему"),
+    }[lang]
+    return (
+        f'<button hidden type="button" class="theme-switch" data-theme-switch '
+        f'aria-label="{label}" aria-pressed="false" data-light="{light}" data-dark="{dark}">'
+        '<span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>'
+    )
+
 def metadata(site, lang, route, title, description):
     kind = "check" if route == START[lang] else "bridge"
     image = f"{site}/assets/{kind}-{lang}-v1.jpg"
@@ -54,7 +66,8 @@ def render_start(web, site, lang):
         + metadata(site, lang, START[lang], title, words["intro"])
     )
     context = {**{key: escape(value) for key, value in words.items()}, "lang": lang,
-               "head": head, "pagetitle": escape(title), "nav": links, "home": HOME[lang],
+               "head": head, "pagetitle": escape(title), "nav": links, "home": HOME[lang], "theme_button": theme_button(lang),
+               "theme_js": (web / "assets/theme.js").read_text(encoding="utf-8"),
                "i18n": json.dumps(words, ensure_ascii=False).replace("<", r"\u003c")}
     for key, value in context.items():
         tpl = tpl.replace("{{" + key + "}}", value)
