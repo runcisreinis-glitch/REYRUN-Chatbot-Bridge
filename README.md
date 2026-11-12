@@ -1,12 +1,16 @@
-# REYRUN Bridge · From AI chat to your computer
+# REYRUN Bridge · From AI chat to your device
 
-Running out of space on your computer? This bridge lets you ask your AI to show you the five largest files in Downloads. On your phone, you can open and save a shopping list it wrote for you.
+You’re chatting with an AI. Without access to your computer or phone, it can only tell you where to click. You have to do the hard part yourself.
 
-Connecting and using this bridge is completely free. You don’t need any technical know-how. Paste this page’s address into the chat where you usually ask your AI questions. It will tell you what to do next.
+This bridge lets your AI chat work on your device. It’s completely free to connect and use. Tell the AI exactly what you want to change so it can do the work for you.
+
+Say your computer is running out of space. Ask your AI to find the five largest files in Downloads. It can check the folder itself and show you how much space each file takes up.
+
+You don’t need any technical skills. Paste this page’s address into your usual AI chat. It will tell you what to do next.
 
 [Open the page to copy its address](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/)
 
-You probably already talk to a chatbot online, such as ChatGPT. You don’t need to install the AI itself on your computer.
+If you ask ChatGPT questions online, you already use a chatbot. You don’t need to install the AI itself on your computer.
 
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 

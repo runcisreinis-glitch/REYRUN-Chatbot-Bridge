@@ -1,12 +1,16 @@
-# REYRUN Tilts · Tilts no čata uz tavu datoru
+# REYRUN Tilts · Tilts no čata uz jūsu ierīci
 
-Datorā trūkst vietas, bet nezini, kas to aizņem? Ar šo tiltu vari palūgt čatam apskatīt lejupielāžu mapi un parādīt piecus lielākos failus. Telefonā vari atvērt un saglabāt čata sagatavotu iepirkumu sarakstu.
+Jūs sarunājaties čatā ar mākslīgo intelektu. Bez piekļuves datoram vai telefonam tas var vien izstāstīt, kur jāklikšķina. Viss sarežģītais jādara jums pašiem.
 
-Pieslēgt un lietot šo tiltu vari pilnīgi bez maksas. Īpašas datora zināšanas nav vajadzīgas. Iekopē šīs lapas adresi tur, kur parasti uzdod jautājumus mākslīgajam intelektam. Tas pateiks, ko darīt tālāk.
+Šis tilts ļauj čatam strādāt jūsu ierīcē. Tā pieslēgšana un lietošana ir pilnīgi bez maksas. Pastāstiet pēc iespējas precīzāk, ko vēlaties mainīt, un čats varēs to izdarīt jūsu vietā.
+
+Piemēram, datorā trūkst vietas. Palūdziet čatam atrast piecus lielākos failus lejupielāžu mapē. Tas pats apskatīs mapi un parādīs, cik vietas aizņem katrs fails.
+
+Īpašas zināšanas nav vajadzīgas. Iekopējiet šīs lapas adresi savā čatā. Tas pateiks, ko darīt tālāk.
 
 [Atvērt lapu un nokopēt tās adresi](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/)
 
-Visticamāk, tu jau sarunājies ar čatbotu internetā, piemēram, ar ChatGPT. Tev datorā nav jāuzstāda pats mākslīgais intelekts.
+Ja uzdodat jautājumus ChatGPT internetā, jūs jau lietojat čatbotu. Pats mākslīgais intelekts jūsu datorā nav jāuzstāda.
 
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
@@ -79,6 +83,6 @@ Katram čatam piešķir savu darba nosaukumu un atsevišķu mapi. Tekstu, failu 
 
 Jaunajā čatā nosauc iepriekšējo uzdevumu. Palūdz apskatīt pēdējo saglabāto ierakstu un pārbaudīt, kuri faili jau ir gatavi. Ja pārtrūka lejupielāde vai kopēšana, vispirms pārbaudi failu. Ja divi čati reizē mainīja vienu ierakstu, pirms nākamās izmaiņas nolasi saglabāto versiju.
 
-Par tiltu un spēles tulkojumu es neprasu naudu. Ja vēlies atbalstīt manu darbu, būšu pateicīgs. [Atbalstīt Reini](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/atbalsts.html) · [REYRUN meklēšana](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.lv.html)
+Par tiltu un spēles tulkojumu es neprasu naudu. Ja vēlaties atbalstīt manu darbu, būšu pateicīgs. [Atbalstīt Reini](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/atbalsts.html) · [REYRUN meklēšana](https://reyrun-rekursive-deep-search.runcisreinis.chatgpt.site/index.lv.html)
 
 </details>
