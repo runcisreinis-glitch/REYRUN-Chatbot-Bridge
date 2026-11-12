@@ -153,6 +153,9 @@ def make(l):
     long+='\n## '+c('client')+'\n\n'+c('client_text')+'\n\n## '+c('resume_test')+'\n\n'+c('resume_text')+'\n\n'
     example={'name':'save_checkpoint','arguments':{'job':'game-check','revision':0,'done':t('Testa fails precīzi nolasīts.','Test note read back exactly.','Тестовый файл прочитан без изменений.'),'next':t('Pārbaudi izvēlēto spēles mapi.','Verify the selected game folder.','Проверь выбранную папку игры.')}}
     long+='\n```json\n'+json.dumps(example,ensure_ascii=False,indent=2)+'\n```\n'
+    heading, rest = long.split('\n\n', 1)
+    note = json.loads((ROOT / 'publishing' / 'one-launcher.json').read_text(encoding='utf-8'))[l]
+    long = heading + '\n\n' + note + '\n\n' + rest
     (REFS/refbasename).write_text(long)
     readme+=f"\n[{c('evidence')}](skill/reyrun-chatbot-bridge/references/{refbasename}) · [JSON](research/)\n\n"
     for i in (1,2):readme+=f"### {c('guide'+str(i))}\n\n{c('answer'+str(i))}\n\n"

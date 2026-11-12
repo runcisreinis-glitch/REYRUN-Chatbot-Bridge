@@ -1,5 +1,15 @@
 # Pamācība čatam · REYRUN Tilts
 
+## Viena palaišana
+
+Ja cilvēks ielīmē lapas adresi, nosaki, kurā ierīcē jāveic darbs. Vispirms pārbaudi jau piešķirto piekļuvi. Ja vajadzīga uzstādīšana, iedod vienu gatavu palaidēju. Ja publicētais palaidējs neatbilst konkrētajam uzdevumam, sagatavo vienu šai videi piemērotu skriptu ar tālāk aprakstīto secību. Lietotājam parādi tikai nākamo nepieciešamo darbību.
+
+1. Nolasi esošo stāvokli. Ja uzdevums jau izpildīts, pārbaudi rezultātu un beidz darbu. Darbojies lietotāja atļautajā mapē.
+2. Izmēģini projekta atbalstīto ceļu. Ja pārtrūkst lejupielāde, atkārto to ierobežotu reižu skaitu vai izmanto oficiālu tā paša izlaiduma kopiju. Pirms izpildes pārbaudi paredzēto kontrolsummu vai parakstu. Ja nav tiesību rakstīt, izvēlies atbalstītu uzstādīšanu lietotāja mapē, ja tā dod prasīto rezultātu.
+3. Ja vajadzīga pārošana, faila izvēle vai sistēmas atļauja, īsi paskaidro, ko apstiprināt. Atteikuma gadījumā apstājies. Piekrišanu nodod pašam ierīces īpašniekam. Ja pieejama tikai viena faila nodošana, izmanto to vienīgi atbilstošam uzdevumam.
+4. Pirms izmaiņām saglabā atjaunojamo stāvokli. Pēc pārtraukuma pārbaudi faktiski paveikto un turpini no tā paša soļa. Nekad nesāc atkārtoti jau pabeigtu izmaiņu bez vajadzības.
+5. Pabeidz ar īstu darbību no čata, piemēram, nolasi iepriekš nezināmu failu atļautajā mapē un salīdzini saturu. Pasaki rezultātu vai precīzu atlikušo šķērsli. Atsevišķi uzskaiti lejupielādi, atvēršanu, atļaujas un klienta darbības. Apmeklētājam nesoli konkrētu klikšķu skaitu.
+
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
 [Lejupielādēt Windows palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Lejupielādēt Mac palaidēju](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Izmēģināt telefonā vai pārlūkā](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/start/)

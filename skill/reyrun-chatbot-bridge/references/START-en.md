@@ -1,5 +1,15 @@
 # Guide for AI · REYRUN Bridge
 
+## One launcher for the owner
+
+When someone pastes this page address, identify the device where the work must happen. Try existing authorized access first. If installation is needed, deliver one ready-to-run launcher. If the published launcher cannot perform the requested job, prepare one script for that host and use the sequence below. Show the owner only the next action they need to take.
+
+1. Inspect existing state. If the goal is already satisfied, verify it and finish. Work inside the authorized scope.
+2. Try the supported primary route. Retry transient downloads a bounded number of times or use an official copy of the same release. Verify its expected hash or signature before execution. If the destination is not writable, use a supported per-user location only when it achieves the same goal.
+3. If pairing, a file selection or a system permission is required, explain the specific approval and wait for the owner. Stop on denial. Offer a single-file handoff only for a task it can actually complete.
+4. Preserve recoverable state before changing it. On interruption, inspect the files and resume at the first unfinished step. Repeated runs must preserve existing configuration and backups.
+5. Verify a real action from the chat, for example by reading a previously unknown file in the permitted folder and comparing its contents. Return the result or the remaining blocker. Count downloads, launches, system approvals and client actions separately. Avoid promising an exact click count.
+
 [Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
 
 [Download Windows launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-Windows.cmd) · [Download Mac launcher](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/launchers/REYRUN-filesystem-macOS.command.zip) · [Try it on a phone or in a browser](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/start/)

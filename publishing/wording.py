@@ -21,7 +21,7 @@ COPY={
 'title':('REYRUN Tilts','REYRUN Bridge','REYRUN Мост'),
 'h1':('Tilts no čata', 'From AI chat', 'Из чата'),
 'accent':('uz jūsu ierīci', 'to your device', 'на ваше устройство'),
-'pitch':('Piemēram, datorā trūkst vietas. Palūdziet čatam atrast piecus lielākos failus lejupielāžu mapē. Tas pats apskatīs mapi un parādīs, cik vietas aizņem katrs fails.', 'Say your computer is running out of space. Ask your AI to find the five largest files in Downloads. It can check the folder itself and show you how much space each file takes up.', 'Например, на компьютере заканчивается место. Попросите ИИ найти пять самых больших файлов в папке загрузок. Он сам проверит папку и покажет, сколько места занимает каждый файл.'),
+'pitch':('Piemēram, datorā trūkst vietas. Palūdziet čatam atrast piecus lielākos failus lejupielāžu mapē. Ja atļausiet čatam apskatīt šo mapi, tas parādīs, cik vietas aizņem katrs fails.', 'Say your computer is running out of space. Ask your AI to find the five largest files in Downloads. Give your chat access to that folder and it can show you how much space each file takes up.', 'Например, на компьютере заканчивается место. Попросите ИИ найти пять самых больших файлов в папке загрузок. Если вы разрешите чату открыть эту папку, он покажет, сколько места занимает каждый файл.'),
 'win':('Lejupielādēt Windows palaidēju','Download Windows launcher','Скачать для Windows'),
 'mac':('Lejupielādēt Mac palaidēju','Download Mac launcher','Скачать для Mac'),
 'phone':('Izmēģināt telefonā vai pārlūkā','Try it on a phone or in a browser','Попробовать на телефоне или в браузере'),

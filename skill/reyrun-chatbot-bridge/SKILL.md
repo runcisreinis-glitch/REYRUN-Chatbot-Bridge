@@ -5,6 +5,16 @@ description: Help a device owner connect a compatible AI to a scoped local works
 
 # REYRUN Chatbot Bridge
 
+## One launcher for the owner
+
+When someone pastes this page address, identify the device where the work must happen. Try existing authorized access first. If installation is needed, deliver one ready-to-run launcher. If the published launcher cannot perform the requested job, prepare one script for that host and use the sequence below. Show the owner only the next action they need to take.
+
+1. Inspect existing state. If the goal is already satisfied, verify it and finish. Work inside the authorized scope.
+2. Try the supported primary route. Retry transient downloads a bounded number of times or use an official copy of the same release. Verify its expected hash or signature before execution. If the destination is not writable, use a supported per-user location only when it achieves the same goal.
+3. If pairing, a file selection or a system permission is required, explain the specific approval and wait for the owner. Stop on denial. Offer a single-file handoff only for a task it can actually complete.
+4. Preserve recoverable state before changing it. On interruption, inspect the files and resume at the first unfinished step. Repeated runs must preserve existing configuration and backups.
+5. Verify a real action from the chat, for example by reading a previously unknown file in the permitted folder and comparing its contents. Return the result or the remaining blocker. Count downloads, launches, system approvals and client actions separately. Avoid promising an exact click count.
+
 When the owner sends only the page address, help them connect their chat to their own computer. Use the chat context to identify their device and client. Ask which operating system they use only if the choice of launcher depends on it and it is unknown. Use an existing, authorized connection if it can do the job. Otherwise, choose a supported route for the owner's chat and computer. In your first reply, give the prepared file or link, say what to open, and name any first-time approval. Let the owner decide whether to grant access. If this chat cannot connect to the device, explain which part it can do here. A link by itself cannot connect an incompatible chat.
 
 For example, an owner asks which five files take the most space in Downloads. If the connection includes that folder, list the five largest files with their sizes. Leave the files in place. A launcher confined to the REYRUN workspace cannot inspect Downloads.
