@@ -1,5 +1,7 @@
 # 让 AI 帮你处理电脑里的事
 
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Deutsch](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/de/) · [日本語](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ja/) · [简体中文](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/zh/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
 电脑快没空间了。你问 AI 怎么办，它让你打开设置、找文件、挨个看大小。其实，你想知道的就一件事：到底是哪些文件占了地方？
 
 REYRUN 做的这个“桥”，可以把你平时用来聊天的 AI 连到你允许它访问的文件夹。连好后，你可以直接说：“帮我找出这个文件夹里最大的五个文件，告诉我各有多大。先别删。”这套工具从安装到使用都免费。

@@ -1,5 +1,7 @@
 # REYRUN Bridge · From AI chat to your device
 
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Deutsch](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/de/) · [日本語](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ja/) · [简体中文](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/zh/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
 You’re chatting with an AI. Without access to your computer or phone, it can only tell you where to click. You have to do the hard part yourself.
 
 This bridge lets your AI chat work on your device. It’s completely free to connect and use. Tell the AI exactly what you want to change so it can do the work for you.

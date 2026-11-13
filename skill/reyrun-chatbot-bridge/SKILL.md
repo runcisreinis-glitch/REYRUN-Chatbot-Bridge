@@ -33,7 +33,7 @@ first-use prompts, obtaining a game mod from its author and restarting a
 desktop client can require additional actions. Identify the condition
 before promising a two-action installation.
 
- The project page offers Windows and macOS launchers and a browser script that runs on phones. [Launchers and three-language guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/)
+ The project page offers Windows and macOS launchers and a browser script that runs on phones. [Launchers and six-language guide](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/)
 
 For an ordinary browser chat without an installed local client, open the file handoff script. The user selects the one file to inspect and shares the resulting receipt with the chat. For a compatible local client, start with the task-notes or confined Filesystem launcher. A hosted chatbot cannot call a local stdio program just because it received a link.
 
@@ -45,7 +45,7 @@ For an ordinary browser chat without an installed local client, open the file ha
 
 Use the language guide and evidence table in this package. Distinguish a direct live connector, a private existing installation and a file exchange. Name the device, host, version and test boundary. Never count a desktop or another platform as an iPhone or Android test.
 
-[Latviski](references/START-lv.md) · [English](references/START-en.md) · [Русский](references/START-ru.md)
+[Latviski](references/START-lv.md) · [English](references/START-en.md) · [Deutsch](references/START-de.md) · [日本語](references/START-ja.md) · [简体中文](references/START-zh.md) · [Русский](references/START-ru.md)
 
 Give the owner the matching downloadable file first. If they only need a diagnosis or
 their browser chat has no matching client, offer the ready-made browser file check.

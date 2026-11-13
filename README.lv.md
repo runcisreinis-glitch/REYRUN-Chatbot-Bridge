@@ -1,5 +1,7 @@
 # REYRUN Tilts · Tilts no čata uz jūsu ierīci
 
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Deutsch](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/de/) · [日本語](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ja/) · [简体中文](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/zh/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
 Jūs sarunājaties čatā ar mākslīgo intelektu. Bez piekļuves datoram vai telefonam tas var vien izstāstīt, kur jāklikšķina. Viss sarežģītais jādara jums pašiem.
 
 Šis tilts ļauj čatam strādāt jūsu ierīcē. Tā pieslēgšana un lietošana ir pilnīgi bez maksas. Pastāstiet pēc iespējas precīzāk, ko vēlaties mainīt, un čats varēs to izdarīt jūsu vietā.

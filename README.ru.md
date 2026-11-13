@@ -1,5 +1,7 @@
 # REYRUN Мост · Из чата на ваше устройство
 
+[Latviski](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/) · [English](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/en/) · [Deutsch](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/de/) · [日本語](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ja/) · [简体中文](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/zh/) · [Русский](https://reyrun-chatbot-bridge.runcisreinis.chatgpt.site/ru/)
+
 Вы общаетесь с искусственным интеллектом в чате. Без доступа к компьютеру или телефону он может только подсказать, куда нажать. Всё сложное приходится делать вам.
 
 Этот мост даёт чату доступ к вашему устройству. Подключить его и пользоваться им можно совершенно бесплатно. Расскажите как можно точнее, что хотите изменить, и ИИ сможет сделать это за вас.
